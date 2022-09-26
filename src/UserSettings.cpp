@@ -6,7 +6,7 @@
 #include "Msg.hpp"
 #include "UserSettings.hpp"
 
-#define DEBUG_MODE
+#undef DEBUG_MODE
 
 
 
@@ -48,6 +48,11 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
 #   endif
 
     // check the number of arguments
+    if (argc == 1)
+        {
+        usage();
+        Msg::error("Expecting command line arguments");
+        }
     if (argc % 2 == 0)
         {
         usage();

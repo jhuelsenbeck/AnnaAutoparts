@@ -1,0 +1,194 @@
+AutoParts Simulation Study
+
+Part 1: how well can the DPP recover process heterogeneity under a known
+	generating model, and how does this compare to conventional 'mixed-model'
+	approach to data partitoning?
+Data	
+	-sample tree topology and branch lengths from prior
+	-evolve 6 partitions
+		2 protein-coding genes with 1000 sites under GTR+G
+	-parameterization
+	data set 1
+		partn	bf	sr	tl alpha
+		1		1	1	1	1
+		2		2	1	2	1
+		3		3	1	3	1
+		4		4	2	3	1
+		5		5	2	1	1
+		6		6	2	2	1
+		
+tree_length        [ 10.0, 20.0, 8.0, 8.0, 10.0, 20.0 ]
+base_frequencies   [ (0.4, 0.3, 0.2, 0.1), (0.25, 0.25, 0.25, 0.25), (0.1, 0.2, 0.3, 0.4), (0.3, 0.1, 0.2, 0.4), (0.2, 0.4, 0.1, 0.3), (0.1, 0.3, 0.4, 0.2) ]
+substitution_rates [ (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (1.0, 5.0, 1.0, 1.0, 5.0, 1.0), (1.0, 5.0, 1.0, 1.0, 5.0, 1.0), (1.0, 5.0, 1.0, 1.0, 5.0, 1.0) ]
+gamma_shape        [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+number_sites       [ 500, 500, 500, 500, 500, 500 ]
+num_taxa           [ 50 ]
+
+	data set 2 [parameters actually used for simulation]
+		partn	bf	sr	tl alpha
+		1		1	1	1	1
+		2		2	1	1	2
+		3		3	1	2	3
+		4		1	2	1	3
+		5		2	2	1	2
+		6		3	2	2	1
+tree_length        [ 5.0, 5.0, 15.0, 5.0, 5.0, 15.0 ]
+base_frequencies   [ (0.1, 0.4, 0.4, 0.1), (0.25, 0.25, 0.25, 0.25), (0.4, 0.1, 0.1, 0.4), (0.1, 0.4, 0.4, 0.1), (0.25, 0.25, 0.25, 0.25), (0.4, 0.1, 0.1, 0.4) ]
+substitution_rates [ (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (1.0, 2.0, 1.0, 1.0, 2.0, 1.0), (2.0, 1.0, 1.0, 1.0, 1.0, 2.0), (2.0, 1.0, 1.0, 1.0, 1.0, 2.0), (2.0, 1.0, 1.0, 1.0, 1.0, 2.0) ]
+gamma_shape        [ 0.1, 0.01, 0.9, 0.9, 0.01, 0.1 ]
+number_sites       [ 1000, 1000, 1000, 1000, 1000, 1000 ]
+num_taxa           [ 50 ]
+num_reps           [ 100 ]
+
+	-simulate 100 replicates
+Analyses
+	-ap [ap_E_n.in, n=1 n++ n < 100; where E{1.2, 3.0, 5.8}]
+		three sets of analyses with E(K) fixed to 1.2, 3.0, and 5.8
+		one run per rep per E(K) (for a total of 300 runs)
+		each run for 2 million cycles/run
+	-mb 
+		saturated model:all params unlinked [mb_max_n.nex, n++ n < 100]
+			(one run per rep = 100 runs) for 2 million cycles/run
+		simpler model: true parttion scheme [mb_tru_n.nex, n++ n < 100]
+			(one run per rep = 100 runs) for 2 million cycles/run
+		uniform model: unpartitioned [mb_uni_n.nex, n++ n < 100]
+			(one run per rep = 100 runs) for 2 million cycles/run
+			
+Results
+	what partitions are estimated by ap?
+	what partition scheme is selected by BF of mb runs?
+	what is the error variance of the parameters under the 
+		selected partition scheme under DPP vs BF?
+			(mppd of params and size of ci for trees)
+	how does the mcmc performance of the two methods compare?
+
+   -ap analyses
+     -accuracy/coverage
+       -for each parameter, % replicates where true partn is within 95% CI
+       -report values for each of the priors on E(K)
+     -precision 
+       -for each parameter, distribution of the number of partns in the 95% CI 
+       -plot distributions for each of the priors on E(K)
+   -mb analyses
+     -bias: %BF choose correct mixture model
+     -error variance
+       -number of trees in 95% CI vs those in ap CI 
+	
+
+Part 2: what is the threshold of sensitivity of DPP to process heterogeneity
+	under a known generating model?
+Data
+	-sample tree topology and branch lengths from prior
+	-evolve 2 partitions
+		2 loci with 1000 sites under GTR+G
+	-parameterization
+		partn	bf	sr	tl alpha
+		1		1	1	1	1
+		2		1	1	2	1
+		tree_length        [ 1.0, X.0 ]
+		base_frequencies   [ (0.25, 0.25, 0.25, 0.25), (0.25, 0.25, 0.25, 0.25) ]
+		substitution_rates [ (1.0, 1.0, 1.0, 1.0, 1.0, 1.0), (1.0, 1.0, 1.0, 1.0, 1.0, 1.0) ]
+		gamma_shape        [ 10.0, 10.0 ]
+		number_sites       [ 1000, 1000 ]
+		num_taxa           [ 50 ]
+		num_reps           [ 50 ]
+	-increment the degree of process heterogeneity (i.e., X = the difference in TL between the two loci)
+		(with 6 increments, where values are TBD based on shake-down runs)
+	-simulate 50 replicates for each TL value
+	-estimate under a single value of E(K) (TBD based on results of Part 1)
+Analyses
+	-ap [ap_2_n.in, n++ n < 100]
+		with E(K) fixed to 1.2 (one run per rep = 100 runs) for 2 million cycles/run
+Results
+	how sensitive is the DPP to various degrees of partiton heterogeneity?
+
+
+Part 3: what is the effect of residual proces heterogeneity on inference
+	under the DPP model?
+Data
+	-sample tree topology and branch lengths from prior
+	-evolve 2 partitions
+		2 loci with 1000 sites under GTR+G
+	-parameterization
+		partn	bf	sr	tl alpha
+		1		1	1	1	1
+		2		1	1	2	1
+		tree_length        [ 1.0, X.0 ]
+		base_frequencies   [ (0.25, 0.25, 0.25, 0.25), (0.25, 0.25, 0.25, 0.25) ]
+		substitution_rates [ (1.0, 1.0, 1.0, 1.0, 1.0, 1.0), (1.0, 1.0, 1.0, 1.0, 1.0, 1.0) ]
+		gamma_shape        [ 10.0, 10.0 ]
+		number_sites       [ 1000, 1000 ]
+		num_taxa           [ 50 ]
+		num_reps           [ 50 ]
+	-the degree of process heterogeneity in TL, X, is based on the results of Part 2
+		(i.e., the selected value is known to be reliably detected by the DPP model)
+	-simulate 50 replicates for the selected TL value
+Analyses
+	-ap (one run per rep) under a uniform model
+Results
+	how does the DPP perform when we fail to specify partitions that 
+		capture to various degrees of partiton heterogeneity?
+	are the mppds for the param bimodal?
+	
+	
+	
+	
+Analysis plan
+Part 1: 
+	ap analyses: 300 total runs (100 reps each for each value of E(K))
+		round 1:
+			1-24 (24) runs on MacPro 1
+			25-48 (24)  runs on MacPro 2
+
+		round 2:
+			49-75 (27) runs on Fisher
+			76-100 (24) runs on MacPro 1
+			101-124 (24)  runs on MacPro 2
+			125-150 (27) runs on Fisher
+		round 3:
+			151-174 (24) runs on MacPro 1
+			175-198 (24)  runs on MacPro 2
+			199-225 (27) runs on Fisher
+		round 4:
+			226-250 (24) runs on MacPro 1
+			251-275 (24)  runs on MacPro 2
+			276-300 (27) runs on Fisher
+
+	mb analyses: 200 runs total (100 reps each for each partition scheme)
+		4 rounds, each with:
+			50 runs on teragrid
+			50 runs on teragrid
+
+Part 2: 
+	ap analyses: 300 total runs (50 reps each for each difference in TL)
+		4 rounds, each with:
+			24 runs on MacPro 1
+			24 runs on MacPro 2
+			27 runs on Fisher
+
+Part 3: 
+	ap analyses: 50 total runs (50 reps each for each difference in TL)
+		1 round:
+			24 runs on MacPro 1
+			24 runs on MacPro 2
+			2 runs on Fisher
+			
+1. substitution model parameters
+combine *.out from batches in a single directory
+copy log files for each parameter to separate folders
+combine post-burn in samples from all runs for each parameter
+	maybe using log combiner
+summarize results for each parameter in supplemental material using tracer
+	mean
+	95% HPD
+	plot of KDE
+	
+
+2. partition schemes
+combine *.log from batches in a single directory
+copy summaries for each parameter to a separate text file
+search each summary file for the true partition scheme
+-need:
+	coverage (true partition scheme contained in 95% hpd)
+	precision (number of partition schemes contained in 95% hpd)
+			

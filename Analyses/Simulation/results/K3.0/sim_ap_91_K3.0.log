@@ -1,0 +1,2353 @@
+   AutoParts v.1.0
+   John Huelsenbeck & Brian Moore
+   University of California, Bervis
+
+   Setting up state sets
+alpha fixed to 1.69577
+Table 1
+Patrons at table: "012345"
+   0 (79, -1, -1) 0.00000 (Taxon_1)  <- Root
+     79 (50, 31, 0) 0.00377
+       50 (51, 53, 79) 0.00684
+         51 (63, 59, 50) 0.03089
+           63 (62, 15, 51) 0.00676
+             62 (52, 14, 63) 0.00223
+               52 (83, 69, 62) 0.02599
+                 83 (96, 35, 52) 0.02134
+                   96 (1, 48, 83) 0.00014
+                     1 (-1, -1, 96) 0.01166 (Taxon_2) 
+                     48 (-1, -1, 96) 0.01381 (Taxon_49) 
+                   35 (-1, -1, 83) 0.00208 (Taxon_36) 
+                 69 (21, 92, 52) 0.01523
+                   21 (-1, -1, 69) 0.01433 (Taxon_22) 
+                   92 (44, 66, 69) 0.00255
+                     44 (-1, -1, 92) 0.00104 (Taxon_45) 
+                     66 (78, 67, 92) 0.01246
+                       78 (18, 30, 66) 0.00042
+                         18 (-1, -1, 78) 0.00427 (Taxon_19) 
+                         30 (-1, -1, 78) 0.00059 (Taxon_31) 
+                       67 (19, 4, 66) 0.00655
+                         19 (-1, -1, 67) 0.00266 (Taxon_20) 
+                         4 (-1, -1, 67) 0.02189 (Taxon_5) 
+               14 (-1, -1, 62) 0.00592 (Taxon_15) 
+             15 (-1, -1, 63) 0.00569 (Taxon_16) 
+           59 (84, 3, 51) 0.02632
+             84 (64, 36, 59) 0.00357
+               64 (11, 70, 84) 0.00319
+                 11 (-1, -1, 64) 0.00363 (Taxon_12) 
+                 70 (22, 80, 64) 0.00251
+                   22 (-1, -1, 70) 0.02618 (Taxon_23) 
+                   80 (32, 73, 70) 0.01754
+                     32 (-1, -1, 80) 0.00187 (Taxon_33) 
+                     73 (90, 16, 80) 0.00135
+                       90 (25, 42, 73) 0.00425
+                         25 (-1, -1, 90) 0.00546 (Taxon_26) 
+                         42 (-1, -1, 90) 0.00726 (Taxon_43) 
+                       16 (-1, -1, 73) 0.01506 (Taxon_17) 
+               36 (-1, -1, 84) 0.00289 (Taxon_37) 
+             3 (-1, -1, 59) 0.01537 (Taxon_4) 
+         53 (75, 61, 50) 0.01319
+           75 (55, 27, 53) 0.00838
+             55 (54, 7, 75) 0.00000
+               54 (57, 71, 55) 0.00001
+                 57 (88, 68, 54) 0.01209
+                   88 (97, 40, 57) 0.01121
+                     97 (5, 49, 88) 0.02506
+                       5 (-1, -1, 97) 0.01609 (Taxon_6) 
+                       49 (-1, -1, 97) 0.02642 (Taxon_50) 
+                     40 (-1, -1, 88) 0.00203 (Taxon_41) 
+                   68 (20, 60, 57) 0.02997
+                     20 (-1, -1, 68) 0.01639 (Taxon_21) 
+                     60 (12, 94, 68) 0.02952
+                       12 (-1, -1, 60) 0.00179 (Taxon_13) 
+                       94 (46, 58, 60) 0.00476
+                         46 (-1, -1, 94) 0.01720 (Taxon_47) 
+                         58 (10, 9, 94) 0.00359
+                           10 (-1, -1, 58) 0.00895 (Taxon_11) 
+                           9 (-1, -1, 58) 0.01726 (Taxon_10) 
+                 71 (23, 72, 54) 0.00509
+                   23 (-1, -1, 71) 0.00053 (Taxon_24) 
+                   72 (93, 86, 71) 0.00887
+                     93 (85, 95, 72) 0.00207
+                       85 (87, 37, 93) 0.00975
+                         87 (81, 39, 85) 0.02358
+                           81 (24, 33, 87) 0.00205
+                             24 (-1, -1, 81) 0.00369 (Taxon_25) 
+                             33 (-1, -1, 81) 0.02697 (Taxon_34) 
+                           39 (-1, -1, 87) 0.00599 (Taxon_40) 
+                         37 (-1, -1, 85) 0.00441 (Taxon_38) 
+                       95 (47, 45, 93) 0.04600
+                         47 (-1, -1, 95) 0.01898 (Taxon_48) 
+                         45 (-1, -1, 95) 0.01205 (Taxon_46) 
+                     86 (38, 74, 72) 0.01047
+                       38 (-1, -1, 86) 0.00212 (Taxon_39) 
+                       74 (26, 65, 86) 0.00369
+                         26 (-1, -1, 74) 0.00409 (Taxon_27) 
+                         65 (76, 56, 74) 0.00860
+                           76 (77, 28, 65) 0.00176
+                             77 (17, 29, 76) 0.01481
+                               17 (-1, -1, 77) 0.04053 (Taxon_18) 
+                               29 (-1, -1, 77) 0.01624 (Taxon_30) 
+                             28 (-1, -1, 76) 0.00768 (Taxon_29) 
+                           56 (89, 6, 65) 0.01180
+                             89 (82, 91, 56) 0.01224
+                               82 (8, 34, 89) 0.01361
+                                 8 (-1, -1, 82) 0.00222 (Taxon_9) 
+                                 34 (-1, -1, 82) 0.00680 (Taxon_35) 
+                               91 (43, 41, 89) 0.00033
+                                 43 (-1, -1, 91) 0.03019 (Taxon_44) 
+                                 41 (-1, -1, 91) 0.00413 (Taxon_42) 
+                             6 (-1, -1, 56) 0.00606 (Taxon_7) 
+               7 (-1, -1, 55) 0.00198 (Taxon_8) 
+             27 (-1, -1, 75) 0.01026 (Taxon_28) 
+           61 (13, 2, 53) 0.00651
+             13 (-1, -1, 61) 0.00757 (Taxon_14) 
+             2 (-1, -1, 61) 0.00361 (Taxon_3) 
+       31 (-1, -1, 79) 0.00325 (Taxon_32) 
+alpha fixed to 1.69577
+Table 1
+Patrons at table: "023"
+alpha = 0.12875
+Table 2
+Patrons at table: "145"
+alpha = 0.85572
+alpha fixed to 1.69577
+Table 1
+Patrons at table: "0"
+SubRates = 0.12938 0.04238 0.09945 0.39629 0.28290 0.04960 
+Table 2
+Patrons at table: "13"
+SubRates = 0.09955 0.16163 0.05551 0.15808 0.12256 0.40267 
+Table 3
+Patrons at table: "2"
+SubRates = 0.18227 0.19553 0.02698 0.45547 0.11150 0.02825 
+Table 4
+Patrons at table: "4"
+SubRates = 0.10819 0.04920 0.00186 0.69925 0.10990 0.03158 
+Table 5
+Patrons at table: "5"
+SubRates = 0.29000 0.01497 0.35410 0.06824 0.06159 0.21110 
+alpha fixed to 1.69577
+Table 1
+Patrons at table: "012345"
+Base Freqs = 0.04076 0.10285 0.13034 0.72605 
+alpha fixed to 1.69577
+Table 1
+Patrons at table: "0"
+Tree Length = 9.96953
+Table 2
+Patrons at table: "15"
+Tree Length = 10.58174
+Table 3
+Patrons at table: "234"
+Tree Length = 8.19852
+
+   Gen -- lnL         -- Number of occupied tables    -- Parameter update
+  1000 -- -101745.415 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+  2000 -- -95900.096 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+  3000 -- -94655.150 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+  4000 -- -93636.970 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+  5000 -- -92390.956 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+  6000 -- -92176.381 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+  7000 -- -91972.109 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+  8000 -- -91816.197 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+  9000 -- -91478.005 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 10000 -- -91297.676 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 11000 -- -91016.769 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+ 12000 -- -90885.368 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 13000 -- -90778.309 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 14000 -- -90753.092 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 15000 -- -90742.393 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 16000 -- -90629.264 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 17000 -- -90601.515 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+ 18000 -- -90583.191 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 19000 -- -90550.121 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 20000 -- -90498.628 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 21000 -- -90448.737 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 22000 -- -90154.334 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 23000 -- -90134.435 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 24000 -- -90124.312 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+ 25000 -- -90044.975 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 26000 -- -90008.837 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+ 27000 -- -89974.677 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 28000 -- -89893.699 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+ 29000 -- -89846.302 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+ 30000 -- -89840.947 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+ 31000 -- -89815.832 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+ 32000 -- -89788.891 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 33000 -- -89778.316 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 34000 -- -89791.990 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 35000 -- -89773.166 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+ 36000 -- -89744.986 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 37000 -- -89724.878 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 38000 -- -89706.885 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+ 39000 -- -89715.960 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 40000 -- -89690.615 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 41000 -- -89569.474 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 42000 -- -89436.240 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 43000 -- -89341.122 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 44000 -- -89229.018 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 45000 -- -89175.921 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 46000 -- -89139.240 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 47000 -- -89128.831 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 48000 -- -89140.043 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+ 49000 -- -89112.157 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 50000 -- -89035.890 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 51000 -- -89024.802 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 52000 -- -89004.570 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 53000 -- -89003.322 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 54000 -- -89049.037 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 55000 -- -89006.572 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 56000 -- -89019.293 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 57000 -- -89011.495 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 58000 -- -89006.950 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 59000 -- -88994.903 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 60000 -- -89004.504 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 61000 -- -89007.322 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 62000 -- -88993.276 -- t(1) rv(3) sr(3) bf(3) tl(3) -- updating subrates
+ 63000 -- -89003.258 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 64000 -- -89009.644 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+ 65000 -- -88985.139 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 66000 -- -88991.878 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 67000 -- -88999.481 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 68000 -- -88996.754 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 69000 -- -88990.044 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 70000 -- -88986.035 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 71000 -- -89006.947 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 72000 -- -88983.129 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 73000 -- -89007.256 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 74000 -- -89021.238 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+ 75000 -- -88966.983 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 76000 -- -88973.269 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 77000 -- -88939.782 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+ 78000 -- -88891.588 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 79000 -- -88912.525 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 80000 -- -88917.427 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 81000 -- -88879.107 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 82000 -- -88913.579 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 83000 -- -88899.035 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+ 84000 -- -88862.735 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 85000 -- -88843.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 86000 -- -88822.881 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+ 87000 -- -88832.735 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 88000 -- -88855.611 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+ 89000 -- -88853.214 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+ 90000 -- -88817.166 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 91000 -- -88817.927 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+ 92000 -- -88780.511 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+ 93000 -- -88793.983 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+ 94000 -- -88793.465 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+ 95000 -- -88794.349 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+ 96000 -- -88776.040 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating asrv
+ 97000 -- -88771.964 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+ 98000 -- -88782.248 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+ 99000 -- -88793.220 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+100000 -- -88788.952 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+101000 -- -88808.788 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+102000 -- -88808.120 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+103000 -- -88783.049 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+104000 -- -88779.812 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+105000 -- -88744.473 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+106000 -- -88713.983 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+107000 -- -88703.793 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+108000 -- -88705.056 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+109000 -- -88723.098 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+110000 -- -88757.563 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+111000 -- -88718.104 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+112000 -- -88726.497 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+113000 -- -88722.721 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+114000 -- -88715.912 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+115000 -- -88680.762 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+116000 -- -88677.703 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+117000 -- -88592.504 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+118000 -- -88569.713 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+119000 -- -88606.015 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+120000 -- -88554.856 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+121000 -- -88552.352 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+122000 -- -88552.441 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+123000 -- -88537.556 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+124000 -- -88536.113 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+125000 -- -88046.111 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+126000 -- -88055.501 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+127000 -- -88042.717 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+128000 -- -88037.490 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+129000 -- -87998.411 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+130000 -- -87990.586 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+131000 -- -87959.788 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+132000 -- -87932.060 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+133000 -- -87946.676 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+134000 -- -87964.203 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+135000 -- -87965.833 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+136000 -- -87948.175 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+137000 -- -87970.990 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+138000 -- -87967.404 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+139000 -- -87951.401 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+140000 -- -87947.723 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+141000 -- -87956.079 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+142000 -- -87945.395 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+143000 -- -87929.390 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+144000 -- -87964.351 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+145000 -- -87966.540 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+146000 -- -87928.170 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+147000 -- -87962.414 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating tree
+148000 -- -87966.449 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+149000 -- -87943.333 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+150000 -- -87927.407 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+151000 -- -87977.536 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+152000 -- -87960.478 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+153000 -- -87933.212 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+154000 -- -87924.600 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+155000 -- -87940.498 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+156000 -- -87957.019 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+157000 -- -87892.275 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+158000 -- -87957.153 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+159000 -- -87935.470 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+160000 -- -87916.902 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+161000 -- -87959.294 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+162000 -- -87924.229 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+163000 -- -87925.200 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+164000 -- -87866.843 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+165000 -- -87435.052 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+166000 -- -87313.131 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+167000 -- -87287.165 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+168000 -- -87221.246 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+169000 -- -87260.619 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+170000 -- -87206.626 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+171000 -- -87172.785 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+172000 -- -87182.238 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+173000 -- -87157.055 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+174000 -- -87138.699 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+175000 -- -87176.860 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+176000 -- -87137.571 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+177000 -- -87165.417 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+178000 -- -87158.341 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+179000 -- -87163.667 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+180000 -- -87115.247 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+181000 -- -87125.863 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+182000 -- -87138.480 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+183000 -- -87148.587 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+184000 -- -87062.560 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+185000 -- -87095.614 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+186000 -- -87134.622 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+187000 -- -87149.643 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+188000 -- -87153.740 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+189000 -- -87142.180 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+190000 -- -87150.475 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+191000 -- -87136.418 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+192000 -- -87162.705 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+193000 -- -87184.047 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+194000 -- -87133.481 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+195000 -- -87120.071 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+196000 -- -87125.902 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+197000 -- -87121.154 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+198000 -- -87121.965 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+199000 -- -87156.020 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+200000 -- -87105.286 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+201000 -- -87097.277 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+202000 -- -87134.668 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+203000 -- -87106.776 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+204000 -- -87120.720 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+205000 -- -87145.234 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+206000 -- -87079.352 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+207000 -- -87080.737 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+208000 -- -87127.589 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+209000 -- -87105.153 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+210000 -- -87159.116 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+211000 -- -87108.532 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+212000 -- -87079.322 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+213000 -- -87094.441 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+214000 -- -87093.988 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+215000 -- -87111.905 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+216000 -- -87093.741 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+217000 -- -87110.128 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+218000 -- -87116.757 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+219000 -- -87135.137 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+220000 -- -87114.209 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+221000 -- -87119.758 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+222000 -- -87098.889 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+223000 -- -87107.662 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+224000 -- -87100.979 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+225000 -- -87122.237 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+226000 -- -87108.949 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+227000 -- -87095.738 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+228000 -- -87115.789 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+229000 -- -87096.234 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+230000 -- -87129.510 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+231000 -- -87089.611 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+232000 -- -87120.700 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+233000 -- -87068.623 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+234000 -- -87088.202 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+235000 -- -87121.914 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+236000 -- -87141.248 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+237000 -- -87100.698 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+238000 -- -87093.718 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+239000 -- -87135.374 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+240000 -- -87099.976 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+241000 -- -87074.611 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+242000 -- -87108.361 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+243000 -- -87120.388 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+244000 -- -87116.844 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+245000 -- -87139.205 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+246000 -- -87101.281 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+247000 -- -87121.890 -- t(1) rv(3) sr(3) bf(3) tl(5) -- updating basefreq
+248000 -- -87092.590 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+249000 -- -87099.456 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+250000 -- -87056.868 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+251000 -- -87116.436 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+252000 -- -87106.444 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+253000 -- -87100.994 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+254000 -- -87088.192 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+255000 -- -87122.900 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+256000 -- -87083.641 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+257000 -- -87114.077 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+258000 -- -87099.500 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+259000 -- -87081.677 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+260000 -- -87106.159 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+261000 -- -87098.899 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+262000 -- -87077.093 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+263000 -- -87137.315 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+264000 -- -87093.486 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+265000 -- -87109.861 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+266000 -- -87144.497 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+267000 -- -87114.334 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+268000 -- -87099.118 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+269000 -- -87103.670 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+270000 -- -87122.609 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+271000 -- -87076.878 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+272000 -- -87101.534 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+273000 -- -87101.512 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+274000 -- -87104.557 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+275000 -- -87048.866 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+276000 -- -87082.875 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+277000 -- -87085.849 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+278000 -- -87092.219 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+279000 -- -87115.986 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+280000 -- -87087.076 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+281000 -- -87131.518 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+282000 -- -87112.860 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+283000 -- -87084.045 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+284000 -- -87103.910 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+285000 -- -87083.974 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+286000 -- -87064.957 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+287000 -- -87125.516 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+288000 -- -87066.495 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+289000 -- -87096.485 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+290000 -- -87085.480 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+291000 -- -87060.261 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+292000 -- -87091.108 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+293000 -- -87100.251 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+294000 -- -87098.179 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+295000 -- -87120.259 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+296000 -- -87119.987 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+297000 -- -87109.331 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+298000 -- -87105.569 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+299000 -- -87115.143 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+300000 -- -87104.214 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+301000 -- -87116.884 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+302000 -- -87083.615 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+303000 -- -87100.007 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+304000 -- -87122.574 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+305000 -- -87143.165 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+306000 -- -87143.104 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+307000 -- -87084.436 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+308000 -- -87081.953 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+309000 -- -87123.840 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+310000 -- -87109.974 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+311000 -- -87111.109 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+312000 -- -87134.674 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+313000 -- -87122.198 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+314000 -- -87094.169 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+315000 -- -87090.553 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+316000 -- -87080.284 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+317000 -- -87095.075 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+318000 -- -87093.468 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+319000 -- -87130.222 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+320000 -- -87112.848 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+321000 -- -87094.760 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+322000 -- -87132.325 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+323000 -- -87132.182 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+324000 -- -87102.204 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+325000 -- -87136.431 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+326000 -- -87123.925 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+327000 -- -87132.142 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+328000 -- -87144.495 -- t(1) rv(5) sr(2) bf(3) tl(3) -- updating treelength
+329000 -- -87116.338 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+330000 -- -87093.693 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+331000 -- -87112.942 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+332000 -- -87123.307 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+333000 -- -87116.846 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+334000 -- -87104.422 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+335000 -- -87103.039 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+336000 -- -87132.879 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+337000 -- -87100.900 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+338000 -- -87108.726 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+339000 -- -87116.664 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+340000 -- -87114.685 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+341000 -- -87110.479 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+342000 -- -87108.191 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+343000 -- -87093.999 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+344000 -- -87111.777 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+345000 -- -87120.825 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+346000 -- -87109.794 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+347000 -- -87079.575 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+348000 -- -87107.517 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+349000 -- -87124.298 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+350000 -- -87118.626 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+351000 -- -87116.759 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+352000 -- -87106.110 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+353000 -- -87097.285 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+354000 -- -87123.935 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+355000 -- -87122.892 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+356000 -- -87104.511 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+357000 -- -87116.082 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+358000 -- -87089.674 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+359000 -- -87103.425 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+360000 -- -87133.760 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+361000 -- -87102.027 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+362000 -- -87128.694 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+363000 -- -87099.020 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+364000 -- -87104.909 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+365000 -- -87080.574 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+366000 -- -87110.662 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+367000 -- -87117.934 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+368000 -- -87108.680 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+369000 -- -87115.629 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+370000 -- -87056.631 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+371000 -- -87127.646 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+372000 -- -87097.175 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+373000 -- -87087.139 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+374000 -- -87103.766 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+375000 -- -87123.301 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+376000 -- -87067.230 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+377000 -- -87116.471 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+378000 -- -87090.015 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+379000 -- -87109.074 -- t(1) rv(5) sr(2) bf(3) tl(5) -- updating basefreq
+380000 -- -87119.318 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+381000 -- -87064.349 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+382000 -- -87083.755 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+383000 -- -87102.971 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+384000 -- -87055.777 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+385000 -- -87106.442 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+386000 -- -87105.630 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+387000 -- -87104.616 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+388000 -- -87112.199 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+389000 -- -87102.718 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+390000 -- -87059.190 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+391000 -- -87128.974 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+392000 -- -87077.933 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+393000 -- -87098.597 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+394000 -- -87101.491 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+395000 -- -87100.620 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+396000 -- -87096.900 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+397000 -- -87111.729 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+398000 -- -87092.944 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+399000 -- -87142.425 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+400000 -- -87136.761 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+401000 -- -87063.493 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+402000 -- -87097.240 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+403000 -- -87095.271 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+404000 -- -87126.858 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+405000 -- -87077.929 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+406000 -- -87108.632 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+407000 -- -87094.140 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+408000 -- -87127.197 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+409000 -- -87106.034 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+410000 -- -87115.579 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+411000 -- -87110.243 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+412000 -- -87110.430 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+413000 -- -87131.452 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+414000 -- -87126.373 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+415000 -- -87160.060 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+416000 -- -87113.650 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+417000 -- -87097.627 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+418000 -- -87091.191 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+419000 -- -87107.662 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+420000 -- -87089.464 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+421000 -- -87090.391 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+422000 -- -87119.014 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+423000 -- -87134.730 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+424000 -- -87088.862 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+425000 -- -87150.836 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+426000 -- -87086.933 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+427000 -- -87073.870 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+428000 -- -87098.758 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+429000 -- -87092.817 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+430000 -- -87053.247 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+431000 -- -87094.937 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+432000 -- -87125.921 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+433000 -- -87123.821 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+434000 -- -87131.818 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+435000 -- -87090.870 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+436000 -- -87100.170 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+437000 -- -87107.612 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+438000 -- -87099.922 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+439000 -- -87122.492 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+440000 -- -87096.725 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+441000 -- -87117.540 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+442000 -- -87063.627 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+443000 -- -87089.616 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+444000 -- -87072.952 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+445000 -- -87088.615 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+446000 -- -87153.388 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+447000 -- -87101.530 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+448000 -- -87103.569 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+449000 -- -87142.832 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+450000 -- -87144.227 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+451000 -- -87130.247 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+452000 -- -87111.283 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+453000 -- -87115.319 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+454000 -- -87095.848 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+455000 -- -87121.654 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+456000 -- -87124.818 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+457000 -- -87147.370 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+458000 -- -87103.864 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+459000 -- -87094.317 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+460000 -- -87114.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+461000 -- -87102.863 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+462000 -- -87108.355 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+463000 -- -87054.377 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+464000 -- -87095.513 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+465000 -- -87107.249 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+466000 -- -87118.732 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+467000 -- -87075.431 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+468000 -- -87068.975 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+469000 -- -87108.485 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+470000 -- -87097.329 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+471000 -- -87116.689 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+472000 -- -87062.338 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+473000 -- -87093.029 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+474000 -- -87146.511 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+475000 -- -87084.102 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+476000 -- -87098.270 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+477000 -- -87107.133 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+478000 -- -87087.763 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+479000 -- -87104.014 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+480000 -- -87134.161 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+481000 -- -87108.548 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+482000 -- -87060.652 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+483000 -- -87105.875 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+484000 -- -87075.716 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+485000 -- -87083.698 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+486000 -- -87092.234 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+487000 -- -87083.381 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+488000 -- -87092.205 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+489000 -- -87079.834 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+490000 -- -87056.444 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+491000 -- -87101.994 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+492000 -- -87110.689 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+493000 -- -87117.290 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+494000 -- -87099.667 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+495000 -- -87086.019 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+496000 -- -87088.205 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+497000 -- -87108.661 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+498000 -- -87105.088 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+499000 -- -87103.666 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+500000 -- -87088.207 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+501000 -- -87140.747 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+502000 -- -87104.517 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+503000 -- -87084.055 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+504000 -- -87127.086 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+505000 -- -87100.562 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+506000 -- -87105.621 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+507000 -- -87119.457 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+508000 -- -87109.811 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+509000 -- -87116.111 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+510000 -- -87109.941 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+511000 -- -87094.905 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+512000 -- -87115.577 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+513000 -- -87122.050 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+514000 -- -87113.608 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+515000 -- -87103.754 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+516000 -- -87095.209 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+517000 -- -87091.749 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+518000 -- -87088.898 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+519000 -- -87087.336 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+520000 -- -87119.426 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+521000 -- -87091.075 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+522000 -- -87099.013 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+523000 -- -87116.278 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+524000 -- -87086.010 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+525000 -- -87109.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+526000 -- -87118.042 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+527000 -- -87119.399 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+528000 -- -87094.793 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+529000 -- -87114.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+530000 -- -87091.250 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+531000 -- -87084.367 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+532000 -- -87118.131 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+533000 -- -87126.779 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+534000 -- -87096.816 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+535000 -- -87109.130 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+536000 -- -87131.763 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+537000 -- -87121.720 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+538000 -- -87092.282 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+539000 -- -87070.294 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+540000 -- -87127.079 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+541000 -- -87109.071 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+542000 -- -87122.021 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+543000 -- -87098.361 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+544000 -- -87108.742 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+545000 -- -87089.162 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+546000 -- -87097.650 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+547000 -- -87100.846 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+548000 -- -87109.400 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+549000 -- -87092.341 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+550000 -- -87103.347 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+551000 -- -87078.659 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+552000 -- -87104.845 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+553000 -- -87115.268 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+554000 -- -87101.711 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+555000 -- -87110.231 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+556000 -- -87119.855 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+557000 -- -87151.522 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+558000 -- -87086.478 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+559000 -- -87108.554 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+560000 -- -87099.046 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+561000 -- -87103.811 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+562000 -- -87109.030 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+563000 -- -87086.719 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+564000 -- -87155.606 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+565000 -- -87125.168 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+566000 -- -87141.195 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+567000 -- -87099.245 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+568000 -- -87104.971 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+569000 -- -87104.689 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+570000 -- -87115.912 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+571000 -- -87094.823 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+572000 -- -87106.115 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+573000 -- -87134.089 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+574000 -- -87114.552 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+575000 -- -87126.561 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+576000 -- -87113.484 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+577000 -- -87095.206 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+578000 -- -87122.558 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+579000 -- -87131.110 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+580000 -- -87097.076 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+581000 -- -87092.316 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+582000 -- -87145.462 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+583000 -- -87094.082 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+584000 -- -87088.263 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+585000 -- -87105.111 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+586000 -- -87125.488 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+587000 -- -87080.890 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+588000 -- -87098.423 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+589000 -- -87083.872 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+590000 -- -87129.314 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+591000 -- -87068.821 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+592000 -- -87107.190 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+593000 -- -87095.851 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+594000 -- -87085.520 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+595000 -- -87113.521 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+596000 -- -87102.993 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+597000 -- -87101.066 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+598000 -- -87070.458 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+599000 -- -87134.121 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+600000 -- -87101.767 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+601000 -- -87115.335 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+602000 -- -87109.556 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+603000 -- -87061.005 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+604000 -- -87064.876 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+605000 -- -87083.701 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+606000 -- -87123.256 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+607000 -- -87096.898 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+608000 -- -87108.167 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+609000 -- -87085.188 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+610000 -- -87091.892 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+611000 -- -87089.688 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+612000 -- -87109.380 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+613000 -- -87108.992 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+614000 -- -87082.787 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+615000 -- -87097.142 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+616000 -- -87096.404 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+617000 -- -87075.942 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+618000 -- -87092.422 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+619000 -- -87076.617 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+620000 -- -87094.250 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+621000 -- -87063.989 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+622000 -- -87098.856 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+623000 -- -87099.692 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+624000 -- -87084.454 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+625000 -- -87080.725 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+626000 -- -87072.677 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+627000 -- -87131.538 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+628000 -- -87123.630 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+629000 -- -87105.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+630000 -- -87108.483 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+631000 -- -87107.419 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+632000 -- -87085.673 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+633000 -- -87089.089 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+634000 -- -87087.791 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+635000 -- -87118.963 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+636000 -- -87093.948 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+637000 -- -87119.950 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+638000 -- -87092.503 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+639000 -- -87100.270 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+640000 -- -87106.180 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+641000 -- -87087.596 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+642000 -- -87109.521 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+643000 -- -87116.364 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+644000 -- -87109.451 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+645000 -- -87107.081 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+646000 -- -87098.014 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+647000 -- -87109.387 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+648000 -- -87126.910 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+649000 -- -87106.400 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+650000 -- -87103.779 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+651000 -- -87097.525 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+652000 -- -87094.945 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+653000 -- -87106.932 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+654000 -- -87071.588 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+655000 -- -87078.362 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+656000 -- -87109.194 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+657000 -- -87098.520 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+658000 -- -87089.950 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+659000 -- -87064.505 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+660000 -- -87125.875 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+661000 -- -87102.943 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+662000 -- -87099.202 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+663000 -- -87085.148 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+664000 -- -87106.718 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+665000 -- -87076.994 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+666000 -- -87069.337 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+667000 -- -87126.125 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+668000 -- -87091.115 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+669000 -- -87078.340 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+670000 -- -87071.468 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+671000 -- -87109.601 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+672000 -- -87102.909 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+673000 -- -87128.518 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+674000 -- -87115.349 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+675000 -- -87098.996 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+676000 -- -87131.657 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+677000 -- -87136.417 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+678000 -- -87093.651 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+679000 -- -87116.863 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+680000 -- -87114.671 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+681000 -- -87083.053 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+682000 -- -87086.659 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+683000 -- -87099.010 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+684000 -- -87087.997 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+685000 -- -87101.307 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+686000 -- -87112.153 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+687000 -- -87138.697 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+688000 -- -87125.145 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+689000 -- -87138.020 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+690000 -- -87147.308 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+691000 -- -87135.170 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+692000 -- -87103.768 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+693000 -- -87099.468 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+694000 -- -87068.001 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+695000 -- -87111.878 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+696000 -- -87120.881 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+697000 -- -87130.191 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+698000 -- -87126.921 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+699000 -- -87086.634 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+700000 -- -87088.343 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+701000 -- -87136.870 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+702000 -- -87105.435 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+703000 -- -87100.924 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+704000 -- -87085.290 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+705000 -- -87097.490 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+706000 -- -87118.260 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+707000 -- -87104.063 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+708000 -- -87129.154 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+709000 -- -87080.999 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+710000 -- -87115.426 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+711000 -- -87059.244 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+712000 -- -87115.987 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+713000 -- -87101.463 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+714000 -- -87090.394 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+715000 -- -87100.423 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+716000 -- -87102.506 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+717000 -- -87105.106 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+718000 -- -87083.216 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+719000 -- -87091.753 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+720000 -- -87109.682 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+721000 -- -87067.241 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+722000 -- -87110.728 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+723000 -- -87110.380 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+724000 -- -87110.568 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+725000 -- -87140.681 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+726000 -- -87146.785 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+727000 -- -87140.422 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+728000 -- -87101.808 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+729000 -- -87136.100 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+730000 -- -87122.594 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+731000 -- -87112.574 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+732000 -- -87104.303 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+733000 -- -87096.010 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+734000 -- -87094.081 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+735000 -- -87098.442 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+736000 -- -87098.278 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+737000 -- -87099.147 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+738000 -- -87109.843 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+739000 -- -87122.765 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+740000 -- -87120.952 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+741000 -- -87117.052 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+742000 -- -87140.172 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+743000 -- -87116.799 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+744000 -- -87143.710 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+745000 -- -87113.307 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+746000 -- -87089.239 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+747000 -- -87119.992 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+748000 -- -87071.643 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+749000 -- -87120.855 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+750000 -- -87071.419 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+751000 -- -87141.017 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+752000 -- -87110.429 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+753000 -- -87110.768 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+754000 -- -87082.963 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+755000 -- -87129.183 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+756000 -- -87115.132 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+757000 -- -87076.040 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+758000 -- -87063.961 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+759000 -- -87071.732 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+760000 -- -87077.871 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+761000 -- -87115.879 -- t(1) rv(3) sr(3) bf(3) tl(4) -- updating subrates
+762000 -- -87092.748 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+763000 -- -87095.544 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+764000 -- -87086.214 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+765000 -- -87065.571 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+766000 -- -87128.108 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+767000 -- -87072.058 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+768000 -- -87094.968 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+769000 -- -87146.652 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+770000 -- -87073.587 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+771000 -- -87117.485 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+772000 -- -87108.842 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+773000 -- -87097.419 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+774000 -- -87140.759 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+775000 -- -87109.593 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+776000 -- -87144.436 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+777000 -- -87083.750 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+778000 -- -87108.341 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+779000 -- -87110.687 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+780000 -- -87108.971 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+781000 -- -87102.452 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+782000 -- -87099.138 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+783000 -- -87093.238 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+784000 -- -87102.051 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+785000 -- -87106.211 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+786000 -- -87116.060 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+787000 -- -87100.911 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+788000 -- -87109.959 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+789000 -- -87070.984 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+790000 -- -87119.033 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+791000 -- -87085.955 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+792000 -- -87072.844 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+793000 -- -87080.636 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+794000 -- -87090.477 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+795000 -- -87121.915 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+796000 -- -87118.752 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+797000 -- -87088.139 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+798000 -- -87087.445 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+799000 -- -87092.787 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+800000 -- -87096.650 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+801000 -- -87125.226 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+802000 -- -87095.912 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+803000 -- -87087.522 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+804000 -- -87086.369 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+805000 -- -87082.922 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+806000 -- -87136.213 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+807000 -- -87113.615 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+808000 -- -87151.709 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+809000 -- -87132.129 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+810000 -- -87074.941 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+811000 -- -87150.266 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+812000 -- -87102.818 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating treelength
+813000 -- -87112.685 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+814000 -- -87093.025 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+815000 -- -87106.254 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+816000 -- -87122.784 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+817000 -- -87113.799 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+818000 -- -87092.047 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+819000 -- -87088.816 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+820000 -- -87116.845 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+821000 -- -87097.629 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+822000 -- -87093.014 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+823000 -- -87102.463 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+824000 -- -87081.361 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+825000 -- -87106.435 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+826000 -- -87124.034 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+827000 -- -87074.260 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+828000 -- -87106.274 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+829000 -- -87083.240 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+830000 -- -87082.451 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+831000 -- -87059.225 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+832000 -- -87110.790 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+833000 -- -87107.492 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+834000 -- -87095.865 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+835000 -- -87120.630 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+836000 -- -87114.025 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+837000 -- -87098.077 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+838000 -- -87067.660 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+839000 -- -87120.598 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+840000 -- -87132.763 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+841000 -- -87108.835 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+842000 -- -87084.831 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+843000 -- -87130.593 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating tree
+844000 -- -87070.839 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+845000 -- -87086.413 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+846000 -- -87072.867 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+847000 -- -87095.504 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+848000 -- -87147.842 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+849000 -- -87120.754 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+850000 -- -87059.611 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+851000 -- -87129.394 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+852000 -- -87119.548 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+853000 -- -87117.005 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating treelength
+854000 -- -87077.808 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+855000 -- -87099.682 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+856000 -- -87080.970 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+857000 -- -87094.197 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+858000 -- -87089.581 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+859000 -- -87106.263 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+860000 -- -87078.398 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+861000 -- -87085.748 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+862000 -- -87083.865 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+863000 -- -87092.168 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+864000 -- -87122.955 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+865000 -- -87088.804 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+866000 -- -87102.321 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+867000 -- -87096.518 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+868000 -- -87111.157 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+869000 -- -87072.503 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+870000 -- -87112.763 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+871000 -- -87095.126 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+872000 -- -87109.895 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+873000 -- -87126.511 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+874000 -- -87099.068 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+875000 -- -87097.769 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+876000 -- -87087.841 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+877000 -- -87095.227 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+878000 -- -87117.099 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+879000 -- -87109.353 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+880000 -- -87114.617 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+881000 -- -87133.739 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+882000 -- -87095.827 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+883000 -- -87145.573 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+884000 -- -87163.078 -- t(1) rv(3) sr(2) bf(3) tl(2) -- updating treelength
+885000 -- -87129.563 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+886000 -- -87138.652 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+887000 -- -87140.934 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+888000 -- -87119.432 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+889000 -- -87123.054 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+890000 -- -87111.555 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+891000 -- -87093.775 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+892000 -- -87054.078 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+893000 -- -87095.069 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+894000 -- -87135.989 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+895000 -- -87109.856 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+896000 -- -87146.363 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+897000 -- -87107.559 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+898000 -- -87115.818 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+899000 -- -87111.191 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+900000 -- -87080.836 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+901000 -- -87101.987 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+902000 -- -87085.854 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+903000 -- -87104.682 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+904000 -- -87097.396 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+905000 -- -87113.249 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+906000 -- -87126.388 -- t(1) rv(5) sr(2) bf(3) tl(5) -- updating tree
+907000 -- -87111.763 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+908000 -- -87131.161 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+909000 -- -87128.707 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+910000 -- -87088.904 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+911000 -- -87103.623 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+912000 -- -87096.119 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+913000 -- -87120.858 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+914000 -- -87105.334 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+915000 -- -87088.672 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+916000 -- -87058.029 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+917000 -- -87101.664 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+918000 -- -87127.506 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+919000 -- -87099.866 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+920000 -- -87116.637 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+921000 -- -87119.130 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+922000 -- -87125.434 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+923000 -- -87096.950 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+924000 -- -87095.430 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+925000 -- -87100.316 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+926000 -- -87090.303 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+927000 -- -87107.056 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+928000 -- -87104.988 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+929000 -- -87097.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+930000 -- -87119.563 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+931000 -- -87077.031 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+932000 -- -87131.739 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+933000 -- -87120.901 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+934000 -- -87088.095 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+935000 -- -87100.720 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+936000 -- -87098.349 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+937000 -- -87116.678 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+938000 -- -87106.216 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+939000 -- -87093.854 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+940000 -- -87131.217 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+941000 -- -87094.628 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+942000 -- -87121.862 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+943000 -- -87083.284 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+944000 -- -87092.704 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+945000 -- -87132.565 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+946000 -- -87120.189 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+947000 -- -87096.042 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+948000 -- -87112.577 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+949000 -- -87084.024 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+950000 -- -87149.880 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+951000 -- -87103.010 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+952000 -- -87111.795 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+953000 -- -87098.695 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+954000 -- -87092.180 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+955000 -- -87116.143 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+956000 -- -87143.268 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+957000 -- -87129.387 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+958000 -- -87115.339 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+959000 -- -87115.186 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+960000 -- -87113.532 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+961000 -- -87086.885 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+962000 -- -87100.010 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+963000 -- -87143.877 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+964000 -- -87115.963 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+965000 -- -87106.461 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+966000 -- -87123.984 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+967000 -- -87101.126 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+968000 -- -87081.876 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+969000 -- -87100.451 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+970000 -- -87136.759 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+971000 -- -87101.904 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+972000 -- -87128.846 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+973000 -- -87115.581 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+974000 -- -87116.638 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+975000 -- -87120.948 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+976000 -- -87095.724 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+977000 -- -87118.938 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+978000 -- -87105.932 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+979000 -- -87098.751 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+980000 -- -87099.976 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+981000 -- -87140.103 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+982000 -- -87118.304 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+983000 -- -87127.571 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+984000 -- -87118.329 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+985000 -- -87071.816 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+986000 -- -87091.975 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+987000 -- -87111.768 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+988000 -- -87106.685 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+989000 -- -87117.203 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+990000 -- -87065.190 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+991000 -- -87132.724 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+992000 -- -87099.045 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+993000 -- -87083.565 -- t(1) rv(5) sr(2) bf(3) tl(3) -- updating tree
+994000 -- -87133.959 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+995000 -- -87097.253 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+996000 -- -87110.663 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+997000 -- -87076.988 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+998000 -- -87116.313 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+999000 -- -87085.317 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1000000 -- -87115.400 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1001000 -- -87087.302 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1002000 -- -87095.039 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1003000 -- -87122.262 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1004000 -- -87119.135 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1005000 -- -87110.184 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1006000 -- -87101.655 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1007000 -- -87080.982 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1008000 -- -87087.784 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1009000 -- -87105.472 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1010000 -- -87098.654 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1011000 -- -87094.593 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1012000 -- -87118.992 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1013000 -- -87093.928 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1014000 -- -87118.794 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1015000 -- -87113.751 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1016000 -- -87134.571 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1017000 -- -87116.101 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1018000 -- -87129.856 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1019000 -- -87116.372 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1020000 -- -87104.119 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1021000 -- -87099.727 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1022000 -- -87089.317 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1023000 -- -87113.814 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1024000 -- -87123.124 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1025000 -- -87158.387 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1026000 -- -87137.220 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1027000 -- -87063.229 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1028000 -- -87092.088 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1029000 -- -87125.983 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1030000 -- -87109.747 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1031000 -- -87079.579 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1032000 -- -87122.762 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1033000 -- -87107.172 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1034000 -- -87103.201 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1035000 -- -87119.902 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1036000 -- -87125.701 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1037000 -- -87065.708 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1038000 -- -87113.811 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1039000 -- -87080.439 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+1040000 -- -87124.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1041000 -- -87135.344 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1042000 -- -87085.630 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1043000 -- -87112.698 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+1044000 -- -87117.891 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1045000 -- -87099.651 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1046000 -- -87094.882 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1047000 -- -87121.721 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1048000 -- -87095.794 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1049000 -- -87097.022 -- t(1) rv(5) sr(2) bf(3) tl(5) -- updating tree
+1050000 -- -87117.180 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1051000 -- -87126.499 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1052000 -- -87135.723 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1053000 -- -87110.615 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1054000 -- -87094.374 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1055000 -- -87119.997 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1056000 -- -87103.621 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1057000 -- -87125.282 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1058000 -- -87103.828 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1059000 -- -87100.040 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1060000 -- -87121.439 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1061000 -- -87122.793 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1062000 -- -87128.012 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1063000 -- -87131.470 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1064000 -- -87097.293 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1065000 -- -87161.497 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1066000 -- -87150.163 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1067000 -- -87120.391 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1068000 -- -87099.085 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1069000 -- -87140.170 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1070000 -- -87075.119 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1071000 -- -87115.798 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating asrv
+1072000 -- -87107.849 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1073000 -- -87079.680 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1074000 -- -87077.845 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1075000 -- -87117.378 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1076000 -- -87108.461 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1077000 -- -87079.203 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1078000 -- -87115.919 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1079000 -- -87116.498 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1080000 -- -87112.692 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1081000 -- -87061.727 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1082000 -- -87082.984 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1083000 -- -87101.122 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1084000 -- -87094.377 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1085000 -- -87113.585 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1086000 -- -87095.196 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1087000 -- -87090.483 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1088000 -- -87102.766 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1089000 -- -87134.305 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1090000 -- -87096.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1091000 -- -87106.433 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1092000 -- -87098.765 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1093000 -- -87140.847 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1094000 -- -87074.183 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1095000 -- -87113.438 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1096000 -- -87088.993 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1097000 -- -87104.889 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1098000 -- -87088.927 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1099000 -- -87078.279 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1100000 -- -87105.189 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1101000 -- -87077.065 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1102000 -- -87120.228 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1103000 -- -87117.425 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+1104000 -- -87088.614 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1105000 -- -87096.231 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1106000 -- -87107.824 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1107000 -- -87110.316 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1108000 -- -87075.532 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1109000 -- -87131.464 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1110000 -- -87077.072 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1111000 -- -87089.980 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1112000 -- -87074.722 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1113000 -- -87091.676 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1114000 -- -87118.704 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1115000 -- -87127.087 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1116000 -- -87070.708 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1117000 -- -87087.507 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1118000 -- -87094.904 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1119000 -- -87083.181 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1120000 -- -87096.895 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1121000 -- -87128.721 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1122000 -- -87077.723 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1123000 -- -87080.070 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1124000 -- -87136.030 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1125000 -- -87070.290 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1126000 -- -87115.527 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1127000 -- -87125.175 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1128000 -- -87070.992 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1129000 -- -87125.463 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1130000 -- -87125.923 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1131000 -- -87102.118 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1132000 -- -87121.723 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1133000 -- -87075.887 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1134000 -- -87125.013 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1135000 -- -87094.423 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1136000 -- -87101.962 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1137000 -- -87113.501 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1138000 -- -87128.318 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1139000 -- -87112.881 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1140000 -- -87124.096 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1141000 -- -87081.174 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1142000 -- -87084.777 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1143000 -- -87115.712 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1144000 -- -87141.848 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1145000 -- -87125.449 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1146000 -- -87108.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1147000 -- -87069.431 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1148000 -- -87109.472 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1149000 -- -87093.146 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1150000 -- -87107.952 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1151000 -- -87122.573 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1152000 -- -87080.504 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1153000 -- -87102.210 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1154000 -- -87091.352 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1155000 -- -87098.506 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1156000 -- -87101.565 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1157000 -- -87091.667 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1158000 -- -87111.712 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1159000 -- -87093.993 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1160000 -- -87085.230 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1161000 -- -87097.643 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1162000 -- -87108.573 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1163000 -- -87083.293 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1164000 -- -87112.449 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1165000 -- -87073.980 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1166000 -- -87084.146 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1167000 -- -87111.146 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1168000 -- -87060.314 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1169000 -- -87119.570 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1170000 -- -87111.265 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1171000 -- -87146.661 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1172000 -- -87104.564 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1173000 -- -87142.659 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1174000 -- -87126.944 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1175000 -- -87108.218 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1176000 -- -87127.654 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1177000 -- -87158.644 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1178000 -- -87124.083 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1179000 -- -87080.089 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1180000 -- -87104.761 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1181000 -- -87149.538 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1182000 -- -87114.104 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1183000 -- -87133.073 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1184000 -- -87101.854 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1185000 -- -87091.823 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1186000 -- -87106.784 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1187000 -- -87086.218 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1188000 -- -87098.268 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1189000 -- -87097.640 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1190000 -- -87114.283 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1191000 -- -87129.635 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1192000 -- -87102.262 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1193000 -- -87088.368 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1194000 -- -87080.267 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1195000 -- -87114.408 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1196000 -- -87093.306 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1197000 -- -87098.052 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1198000 -- -87116.443 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1199000 -- -87094.797 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1200000 -- -87130.332 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1201000 -- -87095.388 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1202000 -- -87091.166 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1203000 -- -87142.846 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1204000 -- -87105.621 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1205000 -- -87136.422 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1206000 -- -87144.373 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+1207000 -- -87111.621 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1208000 -- -87072.877 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1209000 -- -87144.857 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1210000 -- -87130.109 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1211000 -- -87095.183 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1212000 -- -87091.397 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1213000 -- -87136.896 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1214000 -- -87094.772 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1215000 -- -87094.200 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1216000 -- -87118.195 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1217000 -- -87131.531 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1218000 -- -87107.692 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1219000 -- -87078.421 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1220000 -- -87074.742 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1221000 -- -87107.049 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1222000 -- -87091.592 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1223000 -- -87115.645 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1224000 -- -87120.319 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1225000 -- -87121.448 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1226000 -- -87111.130 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1227000 -- -87090.475 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1228000 -- -87101.734 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1229000 -- -87097.140 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1230000 -- -87143.148 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1231000 -- -87112.328 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1232000 -- -87095.774 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1233000 -- -87079.149 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1234000 -- -87133.161 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1235000 -- -87130.352 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1236000 -- -87091.068 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1237000 -- -87087.584 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1238000 -- -87130.708 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1239000 -- -87138.753 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1240000 -- -87144.904 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1241000 -- -87085.957 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1242000 -- -87102.325 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1243000 -- -87124.559 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1244000 -- -87055.015 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1245000 -- -87125.369 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1246000 -- -87109.770 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1247000 -- -87095.881 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1248000 -- -87092.245 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1249000 -- -87098.736 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1250000 -- -87091.308 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1251000 -- -87115.872 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1252000 -- -87088.626 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1253000 -- -87097.440 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1254000 -- -87119.471 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1255000 -- -87118.609 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1256000 -- -87115.669 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1257000 -- -87109.186 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1258000 -- -87113.036 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1259000 -- -87096.961 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1260000 -- -87106.512 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1261000 -- -87109.035 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1262000 -- -87088.096 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+1263000 -- -87098.685 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1264000 -- -87071.282 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1265000 -- -87149.868 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1266000 -- -87093.074 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+1267000 -- -87119.516 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1268000 -- -87130.954 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1269000 -- -87094.902 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1270000 -- -87114.063 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1271000 -- -87108.883 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1272000 -- -87106.262 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1273000 -- -87138.415 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1274000 -- -87095.863 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1275000 -- -87145.276 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1276000 -- -87088.496 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1277000 -- -87089.311 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1278000 -- -87129.635 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1279000 -- -87123.329 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating basefreq
+1280000 -- -87093.521 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1281000 -- -87101.617 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1282000 -- -87094.017 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1283000 -- -87132.448 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1284000 -- -87090.019 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1285000 -- -87123.074 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1286000 -- -87113.531 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1287000 -- -87101.704 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1288000 -- -87098.379 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1289000 -- -87107.050 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1290000 -- -87088.432 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1291000 -- -87109.659 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1292000 -- -87127.884 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1293000 -- -87091.368 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1294000 -- -87113.823 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1295000 -- -87118.050 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1296000 -- -87106.327 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1297000 -- -87113.280 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1298000 -- -87100.663 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1299000 -- -87105.298 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating treelength
+1300000 -- -87101.869 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1301000 -- -87106.343 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1302000 -- -87104.011 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1303000 -- -87066.635 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1304000 -- -87107.435 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1305000 -- -87086.034 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1306000 -- -87100.198 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1307000 -- -87117.837 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1308000 -- -87128.853 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1309000 -- -87080.510 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1310000 -- -87100.223 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1311000 -- -87124.294 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1312000 -- -87131.781 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1313000 -- -87114.484 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1314000 -- -87122.239 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1315000 -- -87102.244 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1316000 -- -87105.363 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1317000 -- -87111.735 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1318000 -- -87101.934 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1319000 -- -87129.256 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+1320000 -- -87119.922 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+1321000 -- -87088.972 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1322000 -- -87091.687 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1323000 -- -87105.435 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1324000 -- -87080.692 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1325000 -- -87107.831 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1326000 -- -87104.370 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1327000 -- -87106.473 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1328000 -- -87075.970 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1329000 -- -87131.522 -- t(1) rv(5) sr(2) bf(3) tl(3) -- updating treelength
+1330000 -- -87099.538 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1331000 -- -87105.389 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1332000 -- -87051.734 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1333000 -- -87137.622 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1334000 -- -87074.239 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1335000 -- -87115.821 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1336000 -- -87145.978 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1337000 -- -87141.058 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1338000 -- -87114.553 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1339000 -- -87093.685 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1340000 -- -87090.899 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1341000 -- -87113.856 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1342000 -- -87117.620 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1343000 -- -87110.808 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1344000 -- -87062.404 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1345000 -- -87088.443 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1346000 -- -87132.330 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1347000 -- -87070.381 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1348000 -- -87082.109 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1349000 -- -87092.066 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1350000 -- -87087.873 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1351000 -- -87122.270 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1352000 -- -87103.123 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1353000 -- -87116.402 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1354000 -- -87094.605 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1355000 -- -87097.736 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1356000 -- -87108.225 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1357000 -- -87078.057 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1358000 -- -87109.529 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1359000 -- -87124.448 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1360000 -- -87114.331 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1361000 -- -87059.287 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1362000 -- -87108.156 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1363000 -- -87092.686 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1364000 -- -87112.615 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1365000 -- -87077.636 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1366000 -- -87120.324 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1367000 -- -87117.777 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1368000 -- -87106.713 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1369000 -- -87122.038 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1370000 -- -87107.758 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1371000 -- -87082.126 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1372000 -- -87087.887 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1373000 -- -87072.234 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1374000 -- -87073.835 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1375000 -- -87132.322 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1376000 -- -87082.043 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1377000 -- -87134.054 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1378000 -- -87085.751 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1379000 -- -87090.250 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1380000 -- -87090.458 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1381000 -- -87077.682 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1382000 -- -87096.314 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1383000 -- -87092.418 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1384000 -- -87065.862 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1385000 -- -87083.702 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1386000 -- -87096.880 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1387000 -- -87086.308 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1388000 -- -87093.498 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1389000 -- -87099.887 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1390000 -- -87129.598 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1391000 -- -87077.352 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1392000 -- -87054.747 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1393000 -- -87118.007 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1394000 -- -87085.050 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1395000 -- -87094.447 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1396000 -- -87064.138 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1397000 -- -87072.774 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1398000 -- -87084.963 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1399000 -- -87123.881 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1400000 -- -87090.011 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1401000 -- -87090.070 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1402000 -- -87099.001 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating tree
+1403000 -- -87076.187 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1404000 -- -87093.649 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1405000 -- -87068.988 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1406000 -- -87076.198 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1407000 -- -87121.333 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1408000 -- -87097.093 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1409000 -- -87100.975 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1410000 -- -87105.834 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1411000 -- -87075.474 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1412000 -- -87101.560 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1413000 -- -87069.509 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1414000 -- -87141.247 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1415000 -- -87051.085 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1416000 -- -87116.563 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1417000 -- -87117.174 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1418000 -- -87083.484 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1419000 -- -87107.974 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1420000 -- -87127.176 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1421000 -- -87099.625 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1422000 -- -87055.292 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1423000 -- -87108.984 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1424000 -- -87109.599 -- t(1) rv(3) sr(3) bf(3) tl(4) -- updating tree
+1425000 -- -87077.433 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1426000 -- -87119.529 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1427000 -- -87137.438 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1428000 -- -87152.524 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1429000 -- -87084.926 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1430000 -- -87108.695 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1431000 -- -87088.583 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1432000 -- -87106.000 -- t(1) rv(5) sr(2) bf(3) tl(5) -- updating tree
+1433000 -- -87104.468 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1434000 -- -87113.120 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1435000 -- -87112.018 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1436000 -- -87112.359 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1437000 -- -87135.478 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1438000 -- -87079.506 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1439000 -- -87075.085 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1440000 -- -87089.033 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1441000 -- -87079.049 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1442000 -- -87103.652 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1443000 -- -87092.079 -- t(1) rv(3) sr(3) bf(3) tl(3) -- updating tree
+1444000 -- -87097.173 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1445000 -- -87055.987 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1446000 -- -87080.588 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1447000 -- -87102.759 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1448000 -- -87099.354 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1449000 -- -87080.369 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1450000 -- -87116.127 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1451000 -- -87086.243 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1452000 -- -87086.688 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1453000 -- -87087.020 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1454000 -- -87069.378 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1455000 -- -87056.478 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1456000 -- -87085.645 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1457000 -- -87069.274 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1458000 -- -87079.467 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+1459000 -- -87104.401 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1460000 -- -87105.666 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1461000 -- -87078.398 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1462000 -- -87077.520 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1463000 -- -87119.699 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1464000 -- -87074.299 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1465000 -- -87106.848 -- t(1) rv(5) sr(2) bf(3) tl(3) -- updating tree
+1466000 -- -87087.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1467000 -- -87088.528 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1468000 -- -87082.262 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1469000 -- -87108.132 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1470000 -- -87084.505 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1471000 -- -87107.345 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1472000 -- -87130.934 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1473000 -- -87114.013 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1474000 -- -87095.878 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1475000 -- -87101.983 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1476000 -- -87108.162 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1477000 -- -87099.253 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1478000 -- -87067.647 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1479000 -- -87064.685 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1480000 -- -87095.709 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1481000 -- -87097.752 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1482000 -- -87101.099 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1483000 -- -87088.525 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1484000 -- -87063.721 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1485000 -- -87081.360 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1486000 -- -87107.248 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1487000 -- -87089.654 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1488000 -- -87106.107 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1489000 -- -87116.809 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1490000 -- -87061.740 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1491000 -- -87108.347 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1492000 -- -87116.316 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1493000 -- -87112.780 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1494000 -- -87078.946 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1495000 -- -87115.118 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1496000 -- -87125.661 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1497000 -- -87102.513 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1498000 -- -87099.192 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1499000 -- -87128.030 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1500000 -- -87089.782 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1501000 -- -87106.022 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1502000 -- -87089.878 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1503000 -- -87082.562 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1504000 -- -87090.215 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1505000 -- -87084.158 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1506000 -- -87096.654 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1507000 -- -87088.493 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1508000 -- -87108.069 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1509000 -- -87099.858 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1510000 -- -87094.711 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1511000 -- -87093.809 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1512000 -- -87106.257 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1513000 -- -87097.769 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1514000 -- -87105.569 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1515000 -- -87088.361 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1516000 -- -87111.651 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1517000 -- -87078.003 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1518000 -- -87070.163 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1519000 -- -87076.121 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1520000 -- -87097.254 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1521000 -- -87126.746 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1522000 -- -87121.584 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1523000 -- -87120.804 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1524000 -- -87084.742 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1525000 -- -87115.934 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1526000 -- -87115.209 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1527000 -- -87111.083 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1528000 -- -87098.455 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1529000 -- -87092.308 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1530000 -- -87108.436 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1531000 -- -87087.495 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1532000 -- -87090.560 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1533000 -- -87114.483 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1534000 -- -87063.422 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1535000 -- -87103.562 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1536000 -- -87079.516 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1537000 -- -87087.461 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1538000 -- -87112.102 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1539000 -- -87086.401 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1540000 -- -87091.626 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1541000 -- -87101.819 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1542000 -- -87088.956 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating basefreq
+1543000 -- -87067.132 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1544000 -- -87110.825 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1545000 -- -87107.943 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1546000 -- -87104.470 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1547000 -- -87111.123 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1548000 -- -87090.932 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1549000 -- -87069.779 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1550000 -- -87106.896 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1551000 -- -87115.925 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1552000 -- -87076.761 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1553000 -- -87106.787 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1554000 -- -87081.984 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1555000 -- -87095.045 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1556000 -- -87060.688 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1557000 -- -87081.209 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1558000 -- -87107.999 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1559000 -- -87088.271 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1560000 -- -87101.004 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1561000 -- -87118.192 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1562000 -- -87117.743 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1563000 -- -87116.866 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1564000 -- -87123.612 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1565000 -- -87094.520 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1566000 -- -87097.531 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1567000 -- -87089.240 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1568000 -- -87116.094 -- t(1) rv(5) sr(2) bf(3) tl(3) -- updating asrv
+1569000 -- -87085.380 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1570000 -- -87101.952 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1571000 -- -87087.969 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1572000 -- -87094.224 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1573000 -- -87120.701 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1574000 -- -87091.846 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1575000 -- -87118.843 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1576000 -- -87131.045 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1577000 -- -87112.066 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1578000 -- -87119.660 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1579000 -- -87110.194 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1580000 -- -87114.146 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1581000 -- -87115.958 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1582000 -- -87121.277 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1583000 -- -87153.813 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1584000 -- -87095.413 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1585000 -- -87107.378 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+1586000 -- -87105.150 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1587000 -- -87135.486 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1588000 -- -87119.439 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1589000 -- -87139.624 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1590000 -- -87127.401 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1591000 -- -87112.883 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1592000 -- -87101.042 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1593000 -- -87111.800 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1594000 -- -87070.050 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1595000 -- -87116.470 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1596000 -- -87091.052 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1597000 -- -87103.657 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1598000 -- -87119.085 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1599000 -- -87079.120 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1600000 -- -87116.619 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1601000 -- -87103.481 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1602000 -- -87105.811 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1603000 -- -87150.788 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1604000 -- -87098.175 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1605000 -- -87076.727 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1606000 -- -87088.138 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1607000 -- -87057.810 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1608000 -- -87106.489 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1609000 -- -87111.575 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1610000 -- -87120.570 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1611000 -- -87093.674 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1612000 -- -87115.785 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1613000 -- -87092.007 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1614000 -- -87086.887 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1615000 -- -87091.947 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1616000 -- -87074.910 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1617000 -- -87112.308 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1618000 -- -87070.235 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1619000 -- -87071.945 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1620000 -- -87099.189 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1621000 -- -87087.432 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1622000 -- -87093.184 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1623000 -- -87114.220 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1624000 -- -87086.302 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1625000 -- -87115.740 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1626000 -- -87111.852 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1627000 -- -87085.734 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1628000 -- -87088.382 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1629000 -- -87085.260 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1630000 -- -87092.138 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1631000 -- -87077.736 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1632000 -- -87056.668 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1633000 -- -87097.710 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1634000 -- -87104.458 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1635000 -- -87095.945 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1636000 -- -87090.709 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1637000 -- -87111.426 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1638000 -- -87102.036 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1639000 -- -87091.975 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1640000 -- -87103.294 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1641000 -- -87133.919 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1642000 -- -87121.141 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1643000 -- -87098.717 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1644000 -- -87094.072 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1645000 -- -87120.213 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1646000 -- -87096.878 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1647000 -- -87106.022 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1648000 -- -87120.701 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1649000 -- -87120.191 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1650000 -- -87091.133 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1651000 -- -87095.166 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1652000 -- -87134.273 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1653000 -- -87092.026 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1654000 -- -87071.079 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1655000 -- -87134.977 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1656000 -- -87107.543 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1657000 -- -87110.387 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1658000 -- -87132.533 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1659000 -- -87088.200 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1660000 -- -87130.860 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1661000 -- -87110.853 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1662000 -- -87102.535 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1663000 -- -87127.635 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1664000 -- -87102.458 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1665000 -- -87114.646 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1666000 -- -87094.954 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1667000 -- -87115.219 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+1668000 -- -87116.807 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1669000 -- -87103.236 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1670000 -- -87101.177 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1671000 -- -87120.715 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1672000 -- -87089.285 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating basefreq
+1673000 -- -87109.370 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1674000 -- -87085.483 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1675000 -- -87081.604 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1676000 -- -87101.049 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1677000 -- -87114.322 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1678000 -- -87081.897 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1679000 -- -87098.694 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1680000 -- -87134.862 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1681000 -- -87099.820 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1682000 -- -87089.847 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1683000 -- -87085.758 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1684000 -- -87114.429 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1685000 -- -87101.552 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1686000 -- -87067.189 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1687000 -- -87046.437 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1688000 -- -87090.236 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1689000 -- -87099.847 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+1690000 -- -87087.514 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1691000 -- -87101.962 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1692000 -- -87073.377 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1693000 -- -87113.609 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1694000 -- -87096.082 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1695000 -- -87110.061 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1696000 -- -87132.673 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1697000 -- -87077.328 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1698000 -- -87099.400 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating asrv
+1699000 -- -87110.169 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1700000 -- -87105.174 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1701000 -- -87116.057 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating tree
+1702000 -- -87077.784 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1703000 -- -87130.591 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1704000 -- -87118.934 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1705000 -- -87115.254 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1706000 -- -87122.356 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1707000 -- -87075.096 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1708000 -- -87107.468 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1709000 -- -87050.829 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1710000 -- -87079.311 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1711000 -- -87101.563 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1712000 -- -87142.523 -- t(1) rv(3) sr(2) bf(3) tl(2) -- updating subrates
+1713000 -- -87069.082 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1714000 -- -87090.778 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1715000 -- -87081.743 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1716000 -- -87105.294 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1717000 -- -87084.645 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1718000 -- -87069.707 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1719000 -- -87092.126 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1720000 -- -87094.011 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1721000 -- -87101.071 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1722000 -- -87116.852 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1723000 -- -87104.348 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1724000 -- -87077.198 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1725000 -- -87112.793 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1726000 -- -87112.110 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1727000 -- -87076.426 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1728000 -- -87108.632 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1729000 -- -87081.201 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1730000 -- -87111.619 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1731000 -- -87114.639 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1732000 -- -87104.674 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1733000 -- -87082.370 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1734000 -- -87142.917 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1735000 -- -87099.394 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1736000 -- -87062.012 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1737000 -- -87127.035 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1738000 -- -87084.311 -- t(1) rv(5) sr(2) bf(3) tl(4) -- updating tree
+1739000 -- -87141.881 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1740000 -- -87100.222 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1741000 -- -87129.279 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1742000 -- -87113.502 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1743000 -- -87106.569 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1744000 -- -87110.852 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1745000 -- -87111.917 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1746000 -- -87107.071 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1747000 -- -87106.532 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1748000 -- -87110.252 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1749000 -- -87076.891 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1750000 -- -87108.650 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1751000 -- -87116.775 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1752000 -- -87135.221 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1753000 -- -87079.877 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1754000 -- -87090.125 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1755000 -- -87088.732 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1756000 -- -87101.257 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1757000 -- -87104.462 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1758000 -- -87118.658 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1759000 -- -87142.662 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1760000 -- -87091.886 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1761000 -- -87085.407 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1762000 -- -87099.483 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1763000 -- -87083.555 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1764000 -- -87100.598 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1765000 -- -87089.042 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1766000 -- -87115.621 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1767000 -- -87090.263 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1768000 -- -87098.036 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1769000 -- -87070.963 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1770000 -- -87092.599 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1771000 -- -87132.426 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1772000 -- -87101.033 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1773000 -- -87114.631 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1774000 -- -87071.747 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1775000 -- -87103.721 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1776000 -- -87113.122 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1777000 -- -87121.786 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1778000 -- -87125.930 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating asrv
+1779000 -- -87116.868 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1780000 -- -87101.896 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1781000 -- -87071.826 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1782000 -- -87121.382 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1783000 -- -87074.190 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1784000 -- -87095.322 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1785000 -- -87073.539 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1786000 -- -87078.891 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1787000 -- -87094.561 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1788000 -- -87106.894 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1789000 -- -87066.319 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1790000 -- -87122.493 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1791000 -- -87084.759 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1792000 -- -87081.271 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1793000 -- -87118.893 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1794000 -- -87098.666 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1795000 -- -87122.129 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1796000 -- -87116.306 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1797000 -- -87092.051 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1798000 -- -87087.219 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1799000 -- -87093.481 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1800000 -- -87108.931 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1801000 -- -87134.198 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1802000 -- -87119.204 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1803000 -- -87106.249 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1804000 -- -87095.619 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1805000 -- -87106.794 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1806000 -- -87099.703 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1807000 -- -87097.430 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1808000 -- -87084.795 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1809000 -- -87113.052 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating asrv
+1810000 -- -87122.287 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1811000 -- -87093.431 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1812000 -- -87112.955 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1813000 -- -87099.346 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating subrates
+1814000 -- -87135.648 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1815000 -- -87081.585 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1816000 -- -87108.143 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1817000 -- -87127.105 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1818000 -- -87127.812 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1819000 -- -87130.422 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1820000 -- -87107.644 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1821000 -- -87076.021 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1822000 -- -87066.485 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1823000 -- -87115.467 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+1824000 -- -87108.406 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1825000 -- -87089.458 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1826000 -- -87063.857 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1827000 -- -87086.434 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1828000 -- -87108.124 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1829000 -- -87148.904 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1830000 -- -87134.164 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1831000 -- -87133.276 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1832000 -- -87142.421 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1833000 -- -87128.802 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1834000 -- -87131.759 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1835000 -- -87130.613 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1836000 -- -87108.277 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1837000 -- -87127.316 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1838000 -- -87109.384 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1839000 -- -87098.301 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1840000 -- -87125.221 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1841000 -- -87093.802 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1842000 -- -87106.437 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1843000 -- -87119.913 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1844000 -- -87089.733 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1845000 -- -87106.057 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1846000 -- -87152.468 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1847000 -- -87117.628 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1848000 -- -87085.018 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1849000 -- -87122.283 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1850000 -- -87093.909 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1851000 -- -87119.308 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1852000 -- -87109.020 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1853000 -- -87102.023 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1854000 -- -87118.982 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1855000 -- -87082.158 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1856000 -- -87086.871 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1857000 -- -87103.451 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1858000 -- -87097.899 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1859000 -- -87136.409 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1860000 -- -87085.070 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1861000 -- -87112.749 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1862000 -- -87061.310 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1863000 -- -87076.587 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1864000 -- -87086.022 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1865000 -- -87049.875 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1866000 -- -87123.641 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1867000 -- -87116.508 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1868000 -- -87108.434 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1869000 -- -87097.220 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1870000 -- -87096.336 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1871000 -- -87079.692 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1872000 -- -87094.847 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1873000 -- -87094.620 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1874000 -- -87090.668 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1875000 -- -87117.671 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1876000 -- -87092.027 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1877000 -- -87115.428 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1878000 -- -87091.021 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1879000 -- -87095.330 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1880000 -- -87078.303 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1881000 -- -87130.146 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1882000 -- -87075.214 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1883000 -- -87103.490 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1884000 -- -87118.385 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating tree
+1885000 -- -87107.766 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1886000 -- -87097.416 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1887000 -- -87127.378 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1888000 -- -87098.449 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1889000 -- -87092.274 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1890000 -- -87100.125 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1891000 -- -87085.153 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1892000 -- -87111.655 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1893000 -- -87116.844 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1894000 -- -87097.156 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1895000 -- -87103.558 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1896000 -- -87110.657 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1897000 -- -87130.568 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1898000 -- -87128.584 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1899000 -- -87128.013 -- t(1) rv(3) sr(3) bf(3) tl(3) -- updating tree
+1900000 -- -87112.490 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1901000 -- -87085.071 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1902000 -- -87142.586 -- t(1) rv(3) sr(2) bf(3) tl(2) -- updating treelength
+1903000 -- -87089.740 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1904000 -- -87097.436 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1905000 -- -87084.823 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1906000 -- -87099.508 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating basefreq
+1907000 -- -87100.376 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1908000 -- -87113.359 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1909000 -- -87078.952 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating subrates
+1910000 -- -87093.679 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1911000 -- -87085.980 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1912000 -- -87120.674 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1913000 -- -87078.679 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1914000 -- -87118.164 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1915000 -- -87146.460 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1916000 -- -87093.848 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1917000 -- -87065.055 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1918000 -- -87108.889 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1919000 -- -87166.501 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1920000 -- -87120.239 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1921000 -- -87110.035 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1922000 -- -87115.100 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1923000 -- -87122.503 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating asrv
+1924000 -- -87118.397 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1925000 -- -87102.255 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1926000 -- -87130.125 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1927000 -- -87113.605 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1928000 -- -87106.024 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1929000 -- -87113.949 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1930000 -- -87115.817 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1931000 -- -87095.771 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1932000 -- -87106.268 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1933000 -- -87113.905 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1934000 -- -87107.680 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1935000 -- -87098.002 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1936000 -- -87123.067 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1937000 -- -87079.272 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1938000 -- -87106.901 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1939000 -- -87114.461 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1940000 -- -87112.324 -- t(1) rv(4) sr(2) bf(4) tl(4) -- updating tree
+1941000 -- -87087.639 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1942000 -- -87102.075 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1943000 -- -87096.958 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1944000 -- -87100.535 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1945000 -- -87104.963 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1946000 -- -87092.983 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1947000 -- -87119.198 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1948000 -- -87101.863 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating basefreq
+1949000 -- -87103.723 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1950000 -- -87112.441 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1951000 -- -87096.937 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1952000 -- -87118.343 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1953000 -- -87082.850 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1954000 -- -87123.573 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1955000 -- -87138.553 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1956000 -- -87102.470 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1957000 -- -87117.970 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1958000 -- -87141.059 -- t(1) rv(4) sr(2) bf(3) tl(5) -- updating treelength
+1959000 -- -87129.176 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1960000 -- -87130.280 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1961000 -- -87078.184 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1962000 -- -87101.343 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating subrates
+1963000 -- -87099.211 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1964000 -- -87132.546 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1965000 -- -87121.751 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1966000 -- -87107.041 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating tree
+1967000 -- -87108.596 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating subrates
+1968000 -- -87103.810 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1969000 -- -87086.976 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1970000 -- -87119.787 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating treelength
+1971000 -- -87089.290 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1972000 -- -87113.430 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1973000 -- -87106.550 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating asrv
+1974000 -- -87118.499 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1975000 -- -87073.123 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1976000 -- -87119.068 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1977000 -- -87073.612 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1978000 -- -87107.060 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1979000 -- -87109.157 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating treelength
+1980000 -- -87055.336 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1981000 -- -87124.498 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating tree
+1982000 -- -87083.563 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating asrv
+1983000 -- -87133.054 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1984000 -- -87104.057 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1985000 -- -87110.956 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1986000 -- -87093.957 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+1987000 -- -87096.309 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating treelength
+1988000 -- -87132.770 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating subrates
+1989000 -- -87113.826 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1990000 -- -87157.020 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1991000 -- -87091.474 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating asrv
+1992000 -- -87086.526 -- t(1) rv(4) sr(2) bf(3) tl(4) -- updating tree
+1993000 -- -87087.474 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+1994000 -- -87080.992 -- t(1) rv(3) sr(2) bf(3) tl(3) -- updating basefreq
+1995000 -- -87090.818 -- t(1) rv(3) sr(2) bf(3) tl(5) -- updating treelength
+1996000 -- -87111.509 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating tree
+1997000 -- -87127.287 -- t(1) rv(4) sr(2) bf(3) tl(3) -- updating tree
+1998000 -- -87072.936 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating subrates
+1999000 -- -87093.855 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating treelength
+2000000 -- -87120.794 -- t(1) rv(3) sr(2) bf(3) tl(4) -- updating basefreq
+0 -- 1.0000
+1 -- 3.2004
+2 -- 2.0019
+3 -- 3.0005
+4 -- 3.9642
+
+Acceptance Rates:
+Parameter      Tries  Accep  Rate
+tree        857083  42794     0.05
+asrv        285208  180342     0.63
+subrates    285327  158786     0.56
+basefreq    286188  146632     0.51
+treelength  286194  217110     0.76
+
+Marginal lnL Estimates:
+AICM                           = -175019.77
+Harmonic mean (old way)        = -87215.98
+Harmonic mean (Suchard)        = -87215.98
+Marginal likelihood (smoothed) = -87144.66
+
+Restaurant: tree
+   Average Partition = (1,1,1,1,1,1) [6,1]
+   Unique partitions:
+       1 -- 1000001 1.0000 1.0000 (1,1,1,1,1,1) [6,1]
+   Posterior and prior probability distributions for the number of tables:
+       1 -- 1000001 1.0000 0.0659
+       2 --     0 0.0000 0.2554
+       3 --     0 0.0000 0.3656
+       4 --     0 0.0000 0.2370
+       5 --     0 0.0000 0.0671
+       6 --     0 0.0000 0.0090
+   Probability that patrons are seated at the same table:
+      1    2 -- 1.0000
+      1    3 -- 1.0000
+      1    4 -- 1.0000
+      1    5 -- 1.0000
+      1    6 -- 1.0000
+      2    3 -- 1.0000
+      2    4 -- 1.0000
+      2    5 -- 1.0000
+      2    6 -- 1.0000
+      3    4 -- 1.0000
+      3    5 -- 1.0000
+      3    6 -- 1.0000
+      4    5 -- 1.0000
+      4    6 -- 1.0000
+      5    6 -- 1.0000
+Restaurant: asrv
+   Average Partition = (1,2,3,3,2,1) [6,3]
+   Unique partitions:
+       1 -- 803785 0.8038 0.8038 (1,2,3,3,2,1) [6,3]
+       2 -- 142548 0.1425 0.9463 (1,2,3,4,2,1) [6,4]
+       3 -- 30270 0.0303 0.9766 (1,2,3,3,2,4) [6,4]
+       4 -- 14990 0.0150 0.9916 (1,2,3,3,4,1) [6,4]
+       5 --  4963 0.0050 0.9966 (1,2,3,4,2,5) [6,5]
+       6 --  2926 0.0029 0.9995 (1,2,3,4,5,1) [6,5]
+       7 --   360 0.0004 0.9998 (1,2,3,3,4,5) [6,5]
+       8 --   159 0.0002 1.0000 (1,2,3,4,5,6) [6,6]
+   Posterior and prior probability distributions for the number of tables:
+       1 --     0 0.0000 0.0649
+       2 --     0 0.0000 0.2614
+       3 -- 803785 0.8038 0.3648
+       4 -- 187808 0.1878 0.2306
+       5 --  8249 0.0082 0.0702
+       6 --   159 0.0002 0.0081
+   Probability that patrons are seated at the same table:
+      1    2 -- 0.0000
+      1    3 -- 0.0000
+      1    4 -- 0.0000
+      1    5 -- 0.0000
+      1    6 -- 0.9642
+      2    3 -- 0.0000
+      2    4 -- 0.0000
+      2    5 -- 0.9816
+      2    6 -- 0.0000
+      3    4 -- 0.8494
+      3    5 -- 0.0000
+      3    6 -- 0.0000
+      4    5 -- 0.0000
+      4    6 -- 0.0000
+      5    6 -- 0.0000
+Restaurant: subrates
+   Average Partition = (1,1,1,2,2,2) [6,2]
+   Unique partitions:
+       1 -- 998175 0.9982 0.9982 (1,1,1,2,2,2) [6,2]
+       2 --  1693 0.0017 0.9999 (1,1,1,2,3,2) [6,3]
+       3 --   133 0.0001 1.0000 (1,2,1,3,3,3) [6,3]
+   Posterior and prior probability distributions for the number of tables:
+       1 --     0 0.0000 0.0665
+       2 -- 998175 0.9982 0.2570
+       3 --  1826 0.0018 0.3743
+       4 --     0 0.0000 0.2219
+       5 --     0 0.0000 0.0731
+       6 --     0 0.0000 0.0072
+   Probability that patrons are seated at the same table:
+      1    2 -- 0.9999
+      1    3 -- 1.0000
+      1    4 -- 0.0000
+      1    5 -- 0.0000
+      1    6 -- 0.0000
+      2    3 -- 0.9999
+      2    4 -- 0.0000
+      2    5 -- 0.0000
+      2    6 -- 0.0000
+      3    4 -- 0.0000
+      3    5 -- 0.0000
+      3    6 -- 0.0000
+      4    5 -- 0.9983
+      4    6 -- 1.0000
+      5    6 -- 0.9983
+Restaurant: basefreq
+   Average Partition = (1,2,3,1,2,3) [6,3]
+   Unique partitions:
+       1 -- 999470 0.9995 0.9995 (1,2,3,1,2,3) [6,3]
+       2 --   443 0.0004 0.9999 (1,2,3,1,4,3) [6,4]
+       3 --    51 0.0001 1.0000 (1,2,3,4,2,3) [6,4]
+       4 --    37 0.0000 1.0000 (1,2,3,1,2,4) [6,4]
+   Posterior and prior probability distributions for the number of tables:
+       1 --     0 0.0000 0.0710
+       2 --     0 0.0000 0.2546
+       3 -- 999470 0.9995 0.3560
+       4 --   531 0.0005 0.2374
+       5 --     0 0.0000 0.0730
+       6 --     0 0.0000 0.0080
+   Probability that patrons are seated at the same table:
+      1    2 -- 0.0000
+      1    3 -- 0.0000
+      1    4 -- 0.9999
+      1    5 -- 0.0000
+      1    6 -- 0.0000
+      2    3 -- 0.0000
+      2    4 -- 0.0000
+      2    5 -- 0.9996
+      2    6 -- 0.0000
+      3    4 -- 0.0000
+      3    5 -- 0.0000
+      3    6 -- 1.0000
+      4    5 -- 0.0000
+      4    6 -- 0.0000
+      5    6 -- 0.0000
+Restaurant: treelength
+   Average Partition = (1,2,3,4,2,3) [6,4]
+   Unique partitions:
+       1 -- 334864 0.3349 0.3349 (1,2,3,4,2,3) [6,4]
+       2 -- 201441 0.2014 0.5363 (1,2,3,4,5,3) [6,5]
+       3 -- 142381 0.1424 0.6787 (1,2,3,4,3,3) [6,4]
+       4 -- 124462 0.1245 0.8031 (1,2,3,1,2,3) [6,3]
+       5 -- 77663 0.0777 0.8808 (1,2,3,1,4,3) [6,4]
+       6 -- 54550 0.0545 0.9354 (1,2,3,1,3,3) [6,3]
+       7 -- 23426 0.0234 0.9588 (1,1,2,3,4,2) [6,4]
+       8 -- 19301 0.0193 0.9781 (1,1,2,3,2,2) [6,3]
+       9 --  9569 0.0096 0.9877 (1,1,2,3,1,2) [6,3]
+      10 --  5718 0.0057 0.9934 (1,2,3,4,1,3) [6,4]
+      11 --  1246 0.0012 0.9946 (1,1,2,1,3,2) [6,3]
+      12 --   808 0.0008 0.9954 (1,1,2,1,2,2) [6,2]
+      13 --   741 0.0007 0.9962 (1,2,3,4,2,5) [6,5]
+      14 --   457 0.0005 0.9966 (1,2,3,4,5,6) [6,6]
+      15 --   411 0.0004 0.9970 (1,2,3,4,5,5) [6,5]
+      16 --   359 0.0004 0.9974 (1,2,3,1,2,4) [6,4]
+      17 --   331 0.0003 0.9977 (1,2,2,3,2,2) [6,3]
+      18 --   289 0.0003 0.9980 (1,2,3,2,4,3) [6,4]
+      19 --   271 0.0003 0.9983 (1,2,3,2,3,3) [6,3]
+      20 --   231 0.0002 0.9985 (1,2,2,3,4,2) [6,4]
+      21 --   203 0.0002 0.9987 (1,2,3,1,4,4) [6,4]
+      22 --   194 0.0002 0.9989 (1,2,2,1,2,2) [6,2]
+      23 --   188 0.0002 0.9991 (1,2,3,1,1,3) [6,3]
+      24 --   180 0.0002 0.9993 (1,2,3,1,4,5) [6,5]
+      25 --   162 0.0002 0.9994 (1,1,2,3,3,2) [6,3]
+      26 --   122 0.0001 0.9996 (1,2,3,4,3,5) [6,5]
+      27 --   116 0.0001 0.9997 (1,2,2,1,3,2) [6,3]
+      28 --   101 0.0001 0.9998 (1,1,2,1,1,2) [6,2]
+      29 --    54 0.0001 0.9998 (1,1,2,3,4,4) [6,4]
+      30 --    27 0.0000 0.9999 (1,2,3,2,1,3) [6,3]
+      31 --    21 0.0000 0.9999 (1,2,3,4,5,2) [6,5]
+      32 --    19 0.0000 0.9999 (1,1,2,3,2,4) [6,4]
+      33 --    19 0.0000 0.9999 (1,2,3,4,4,3) [6,4]
+      34 --    14 0.0000 0.9999 (1,1,2,3,1,4) [6,4]
+      35 --    14 0.0000 1.0000 (1,2,3,2,2,3) [6,3]
+      36 --    13 0.0000 1.0000 (1,2,3,4,2,2) [6,4]
+      37 --    10 0.0000 1.0000 (1,1,2,3,4,5) [6,5]
+      38 --    10 0.0000 1.0000 (1,1,2,1,3,4) [6,4]
+      39 --     6 0.0000 1.0000 (1,2,3,1,2,2) [6,3]
+      40 --     5 0.0000 1.0000 (1,2,3,4,1,5) [6,5]
+      41 --     3 0.0000 1.0000 (1,2,3,1,3,4) [6,4]
+      42 --     1 0.0000 1.0000 (1,2,3,1,4,2) [6,4]
+   Posterior and prior probability distributions for the number of tables:
+       1 --     0 0.0000 0.0660
+       2 --  1103 0.0011 0.2594
+       3 -- 210243 0.2102 0.3573
+       4 -- 585267 0.5853 0.2355
+       5 -- 202931 0.2029 0.0741
+       6 --   457 0.0005 0.0077
+   Probability that patrons are seated at the same table:
+      1    2 -- 0.0547
+      1    3 -- 0.0000
+      1    4 -- 0.2601
+      1    5 -- 0.0156
+      1    6 -- 0.0000
+      2    3 -- 0.0009
+      2    4 -- 0.0028
+      2    5 -- 0.4707
+      2    6 -- 0.0009
+      3    4 -- 0.0000
+      3    5 -- 0.2180
+      3    6 -- 0.9974
+      4    5 -- 0.0005
+      4    6 -- 0.0000
+      5    6 -- 0.2185

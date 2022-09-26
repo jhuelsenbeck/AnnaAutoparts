@@ -1,0 +1,81 @@
+\documentclass[10pt]{letter}
+
+\usepackage{times}  
+\usepackage{amsmath, amsfonts, amssymb, graphicx, mathrsfs}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+
+% Margins
+\topmargin=-1.5in % Moves the top of the document 1 inch above the default
+\textheight=9in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{Editor in Chief. \emph{Systematic Biology} \\
+%Carlyle House \\
+%Carlyle Road \\
+%Cambridge CB4 3DN UK} 
+Department of Zoology \\
+Southern Illinois University \\
+Carbondale, IL 62901 USA} 
+
+%----------------------------------------------------------------------------------------
+%	EVE LETTERHEAD & SIGNATURE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{flushleft}
+\begin{figure}
+\includegraphics[width=6.5in]{eve_letterhead.pdf}
+\end{figure}
+\end{flushleft} 
+
+\signature{Brian R. Moore} 
+%\vfil
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+\opening{Dear Dr. Anderson,} 
+ 
+Please find enclosed our manuscript `\emph{Bayesian Analysis of Partitioned Data}' coauthored by Jim McGuire, Fredrik Ronquist, John Huelsenbeck, and myself.
+Briefly, the manuscript describes a new Bayesian approach for estimating phylogeny from partitioned sequence alignments under a Dirichlep process prior (DPP) model.
+This approach is in the spirit of the conventional `mixed-model' approach for accommodating variation in the substitution process across an alignment, were the biologist first defines a candidate `partition scheme' (that specifies the number of different substitution models and the assignment of data elements to those models), and then estimates the fit of that mixed model to the dataset by estimating the marginal likelihood, and finally using Bayes factors to chose among candidate mixed-models.
+Our new approach, however, allows both the number of process partitions and the assignment of data elements (nucleotide sites or sets of sites) to those process partitions as random variables under the DPP model.
+Accordingly, the phylogeny is estimated while effectively integrating over all possible partition schemes.
+  
+This manuscript has a long history: it was previously submitted to \emph{Systematic Biology} (USYB-$2010$-$093$), and was accepted with major revisions prior under the previous EIC, Ron DeBry.
+The revisions included a comprehensive simulation study to validate the statistical behavior of the method.
+This simulation study was both involved and computationally expensive, requiring $\approx 46$ years of computational time.
+Unfortunately, we were unable to complete the revisions in a timely manner, and so deadline for submitting the revision elapsed.
+
+Nevertheless, we have included our responses to the reviewer comments, which have all been carefully addressed.
+If you decide that it is necessary to have our manuscript reviewed again, we would be grateful if it could be handled by an AE with expertise in Bayesian inference:
+we would suggest Mark Holder or Tanja Stadler.
+Conversely, we wish to declare a conflict with (and so avoid reviews by) Mark Pagel and Andrew Meade.
+
+Given that this is an unusual situation, I would be more than happy to discuss any questions you may have.
+
+Thank you in advance for your kind consideration of our manuscript.
+
+\closing{Sincerely,
+
+\begin{figure}
+\includegraphics[width=1.2in]{signature.pdf}
+\end{figure}}
+
+
+%\encl{Curriculum vitae, employment form} % List your enclosed documents here, comment this out to get rid of the "encl:"
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
