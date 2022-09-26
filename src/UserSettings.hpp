@@ -44,6 +44,7 @@ class UserSettings {
         
     private:
         bool            yesNo(std::string str);
+        std::string     executablePath;
         std::string     inputFile;
         std::string     treeFile;
         std::string     outputFile;

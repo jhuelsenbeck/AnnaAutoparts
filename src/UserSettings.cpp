@@ -12,6 +12,8 @@
 
 UserSettings::UserSettings(int argc,  char* argv[]) {
 
+    executablePath = argv[0];
+
     // set up a vector of arguments
     std::vector<std::string> settings;
 #   if defined(DEBUG_MODE)
@@ -162,6 +164,7 @@ void UserSettings::print(void) {
     std::cout << std::fixed << std::setprecision(3);
     
     std::cout << "   User Settings" << std::endl;
+    std::cout << "   * Executable path                                       = \"" << executablePath << "\"" << std::endl;
     std::cout << "   * Input file path and name                              = \"" << inputFile << "\"" << std::endl;
     std::cout << "   * Tree file path and name                               = \"" << treeFile << "\"" << std::endl;
     std::cout << "   * Output file path and name                             = \"" << outputFile << "\"" << std::endl;
