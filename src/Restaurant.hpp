@@ -1,0 +1,50 @@
+#ifndef Restaurant_hpp
+#define Restaurant_hpp
+
+#include <map>
+#include <set>
+#include <string>
+class Model;
+class Parameter;
+class Table;
+class UserSettings;
+
+
+
+class Restaurant {
+
+    public:
+                            Restaurant(void) = delete;
+                            Restaurant(const Restaurant& r) = delete;
+                            Restaurant(Model* mp, UserSettings*, bool sf, double a, int np, Parameter* parm);
+                           ~Restaurant(void);
+        Table*              addTable(void);
+        static double       calculateAlphaFromExpectedNumberOfTables(double expT, int np);
+        static double       expectedNumberOfTables(double a, int np);
+        Table*              findTableWithPatron(int idx);
+        double              getConcentrationParameter(void) { return alpha; }
+        int                 getNumPatrons(void) { return numPatrons; }
+        int                 getNumTables(void) { return (int)tables.size(); }
+        Parameter*          getParameter(void) { return parameter; }
+        void                print(void);
+        void                removeTable(Table* tab);
+        std::string         rgf(void);
+        double              update(void);
+        
+    private:
+        Table*              addAuxiliaryTable(void);
+        Table*              chooseTable(std::map<Table*,double>& lnProbs);
+        void                normalize(std::map<Table*,double>& lnProbs);
+        double              sampleAlpha(int k, int n, double oldAlpha, double a, double b);
+        Model*              modelPtr;
+        UserSettings*       settingsPtr;
+        double              alpha;
+        int                 numPatrons;
+        std::set<Table*>    tables;
+        Parameter*          parameter;
+        bool                isSeatingRv;
+        double              gammaAlpha;
+        double              gammaBeta;
+};
+
+#endif
