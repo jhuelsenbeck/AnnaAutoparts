@@ -53,7 +53,8 @@ std::string ParameterTreeLength::getValuesAsString(int precision) {
 double ParameterTreeLength::lnProbability(void) {
 
 #   if defined(USE_GAMMA_DIRICHLET)
-    return Probability::Gamma::lnPdf(alphaT, betaT, length[0]);
+    double c = Probability::Gamma::cdf(alphaT, betaT, MAX_LENGTH) - Probability::Gamma::cdf(alphaT, betaT, MIN_LENGTH);
+    return (Probability::Gamma::lnPdf(alphaT, betaT, length[0]) - log(c));
 #   else
     return Probability::Gamma::lnPdf(numBranches, lambda, length[0]);
 #   endif

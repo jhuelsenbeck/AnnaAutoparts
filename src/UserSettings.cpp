@@ -39,6 +39,7 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     settings.push_back("2.0");
     settings.push_back("-si");
     settings.push_back("/Users/johnh/Desktop/AutoParts2_data/sim.in");
+    argc = (int)settings.size() + 1;
 #   else
     for (int i=1; i<argc; i++)
         {
@@ -51,11 +52,13 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     if (argc == 1)
         {
         usage();
+        std::cout << "   * Executable path                                       = \"" << executablePath << "\"" << std::endl;
         Msg::error("Expecting command line arguments");
         }
     if (argc % 2 == 0)
         {
         usage();
+        std::cout << "   * Executable path                                       = \"" << executablePath << "\"" << std::endl;
         Msg::error("Expecting an odd number of arguments");
         }
 
@@ -169,7 +172,6 @@ void UserSettings::print(void) {
     std::cout << std::fixed << std::setprecision(3);
     
     std::cout << "   User Settings" << std::endl;
-    std::cout << "   * Executable path                                       = \"" << executablePath << "\"" << std::endl;
     std::cout << "   * Input file path and name                              = \"" << inputFile << "\"" << std::endl;
     std::cout << "   * Tree file path and name                               = \"" << treeFile << "\"" << std::endl;
     std::cout << "   * Output file path and name                             = \"" << outputFile << "\"" << std::endl;
