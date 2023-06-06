@@ -15,7 +15,7 @@ class Restaurant {
 
     public:
                             Restaurant(void) = delete;
-                            Restaurant(const Restaurant& r) = delete;
+                            Restaurant(const Restaurant& r);
                             Restaurant(Model* mp, UserSettings*, bool sf, double a, int np, Parameter* parm);
                            ~Restaurant(void);
         Table*              addTable(void);
@@ -34,6 +34,7 @@ class Restaurant {
     private:
         Table*              addAuxiliaryTable(void);
         Table*              chooseTable(std::map<Table*,double>& lnProbs);
+        Parameter*          copyParameter(Parameter* parmToCopy);
         void                normalize(std::map<Table*,double>& lnProbs);
         double              sampleAlpha(int k, int n, double oldAlpha, double a, double b);
         Model*              modelPtr;

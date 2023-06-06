@@ -12,6 +12,7 @@ class ParameterGammaShape : public Parameter {
 
     public:
                                 ParameterGammaShape(void) = delete;
+                                ParameterGammaShape(const ParameterGammaShape& parm);
                                 ParameterGammaShape(Model* m, UserSettings* s, double lam, int nc);
         void                    accept(void);
         std::string             getHeader(void);

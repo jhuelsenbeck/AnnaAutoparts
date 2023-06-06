@@ -83,7 +83,7 @@ Alignment::Alignment(const Alignment& a) {
 Alignment::Alignment(std::string fn) {
 
     std::cout << "   Reading data" << std::endl;
-    std::cout << "   * File = \"" << fn << "\"" << std::endl << std::endl;
+    std::cout << "   * File = \"" << fn << "\"" << std::endl;
     
     // get last component as file name
     std::size_t found = fn.find_last_of("/\\");
@@ -253,7 +253,70 @@ Alignment::Alignment(std::string fn) {
     
     /* close the file */
     seqStream.close();
-
+    
+    // adjust alignment by paring away the excluded sites
+    int numExcluded = 0;
+    for (int i=0; i<numSites; i++)
+        {
+        if (isExcluded[i] == true)
+            numExcluded++;
+        }
+    if (numExcluded > 0)
+        {
+        int tempNumSites = numSites - numExcluded;
+        int** tempMatrix = new int*[numTaxa];
+        tempMatrix[0] = new int[numTaxa * tempNumSites];
+        for (int i=1; i<numTaxa; i++)
+            tempMatrix[i] = tempMatrix[i-1] + tempNumSites;
+        for (int i=0; i<numTaxa; i++)
+            for (int j=0; j<tempNumSites; j++)
+                tempMatrix[i][j] = 0;
+        bool* tempIsExcluded = new bool[tempNumSites];
+        int* tempPartitionId = new int[tempNumSites];
+        for (int i=0; i<tempNumSites; i++)
+            {
+            tempIsExcluded[i] = false;
+            tempPartitionId[i] = -1;
+            }
+        int k = 0;
+        for (int j=0; j<numSites; j++)
+            {
+            if (isExcluded[j] == false)
+                {
+                for (int i=0; i<numTaxa; i++)
+                    tempMatrix[i][k] = matrix[i][j];
+                tempIsExcluded[k] = false;
+                tempPartitionId[k] = partitionId[j];
+                k++;
+                }
+            }
+        if (k != tempNumSites)
+            Msg::error("Problem excluding sites from the analysis");
+            
+        delete [] matrix[0];
+        delete [] matrix;
+        delete [] isExcluded;
+        delete [] partitionId;
+        matrix = tempMatrix;
+        isExcluded = tempIsExcluded;
+        partitionId = tempPartitionId;
+        numSites = tempNumSites;
+        }
+        
+    // check that each partition has at least one site
+    std::map<int,int> partSizes;
+    for (int i=0; i<numSites; i++)
+        {
+        int pid = partitionId[i];
+        std::map<int,int>::iterator it = partSizes.find(pid);
+        if (it == partSizes.end())
+            partSizes.insert( std::make_pair(pid,1) );
+        else
+            it->second++;
+        }
+    for (std::map<int,int>::iterator it = partSizes.begin(); it != partSizes.end(); it++)
+        std::cout << "   * Number of sites for subset " << it->first << " = " << it->second << std::endl;
+    std::cout << std::endl;
 }
 
 Alignment::~Alignment(void) {
@@ -1051,7 +1114,7 @@ void Alignment::print(void) {
         for (int c=0; c<numSites; c++)
             {
             std::cout << std::setw(5) << c << " -- ";
-            std::cout << std::setw(2) << partitionId[c] << " -- ";
+            std::cout << std::setw(2) << partitionId[c] << " " << isExcluded[c] << " -- ";
             for (int t=0; t<numTaxa; t++)
                 {
                 std::cout << std::setw(2) << convertNuc(matrix[t][c]) << " ";
@@ -1064,7 +1127,7 @@ void Alignment::print(void) {
         for (int c=0; c<numSitePatterns; c++)
             {
             std::cout << std::setw(5) << c << " -- ";
-            std::cout << std::setw(2) << compressedPartitionId[c] << " -- ";
+            std::cout << std::setw(2) << compressedPartitionId[c] << " " << isExcluded[c] << " -- ";
             std::cout << std::setw(5) << patternCount[c] << " -- ";
             for (int t=0; t<numTaxa; t++)
                 {

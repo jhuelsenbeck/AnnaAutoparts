@@ -18,9 +18,10 @@ class Model {
 
     public:
                                         Model(void) = delete;
-                                        Model(Model& m) = delete;
-                                        Model(UserSettings* s, int nss);
+                                        Model(Model& m);
+                                        Model(UserSettings* s, int nt, int nss);
                                         Model(Alignment* aln, UserSettings* s);
+                                        Model(Alignment* aln, UserSettings* s, Model* cm);
                                        ~Model(void);
         Alignment*                      getAlignment(void) { return alignment; }
         std::vector<double>&            getBaseFrequencies(int subsetId);
@@ -61,11 +62,11 @@ class Model {
         void                            initializeParameters(UserSettings* s, std::vector<std::string> tn);
         void                            initializeProposalProbabilities(void);
         void                            initializeStateSets(UserSettings* s);
+        UserSettings*                   settings;
         Alignment*                      alignment;
         int                             numSubsets;
         StateSets*                      stateSets;
         std::vector<Chunk*>             chunks;
-        std::vector<Parameter*>         parameters;
         Restaurant*                     treeRestaurant;
         Restaurant*                     treeLengthRestaurant;
         Restaurant*                     freqsRestaurant;

@@ -12,6 +12,7 @@ class ParameterTreeLength : public Parameter {
 
     public:
                                 ParameterTreeLength(void) = delete;
+                                ParameterTreeLength(const ParameterTreeLength& parm);
                                 ParameterTreeLength(Model* m, UserSettings* s, double lam, int nb);
                                 ParameterTreeLength(Model* m, UserSettings* s, double a, double b);
         void                    accept(void);
@@ -29,6 +30,7 @@ class ParameterTreeLength : public Parameter {
         double                  numBranches;
         double                  alphaT;
         double                  betaT;
+        double                  lambda;
         double                  length[2];
 };
 

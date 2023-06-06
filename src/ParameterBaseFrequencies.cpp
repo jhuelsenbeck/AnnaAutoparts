@@ -10,6 +10,14 @@
 
 
 
+ParameterBaseFrequencies::ParameterBaseFrequencies(const ParameterBaseFrequencies& parm) : Parameter(parm) {
+
+    std::cout << "ParameterBaseFrequencies copy constructor" << std::endl;
+
+    freqs[0] = parm.freqs[0];
+    freqs[1] = parm.freqs[1];
+}
+
 ParameterBaseFrequencies::ParameterBaseFrequencies(Model* m, UserSettings* s) : Parameter(m, s, "Base Frequencies") {
 
     updateModifiesEigens = true;

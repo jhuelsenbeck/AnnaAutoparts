@@ -11,6 +11,7 @@ class Chunk {
 
     public:
                                     Chunk(void) = delete;
+                                    Chunk(const Chunk& c);
                                     Chunk(int myId, Alignment* a, Model* m, int nc);
                                    ~Chunk(void);
         void                        flipActiveTransitionProbabilities(void);

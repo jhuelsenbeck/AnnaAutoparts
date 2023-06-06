@@ -12,6 +12,7 @@ class ParameterExchangabilityRates : public Parameter {
 
     public:
                                 ParameterExchangabilityRates(void) = delete;
+                                ParameterExchangabilityRates(const ParameterExchangabilityRates& parm);
                                 ParameterExchangabilityRates(Model* m, UserSettings* s);
         void                    accept(void);
         std::string             getHeader(void);

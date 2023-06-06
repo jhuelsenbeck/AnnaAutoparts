@@ -12,10 +12,12 @@
 #include "ParameterSummaryReal.hpp"
 #include "UserSettings.hpp"
 
-#define POSTERIOR_ANALYSIS
+#undef POSTERIOR_ANALYSIS
 
 void printHeader(void);
 void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
+
+
 
 #if defined(POSTERIOR_ANALYSIS)
 
@@ -37,6 +39,7 @@ int main(int argc, char* argv[]) {
 
     // read in the data
     Alignment data(settings.getInputFile());
+    //data.print();
         
     // set up the phylogenetic model
     Model model(&data, &settings);
@@ -90,7 +93,8 @@ int main(int argc, char* argv[]) {
     UserSettings settings(argc, argv);
     settings.print();
     
-    int numReplicates = 1000;
+    int numTaxa = 10;
+    int numReplicates = 100;
     int numPartitions = 5;
     int numSitesPerPartition = 100;
     Results results;
@@ -98,13 +102,14 @@ int main(int argc, char* argv[]) {
     for (int i=0; i<numReplicates; i++)
         {
         // set up the phylogenetic model
-        Model simModel(&settings, numPartitions);
+        Model simModel(&settings, numTaxa, numPartitions);
         
         // get the simulated data
         Alignment* data = simModel.simulate(settings.getSimFile(), numSitesPerPartition);
                 
         // set up the phylogenetic model
-        Model model(data, &settings);
+        //Model model(data, &settings);
+        Model model(data, &settings, &simModel);
         
         // perform the MCMC analysis
         Mcmc mcmc(&model, &settings);

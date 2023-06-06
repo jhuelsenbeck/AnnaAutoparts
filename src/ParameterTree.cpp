@@ -13,6 +13,14 @@
 
 
 
+ParameterTree::ParameterTree(const ParameterTree& parm) : Parameter(parm) {
+
+    std::cout << "ParameterTree copy constructor" << std::endl;
+
+    trees[0] = new Tree(*parm.trees[0]);
+    trees[1] = new Tree(*parm.trees[1]);
+}
+
 ParameterTree::ParameterTree(Model* m, UserSettings* s, std::vector<std::string> tn) : Parameter(m, s, "Tree") {
 
     updateModifiesEigens = false;

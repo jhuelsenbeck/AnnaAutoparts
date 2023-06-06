@@ -13,6 +13,7 @@ void Table::clean(void) {
 
     myRestaurant = NULL;
     delete parm;
+    parm = NULL;
     patrons.clear();
 }
 

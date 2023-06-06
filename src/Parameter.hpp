@@ -13,6 +13,7 @@ class Parameter {
 
     public:
                                     Parameter(void) = delete;
+                                    Parameter(const Parameter& parm);
                                     Parameter(Model* m, UserSettings* s, std::string n) { modelPtr = m; userSettings = s; name = n; }
         virtual                    ~Parameter(void) { }
         virtual void                accept(void) = 0;

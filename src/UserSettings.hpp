@@ -12,6 +12,7 @@ class UserSettings {
                         UserSettings(int argc,  char* argv[]);
         double          getAlphaT(void);
         double          getBetaT(void);
+        double          getBranchLengthLambda(void) { return brlenLambda; }
         int             getBurnIn(void) { return burnIn; }
         double          getGammaShapeLambda(void) { return shapeLambda; }
         double          getExpectedNumberTreeLengthTables(void) { return etLength; }
@@ -54,6 +55,7 @@ class UserSettings {
         int             sampleFrequency;
         int             burnIn;
         int             numGammaCategories;
+        double          brlenLambda;
         double          treeLengthMean;
         double          treeLengthSD;
         double          shapeLambda;

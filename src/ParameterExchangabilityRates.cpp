@@ -10,6 +10,14 @@
 
 
 
+ParameterExchangabilityRates::ParameterExchangabilityRates(const ParameterExchangabilityRates& parm) : Parameter(parm) {
+
+    std::cout << "ParameterExchangabilityRates copy constructor" << std::endl;
+
+    rates[0] = parm.rates[0];
+    rates[1] = parm.rates[1];
+}
+
 ParameterExchangabilityRates::ParameterExchangabilityRates(Model* m, UserSettings* s) : Parameter(m, s, "Exchangeability Rates") {
 
     updateModifiesEigens = true;

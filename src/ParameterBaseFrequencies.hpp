@@ -12,6 +12,7 @@ class ParameterBaseFrequencies : public Parameter {
 
     public:
                                 ParameterBaseFrequencies(void) = delete;
+                                ParameterBaseFrequencies(const ParameterBaseFrequencies& parm);
                                 ParameterBaseFrequencies(Model* m, UserSettings* s);
         void                    accept(void);
         std::vector<double>&    getFreqs(void) { return freqs[0]; }

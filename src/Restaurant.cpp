@@ -4,7 +4,12 @@
 #include "Chunk.hpp"
 #include "Model.hpp"
 #include "Msg.hpp"
+#include "Parameter.hpp"
 #include "ParameterBaseFrequencies.hpp"
+#include "ParameterExchangabilityRates.hpp"
+#include "ParameterGammaShape.hpp"
+#include "ParameterTree.hpp"
+#include "ParameterTreeLength.hpp"
 #include "Probability.hpp"
 #include "RandomVariable.hpp"
 #include "Restaurant.hpp"
@@ -14,6 +19,33 @@
 #include "UserSettings.hpp"
 
 
+
+Restaurant::Restaurant(const Restaurant& r) {
+
+    modelPtr = r.modelPtr;
+    settingsPtr = r.settingsPtr;
+    alpha = r.alpha;
+    numPatrons = r.numPatrons;
+    isSeatingRv = r.isSeatingRv;
+    gammaAlpha = r.gammaAlpha;
+    gammaBeta = r.gammaBeta;
+        
+    parameter = copyParameter(r.parameter);
+    if (parameter == NULL)
+        Msg::error("Could not find parameter to copy in restaurant copy constructor");
+        
+    TableFactory& tf = TableFactory::tableFactory();
+    for (Table* t : r.tables)
+        {
+        Table* newT = tf.getTable();
+        newT->setRestaurant(this);
+        std::set<int>& tPatrons = t->getPatrons();
+        for (int i : tPatrons)
+            newT->addPatron(i);
+        newT->addParameter( copyParameter(t->getParameter()) );
+        tables.insert(newT);
+        }
+}
 
 Restaurant::Restaurant(Model* mp, UserSettings* s, bool sf, double a, int np, Parameter* parm) {
 
@@ -115,7 +147,7 @@ Table* Restaurant::addAuxiliaryTable(void) {
 double Restaurant::calculateAlphaFromExpectedNumberOfTables(double expT, int np) {
 
     if (expT > np)
-        Msg::error("The expected number of tables cannot be larger than the number of patrons");
+        Msg::error("The expected number of tables cannot be larger than the number of patrons (" + std::to_string(np) + "<" + std::to_string(expT) + ")");
      if (expT <= 1.0)
         Msg::error("The expected number of tables cannot be less than one");
        
@@ -167,6 +199,22 @@ Table* Restaurant::chooseTable(std::map<Table*,double>& lnProbs) {
             return it->first;
         }
     return NULL;
+}
+
+Parameter* Restaurant::copyParameter(Parameter* parmToCopy) {
+
+    Parameter* parm = NULL;
+    if (dynamic_cast<ParameterTree*>(parmToCopy) != NULL)
+        parm = new ParameterTree(*dynamic_cast<ParameterTree*>(parmToCopy));
+    else if (dynamic_cast<ParameterTreeLength*>(parmToCopy) != NULL)
+        parm = new ParameterTreeLength(*dynamic_cast<ParameterTreeLength*>(parmToCopy));
+    else if (dynamic_cast<ParameterBaseFrequencies*>(parmToCopy) != NULL)
+        parm = new ParameterBaseFrequencies(*dynamic_cast<ParameterBaseFrequencies*>(parmToCopy));
+    else if (dynamic_cast<ParameterExchangabilityRates*>(parmToCopy) != NULL)
+        parm = new ParameterExchangabilityRates(*dynamic_cast<ParameterExchangabilityRates*>(parmToCopy));
+    else if (dynamic_cast<ParameterGammaShape*>(parmToCopy) != NULL)
+        parm = new ParameterGammaShape(*dynamic_cast<ParameterGammaShape*>(parmToCopy));
+    return parm;
 }
 
 double Restaurant::expectedNumberOfTables(double a, int np) {
@@ -396,7 +444,7 @@ double Restaurant::update(void) {
     if (isSeatingRv == true)
         {
         std::set<Table*> auxiliaryTables;
-        int numAuxliaryTables = 3;
+        int numAuxliaryTables = 10; // was 3
         for (int n=0; n<numPatrons; n++)
             {
             // get the chunk for the patron

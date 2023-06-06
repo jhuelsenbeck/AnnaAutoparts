@@ -13,6 +13,18 @@
 
 
 
+Chunk::Chunk(const Chunk& c) {
+
+    alignment = c.alignment;
+    model = c.model;
+    id = c.id;
+    numSites = c.numSites;
+    numGammaCategories = c.numGammaCategories;
+
+    condLikes = new ConditionalLikelihoods(alignment, numGammaCategories);
+    transProbs = new TransitionProbabilities(model, this, 2*alignment->getNumTaxa()-1, numGammaCategories);
+}
+
 Chunk::Chunk(int myId, Alignment* a, Model* m, int nc) {
 
     alignment = a;

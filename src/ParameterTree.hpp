@@ -12,6 +12,7 @@ class ParameterTree : public Parameter {
 
     public:
                                 ParameterTree(void) = delete;
+                                ParameterTree(const ParameterTree& parm);
                                 ParameterTree(Model* m, UserSettings* s, std::vector<std::string> tn);
         void                    accept(void);
         Tree*                   getActiveTree(void) { return trees[0]; }

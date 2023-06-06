@@ -11,6 +11,18 @@
 
 
 
+ParameterGammaShape::ParameterGammaShape(const ParameterGammaShape& parm) : Parameter(parm) {
+
+    std::cout << "ParameterGammaShape copy constructor" << std::endl;
+
+    lambda = parm.lambda;
+    shape[0] = parm.shape[0];
+    shape[1] = parm.shape[1];
+    numGammaCategories = parm.numGammaCategories;
+    gammaRates[0] = parm.gammaRates[0];
+    gammaRates[1] = parm.gammaRates[1];
+}
+
 ParameterGammaShape::ParameterGammaShape(Model* m, UserSettings* s, double lam, int nc) : Parameter(m, s, "Gamma Shape") {
 
     updateModifiesEigens = false;

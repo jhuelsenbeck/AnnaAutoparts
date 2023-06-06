@@ -18,9 +18,9 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     std::vector<std::string> settings;
 #   if defined(DEBUG_MODE)
     settings.push_back("-i");
-    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/conifer.in");
+    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/hummer.in");
     settings.push_back("-o");
-    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/conifer.out");
+    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/hummer.out");
     settings.push_back("-n");
     settings.push_back("100000");
     settings.push_back("-p");
@@ -67,13 +67,14 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     treeFile                      = "";
     outputFile                    = "";
     simFile                       = "";
-    numMcmcCycles                 = 1000;
+    numMcmcCycles                 = 400000;
     burnIn                        = 0;
     numGammaCategories            = 1;
     treeLengthMean                = 1.0;
     treeLengthSD                  = 1.0;
+    brlenLambda                   = 10.0;
     shapeLambda                   = 2.0;
-    printFrequency                = 100;
+    printFrequency                = 1000;
     sampleFrequency               = 100;
     isConcentrationParameterFixed = true;
 	priorConcMean                 = 3.0;
@@ -120,6 +121,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 treeLengthMean = stof(settings[i]);
             else if (currentArg == "-lenSD")
                 treeLengthSD = stof(settings[i]);
+            else if (currentArg == "-lenLam")
+                brlenLambda = stof(settings[i]);
             else if (currentArg == "-e")
                 shapeLambda = stof(settings[i]);
              else if (currentArg == "-c")
@@ -172,6 +175,7 @@ void UserSettings::print(void) {
     std::cout << std::fixed << std::setprecision(3);
     
     std::cout << "   User Settings" << std::endl;
+    std::cout << "   * Executable path                                       = \"" << executablePath << "\"" << std::endl;
     std::cout << "   * Input file path and name                              = \"" << inputFile << "\"" << std::endl;
     std::cout << "   * Tree file path and name                               = \"" << treeFile << "\"" << std::endl;
     std::cout << "   * Output file path and name                             = \"" << outputFile << "\"" << std::endl;
@@ -214,6 +218,7 @@ void UserSettings::usage(void) {
     std::cout << "   Program options for model parameters:" << std::endl;
     std::cout << "   * -lenMean : Tree length mean" << std::endl;
     std::cout << "   * -lenSD   : Tree length standard deviation" << std::endl;
+    std::cout << "   * -lenLam  : Tree length exponential parameter" << std::endl;
     std::cout << "   * -e       : Exponential parameter for shape parameter describing ASRV" << std::endl;
     std::cout << "   * -g       : Number of gamma categories" << std::endl;
     std::cout << std::endl;

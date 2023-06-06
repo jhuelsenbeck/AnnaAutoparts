@@ -24,27 +24,29 @@
 
 
 
-Model::Model(UserSettings* s, int nss) {
+Model::Model(UserSettings* s, int nt, int nss) {
 
+    settings = s;
     stateSets = NULL;
     numSubsets =  nss;
-    int numTaxa = 10;
+    int numTaxa = nt;
     std::vector<std::string> taxonNames;
     for (int i=0; i<numTaxa; i++)
         taxonNames.push_back("Taxon_" + std::to_string(i+1));
         
-    initializeParameters(s, taxonNames);
+    initializeParameters(settings, taxonNames);
 }
 
 Model::Model(Alignment* aln, UserSettings* s) {
 
     std::cout << "   Initializing phylogenetic model" << std::endl;
 
+    settings = s;
     stateSets = NULL;
     alignment = aln;
-    initializeStateSets(s);
-    initializeDataChunks(s);
-    initializeParameters(s, alignment->getTaxonNames());
+    initializeStateSets(settings);
+    initializeDataChunks(settings);
+    initializeParameters(settings, alignment->getTaxonNames());
     initializeProposalProbabilities();
     for (int i=0; i<chunks.size(); i++)
         {
@@ -52,6 +54,63 @@ Model::Model(Alignment* aln, UserSettings* s) {
         chunks[i]->updateTransitionProbabilities();
         }
     std::cout << std::endl;
+}
+
+Model::Model(Alignment* aln, UserSettings* s, Model* tm) {
+
+    std::cout << "   Initializing phylogenetic model" << std::endl;
+
+    settings = s;
+    stateSets = NULL;
+    alignment = aln;
+    initializeStateSets(settings);
+    initializeDataChunks(settings);
+
+    treeRestaurant       = new Restaurant(*tm->treeRestaurant);
+    treeLengthRestaurant = new Restaurant(*tm->treeLengthRestaurant);
+    freqsRestaurant      = new Restaurant(*tm->freqsRestaurant);
+    ratesRestaurant      = new Restaurant(*tm->ratesRestaurant);
+    shapeRestaurant      = new Restaurant(*tm->shapeRestaurant);
+    initializeProposalProbabilities();
+    
+    treeRestaurant->print();
+    treeLengthRestaurant->print();
+    freqsRestaurant->print();
+    ratesRestaurant->print();
+    shapeRestaurant->print();
+
+    for (int i=0; i<chunks.size(); i++)
+        {
+        chunks[i]->updateRateMatrix();
+        chunks[i]->updateTransitionProbabilities();
+        }
+    std::cout << std::endl;
+}
+
+Model::Model(Model& m) {
+
+    settings = m.settings;
+    alignment = m.alignment;
+    numSubsets = m.numSubsets;
+    
+    if (m.stateSets != NULL)
+        initializeStateSets(settings);
+
+    treeRestaurant       = new Restaurant(*m.treeRestaurant);
+    treeLengthRestaurant = new Restaurant(*m.treeLengthRestaurant);
+    freqsRestaurant      = new Restaurant(*m.freqsRestaurant);
+    ratesRestaurant      = new Restaurant(*m.ratesRestaurant);
+    shapeRestaurant      = new Restaurant(*m.shapeRestaurant);
+    
+    initializeProposalProbabilities();
+    
+    for (int i=0; i<m.chunks.size(); i++)
+        {
+        Chunk* c = new Chunk(*m.chunks[i]);
+        c->updateRateMatrix();
+        c->updateTransitionProbabilities();
+        chunks.push_back(c);
+        }
 }
 
 Model::~Model(void) {
@@ -393,8 +452,8 @@ void Model::initializeParameters(UserSettings* s, std::vector<std::string> tn) {
     
     // set up the tree-length restaurant
     double alphaLength = Restaurant::calculateAlphaFromExpectedNumberOfTables(s->getExpectedNumberTreeLengthTables(), numSubsets);
-    treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getAlphaT(), s->getBetaT()) );
-    //treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getBranchLengthLambda(), 2*alignment->getNumTaxa()-3) );
+    //treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getAlphaT(), s->getBetaT()) );
+    treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getBranchLengthLambda(), (int)(2*tn.size()-3)) );
     
     // set up the base frequencies restaurant
     double alphaPi = Restaurant::calculateAlphaFromExpectedNumberOfTables(s->getExpectedNumberPiTables(), numSubsets);
