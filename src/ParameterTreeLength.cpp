@@ -34,7 +34,7 @@ ParameterTreeLength::ParameterTreeLength(Model* m, UserSettings* s, double lam, 
     RandomVariable& rng = RandomVariable::randomVariableInstance();
     do
         {
-        length[0] = Probability::Gamma::rv(&rng, alphaT, betaT);
+        length[0] = Probability::Gamma::rv(&rng, numBranches, lambda);
         } while (length[0] < MIN_LENGTH || length[0] > MAX_LENGTH);
     length[1] = length[0];
 }
