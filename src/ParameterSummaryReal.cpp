@@ -1,5 +1,6 @@
 #include <iomanip>
 #include <iostream>
+#include <algorithm>
 #include "Model.hpp"
 #include "ParameterSummaryReal.hpp"
 

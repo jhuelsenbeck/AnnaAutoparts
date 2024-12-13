@@ -1,5 +1,6 @@
 #include <iomanip>
 #include <iostream>
+#include <algorithm>
 #include "Model.hpp"
 #include "ParameterSummaryPartition.hpp"
 #include "Partition.hpp"
@@ -136,7 +137,7 @@ bool ParameterSummaryPartition::inCi(Model* m) {
     std::vector<std::pair<std::string, int> > v;
     for (auto& it : partitionsStringMap)
         v.push_back(it);
-    sort(v.begin(), v.end(), cmp);
+    std::sort(v.begin(), v.end(), cmp);
 
     double cumulativeProb = 0.0;
     for (int i=0; i<v.size(); i++)
@@ -237,7 +238,7 @@ void ParameterSummaryPartition::print(void) {
     std::vector<std::pair<std::string, int> > v;
     for (auto& it : partitionsStringMap)
         v.push_back(it);
-    sort(v.begin(), v.end(), cmp);
+    std::sort(v.begin(), v.end(), cmp);
 
     int nameSize = (int)name.length() + 2;
 
@@ -275,7 +276,7 @@ void ParameterSummaryPartition::print(Model* m) {
     std::vector<std::pair<std::string, int> > v;
     for (auto& it : partitionsStringMap)
         v.push_back(it);
-    sort(v.begin(), v.end(), cmp);
+    std::sort(v.begin(), v.end(), cmp);
 
     int nameSize = (int)name.length() + 2;
 
