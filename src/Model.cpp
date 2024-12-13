@@ -20,7 +20,7 @@
 #include "Tree.hpp"
 #include "UserSettings.hpp"
 
-#undef DEBUG_MODEL
+#define DEBUG_MODEL
 
 
 

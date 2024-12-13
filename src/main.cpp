@@ -12,7 +12,7 @@
 #include "ParameterSummaryReal.hpp"
 #include "UserSettings.hpp"
 
-#undef POSTERIOR_ANALYSIS
+#define POSTERIOR_ANALYSIS
 
 void printHeader(void);
 void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms);

@@ -6,7 +6,7 @@
 #include "Msg.hpp"
 #include "UserSettings.hpp"
 
-#undef DEBUG_MODE
+#define DEBUG_MODE
 
 
 
@@ -18,13 +18,13 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     std::vector<std::string> settings;
 #   if defined(DEBUG_MODE)
     settings.push_back("-i");
-    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/hummer.in");
+    settings.push_back("/workspaces/AnnaAutoparts/analyses/Empirical/3_hummer/hyperprior/hummer.in");
     settings.push_back("-o");
-    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/hummer.out");
+    settings.push_back("/workspaces/AnnaAutoparts/hummer.out");
     settings.push_back("-n");
     settings.push_back("100000");
     settings.push_back("-p");
-    settings.push_back("1000");
+    settings.push_back("10");
     settings.push_back("-b");
     settings.push_back("100");
     settings.push_back("-g");
@@ -37,8 +37,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     settings.push_back("2.0");
     settings.push_back("-eTheta");
     settings.push_back("2.0");
-    settings.push_back("-si");
-    settings.push_back("/Users/johnh/Desktop/AutoParts2_data/sim.in");
+    //settings.push_back("-si");
+    //settings.push_back("/Users/johnh/Desktop/AutoParts2_data/sim.in");
     argc = (int)settings.size() + 1;
 #   else
     for (int i=1; i<argc; i++)
@@ -79,10 +79,10 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     isConcentrationParameterFixed = true;
 	priorConcMean                 = 3.0;
 	priorConcVariance             = 1.0;
-    etAlpha                       = 2.0;
-    etPi                          = 2.0;
-    etTheta                       = 2.0;
-    etLength                      = 2.0;
+    etAlpha                       = 1.0;
+    etPi                          = 1.0;
+    etTheta                       = 1.0;
+    etLength                      = 1.0;
     tuningLocal                   = 200.0;
     tuningTreeLength              = log(4.0);
     tuningBaseFrequencies         = 300.0;

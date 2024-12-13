@@ -148,7 +148,7 @@ double Restaurant::calculateAlphaFromExpectedNumberOfTables(double expT, int np)
 
     if (expT > np)
         Msg::error("The expected number of tables cannot be larger than the number of patrons (" + std::to_string(np) + "<" + std::to_string(expT) + ")");
-     if (expT <= 1.0)
+     if (expT < 1.0)
         Msg::error("The expected number of tables cannot be less than one");
        
     double a = 0.000001;

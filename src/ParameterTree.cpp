@@ -142,7 +142,7 @@ double ParameterTree::updateBrlen(void) {
     if ( fabs(1.0-sum) > 0.0001 )
         Msg::error("Problem with branch proportions in updateBrlen " + std::to_string(sum));
     
-	return (lnReverseProb - lnForwardProb) + (t->getNumNodes()-2) * log((1.0-newP)/(1.0-oldP));
+	return (lnReverseProb - lnForwardProb) + (t->getNumNodes()-2) * log(factor);
 }
 
 double ParameterTree::updateLocal(void) {
