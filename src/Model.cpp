@@ -67,10 +67,15 @@ Model::Model(Alignment* aln, UserSettings* s, Model* tm) {
     initializeDataChunks(settings);
 
     treeRestaurant       = new Restaurant(*tm->treeRestaurant);
+    treeRestaurant->setModel(this);
     treeLengthRestaurant = new Restaurant(*tm->treeLengthRestaurant);
+    treeLengthRestaurant->setModel(this);
     freqsRestaurant      = new Restaurant(*tm->freqsRestaurant);
+    freqsRestaurant->setModel(this);
     ratesRestaurant      = new Restaurant(*tm->ratesRestaurant);
+    ratesRestaurant->setModel(this);
     shapeRestaurant      = new Restaurant(*tm->shapeRestaurant);
+    shapeRestaurant->setModel(this);
     initializeProposalProbabilities();
     
     treeRestaurant->print();
@@ -97,16 +102,22 @@ Model::Model(Model& m) {
         initializeStateSets(settings);
 
     treeRestaurant       = new Restaurant(*m.treeRestaurant);
+    treeRestaurant->setModel(this);
     treeLengthRestaurant = new Restaurant(*m.treeLengthRestaurant);
+    treeLengthRestaurant->setModel(this);
     freqsRestaurant      = new Restaurant(*m.freqsRestaurant);
+    freqsRestaurant->setModel(this);
     ratesRestaurant      = new Restaurant(*m.ratesRestaurant);
+    ratesRestaurant->setModel(this);
     shapeRestaurant      = new Restaurant(*m.shapeRestaurant);
+    shapeRestaurant->setModel(this);
     
     initializeProposalProbabilities();
     
     for (int i=0; i<m.chunks.size(); i++)
         {
         Chunk* c = new Chunk(*m.chunks[i]);
+        c->setModel(this);
         c->updateRateMatrix();
         c->updateTransitionProbabilities();
         chunks.push_back(c);
@@ -597,7 +608,7 @@ Alignment* Model::simulate(std::string fn, int ns) {
                     Branch* b = t->findBranch(p, p->getAncestor());
                     double v = b->getProportion() * treeLength * r;
                     int curState = siteInfo[p->getAncestor()->getIndex()];
-                    double x = 0.0;
+                    double x = 0.0;           
                     while (x < v)
                         {
                         x += Probability::Exponential::rv(&rng, -q[curState][curState]);

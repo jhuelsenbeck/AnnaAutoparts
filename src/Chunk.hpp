@@ -22,6 +22,7 @@ class Chunk {
         double                      lnLikelihood(void);
         void                        printTransitionProbabilities(void);
         void                        setId(int i) { id = i; }
+        void                        setModel(Model* m) {model = m;}
         void                        updateRateMatrix(void);
         void                        updateTransitionProbabilities(void);
         

@@ -31,6 +31,7 @@ class Parameter {
         virtual void                setName(std::string s) { name = s; }
         virtual void                setProposalProbability(double x) { proposalProbability = x; }
         virtual void                setTable(Table* t) { myTable = t; }
+        virtual void                setModel(Model* m) {modelPtr = m;}
         virtual void                setUpdateModifiesEigens(bool tf) { updateModifiesEigens = tf; }
         virtual std::string         type(void) = 0;
         virtual double              update(void) = 0;

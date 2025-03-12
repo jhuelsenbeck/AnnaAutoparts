@@ -4,9 +4,10 @@
 #include <map>
 #include <set>
 #include <string>
+#include "Table.hpp"
+
 class Model;
 class Parameter;
-class Table;
 class UserSettings;
 
 
@@ -29,6 +30,7 @@ class Restaurant {
         void                print(void);
         void                removeTable(Table* tab);
         std::string         rgf(void);
+        void                setModel(Model* m) {modelPtr = m; parameter->setModel(m); for(Table* t : tables) {t->setModel(m);}}
         double              update(void);
         
     private:

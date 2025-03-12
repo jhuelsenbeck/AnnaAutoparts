@@ -6,7 +6,6 @@ project(AnnaAutoparts)
 
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
-include_directories(/workspaces/taskflow/)
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
 

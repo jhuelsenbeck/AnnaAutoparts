@@ -6,7 +6,7 @@
 #include "Msg.hpp"
 #include "UserSettings.hpp"
 
-#define DEBUG_MODE
+#undef DEBUG_MODE
 
 
 
@@ -17,28 +17,32 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     // set up a vector of arguments
     std::vector<std::string> settings;
 #   if defined(DEBUG_MODE)
-    settings.push_back("-i");
-    settings.push_back("/workspaces/AnnaAutoparts/analyses/Empirical/3_hummer/hyperprior/hummer.in");
+    //settings.push_back("-i");
+    //settings.push_back("/workspaces/AnnaAutoparts/analyses/Empirical/1_cynmix/fixed/E(K)1.2_1/cynmix.in");
     settings.push_back("-o");
-    settings.push_back("/workspaces/AnnaAutoparts/hummer.out");
+    settings.push_back("/workspaces/AnnaAutoparts/sim.out");
     settings.push_back("-n");
-    settings.push_back("100000");
+    settings.push_back("50000");
     settings.push_back("-p");
-    settings.push_back("10");
-    settings.push_back("-b");
     settings.push_back("100");
+    settings.push_back("-b");
+    settings.push_back("10000");
     settings.push_back("-g");
     settings.push_back("4");
     settings.push_back("-eLength");
-    settings.push_back("2.0");
+    settings.push_back("1.2");
     settings.push_back("-eShape");
-    settings.push_back("2.0");
+    settings.push_back("1.2");
     settings.push_back("-ePi");
-    settings.push_back("2.0");
+    settings.push_back("1.2");
     settings.push_back("-eTheta");
+    settings.push_back("1.2");
+    settings.push_back("-lenMean");
     settings.push_back("2.0");
-    //settings.push_back("-si");
-    //settings.push_back("/Users/johnh/Desktop/AutoParts2_data/sim.in");
+    settings.push_back("-lenSD");
+    settings.push_back("0.25");
+    settings.push_back("-si");
+    settings.push_back("/workspaces/AnnaAutoparts/sim.in");
     argc = (int)settings.size() + 1;
 #   else
     for (int i=1; i<argc; i++)

@@ -12,62 +12,6 @@
 #include "ParameterSummaryReal.hpp"
 #include "UserSettings.hpp"
 
-#define POSTERIOR_ANALYSIS
-
-void printHeader(void);
-void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
-
-
-
-#if defined(POSTERIOR_ANALYSIS)
-
-
-
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
-
-
-
-// posterior analysis of a data file
-int main(int argc, char* argv[]) {
-
-    // print header
-    printHeader();
-
-    // get the user settings
-    UserSettings settings(argc, argv);
-    settings.print();
-
-    // read in the data
-    Alignment data(settings.getInputFile());
-    //data.print();
-        
-    // set up the phylogenetic model
-    Model model(&data, &settings);
-    
-    // perform the MCMC analysis
-    Mcmc mcmc(&model, &settings);
-    mcmc.run();
-
-    // summarize the results
-    std::vector<ParameterSummary*> parms;
-    summarize(settings.getOutputFile()+".tsv", settings.getBurnIn(), parms);
-
-    return 0;
-}
-
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms) {
-
-    readTsvFile(fn, burn, parms);
-    
-    std::cout << "   Results Summary:" << std::endl;
-    for (int i=0; i<parms.size(); i++)
-        parms[i]->print();
-}
-
-
-
-#else
-
 
 
 struct Results {
@@ -78,6 +22,9 @@ struct Results {
     std::vector<double> ci;
 };
 
+void printHeader(void);
+void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
+void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
 void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
 void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
 
@@ -92,41 +39,72 @@ int main(int argc, char* argv[]) {
     // get the user settings
     UserSettings settings(argc, argv);
     settings.print();
-    
-    int numTaxa = 10;
-    int numReplicates = 100;
-    int numPartitions = 5;
-    int numSitesPerPartition = 100;
-    Results results;
-    results.n = 0;
-    for (int i=0; i<numReplicates; i++)
-        {
+
+    int burnInIter = (int)(
+        (settings.getNumMcmcCycles()/(double)(settings.getSampleFrequency())) *
+        (settings.getBurnIn()/(double)(settings.getNumMcmcCycles()))
+    ); // The burn in is described in number of MCMC generations not sampling iteraitons
+
+    if(settings.getSimFile() != ""){
+        int numTaxa = 10;
+        int numReplicates = 50;
+        int numPartitions = 5;
+        int numSitesPerPartition = 200;
+        Results results;
+        results.n = 0;
+        for (int i=0; i<numReplicates; i++)
+            {
+            // set up the phylogenetic model
+            Model simModel(&settings, numTaxa, numPartitions);
+            
+            // get the simulated data
+            Alignment* data = simModel.simulate(settings.getSimFile(), numSitesPerPartition);
+                    
+            // set up the phylogenetic model
+            Model model(data, &settings);
+            //Model model(data, &settings, &simModel);
+            
+            // perform the MCMC analysis
+            Mcmc mcmc(&model, &settings);
+            mcmc.run();
+            
+            // compare to the true results
+            std::vector<ParameterSummary*> parms;
+            summarize(settings.getOutputFile()+".tsv", burnInIter, parms, &simModel, results);
+            
+            delete data;
+            }
+            
+        // summarize results over simulations
+        for (int i=0; i<results.name.size(); i++)
+            std::cout << results.name[i] << " -- " << results.mse[i]/numReplicates << " " << results.ci[i]/numReplicates << std::endl;
+    }
+    else {
+        Alignment data(settings.getInputFile());
+        //data.print();
+            
         // set up the phylogenetic model
-        Model simModel(&settings, numTaxa, numPartitions);
-        
-        // get the simulated data
-        Alignment* data = simModel.simulate(settings.getSimFile(), numSitesPerPartition);
-                
-        // set up the phylogenetic model
-        //Model model(data, &settings);
-        Model model(data, &settings, &simModel);
+        Model model(&data, &settings);
         
         // perform the MCMC analysis
         Mcmc mcmc(&model, &settings);
         mcmc.run();
-        
-        // compare to the true results
+
+        // summarize the results
         std::vector<ParameterSummary*> parms;
-        summarize(settings.getOutputFile()+".tsv", settings.getBurnIn(), parms, &simModel, results);
-        
-        delete data;
-        }
-        
-    // summarize results over simulations
-    for (int i=0; i<results.name.size(); i++)
-        std::cout << results.name[i] << " -- " << results.mse[i]/numReplicates << " " << results.ci[i]/numReplicates << std::endl;
+        summarize(settings.getOutputFile()+".tsv", burnInIter, parms);
+    }
     
     return 0;
+}
+
+void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms) {
+
+    readTsvFile(fn, burn, parms);
+    
+    std::cout << "   Results Summary:" << std::endl;
+    for (int i=0; i<parms.size(); i++)
+        parms[i]->print();
 }
 
 void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res) {
@@ -163,8 +141,6 @@ void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Re
         res.n++;
 }
 
-#endif
-
 void printHeader(void) {
 
     std::cout << "   AutoParts v1.0" << std::endl;
@@ -191,11 +167,10 @@ void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms
         int ch;
         std::string word = "";
         int wordNum = 0;
-        std::string cmdString = "";
         do
             {
-            word = "";
             linestream >> word;
+            //std::cout << word << std::endl;
             wordNum++;
             if (line == 0)
                 {
@@ -224,7 +199,7 @@ void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms
             else
                 {
                 
-                if (line > burn + 1 && word != "")
+                if (line > burn && word != "")
                     {
                     if (isPartition[wordNum-1] == false)
                         {

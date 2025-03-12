@@ -2,8 +2,8 @@
 #define ParameterTree_hpp
 
 #include "Parameter.hpp"
+#include "Tree.hpp"
 class Model;
-class Tree;
 class UserSettings;
 
 
@@ -25,6 +25,7 @@ class ParameterTree : public Parameter {
         void                    reject(void);
         std::string             type(void);
         double                  update(void);
+        void                    setModel(Model* m){trees[0]->setModel(m); trees[1]->setModel(m);}
 
     private:
         double                  updateBrlen(void);

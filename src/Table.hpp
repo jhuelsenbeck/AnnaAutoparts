@@ -2,9 +2,10 @@
 #define Table_hpp
 
 #include <set>
-class Parameter;
-class Restaurant;
+#include "Model.hpp"
+#include "Parameter.hpp"
 
+class Restaurant;
 
 
 class Table {
@@ -22,6 +23,7 @@ class Table {
         void            removeAllPatrons(void) { patrons.clear(); }
         void            removePatron(int idx) { patrons.erase(idx); }
         void            setRestaurant(Restaurant* r) { myRestaurant = r; }
+        void            setModel(Model* m) {parm->setModel(m);}
     
     private:
         std::set<int>   patrons;

@@ -77,6 +77,7 @@ class Tree {
         void                                        setNumLeaves(int x) { numLeaves = x; }
         void                                        setRoot(Node* p) { root = p; }
         void                                        setTaxonNames(std::vector<std::string> tn) { taxonNames = tn; }
+        void                                        setModel(Model* m) {modelPtr = m;}
     
     private:
         void                                        clone(Tree& t);

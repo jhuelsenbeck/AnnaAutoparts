@@ -12,11 +12,6 @@
 
 #undef NO_DATA
 
-#define USE_TASKFLOW
-#ifdef USE_TASKFLOW
-#include <taskflow/taskflow.hpp>
-#endif
-
 
 Chunk::Chunk(const Chunk& c) {
 
@@ -78,95 +73,6 @@ double Chunk::lnLikelihood(void) {
     if (t->getRoot()->getDescendants().size() != 3)
         Msg::error("Expecting three descendants of the root");
     
-    #ifdef USE_TASKFLOW
-    tf::Taskflow phyloTaskflow;
-    tf::Executor executor;
-    std::unordered_map<int, tf::Task> taskMap;
-    
-    for (int n=0; n<dpSeq.size(); n++)
-        {
-        Node* p = dpSeq[n];
-        taskMap.insert(std::make_pair(p->getIndex(), phyloTaskflow.emplace([this, p, &tp, t]() {
-            if (p->getIsLeaf() == false)
-                {
-                std::vector<Node*> desc = p->getDescendants();
-                
-                if (desc.size() == 2)
-                    {
-                    double* clL = condLikes->getConditionalLikelihoods(0, desc[0]->getIndex());
-                    double* clR = condLikes->getConditionalLikelihoods(0, desc[1]->getIndex());
-                    double* clP = condLikes->getConditionalLikelihoods(0, p->getIndex()      );
-                    for (int c=0; c<numSites; c++)
-                        {
-                        for (int k=0; k<numGammaCategories; k++)
-                            {
-                            NucleotideSquareMatrix_t& tpL = tp[k][desc[0]->getIndex()]; // check to see if this can be brought outside of the loop
-                            NucleotideSquareMatrix_t& tpR = tp[k][desc[1]->getIndex()]; // over the number of sites...may be slow
-                            for (int i=0; i<4; i++)
-                                {
-                                double sumL = 0.0, sumR = 0.0;
-                                for (int j=0; j<4; j++)
-                                    {
-                                    sumL += tpL(i,j) * clL[j];
-                                    sumR += tpR(i,j) * clR[j];
-                                    }
-                                clP[i] = sumL * sumR;
-                                }
-                            clP += 4;
-                            clL += 4;
-                            clR += 4;
-                            }
-                        }
-                    }
-                else if (desc.size() == 3)
-                    {
-                    if (p != t->getRoot())
-                        Msg::error("Only expecting a three-way split at the root of the tree");
-                    double* cl0 = condLikes->getConditionalLikelihoods(0, desc[0]->getIndex());
-                    double* cl1 = condLikes->getConditionalLikelihoods(0, desc[1]->getIndex());
-                    double* cl2 = condLikes->getConditionalLikelihoods(0, desc[2]->getIndex());
-                    double* clP = condLikes->getConditionalLikelihoods(0, p->getIndex()      );
-                    for (int c=0; c<numSites; c++)
-                        {
-                        for (int k=0; k<numGammaCategories; k++)
-                            {
-                            NucleotideSquareMatrix_t& tp0 = tp[k][desc[0]->getIndex()]; // check to see if this can be brought outside of the loop
-                            NucleotideSquareMatrix_t& tp1 = tp[k][desc[1]->getIndex()]; // over the number of sites...may be slow
-                            NucleotideSquareMatrix_t& tp2 = tp[k][desc[2]->getIndex()]; // over the number of sites...may be slow
-                            for (int i=0; i<4; i++)
-                                {
-                                double sum0 = 0.0, sum1 = 0.0, sum2 = 0.0;
-                                for (int j=0; j<4; j++)
-                                    {
-                                    sum0 += tp0(i,j) * cl0[j];
-                                    sum1 += tp1(i,j) * cl1[j];
-                                    sum2 += tp2(i,j) * cl2[j];
-                                    }
-                                clP[i] = sum0 * sum1 * sum2;
-                                }
-                            clP += 4;
-                            cl0 += 4;
-                            cl1 += 4;
-                            cl2 += 4;
-                            }
-                        }
-                    }
-                else
-                    {
-                    Msg::error("Incorrect number of descendants!");
-                    }
-                }
-            })));
-        }
-    
-    for (int n=0; n<dpSeq.size(); n++) {
-        Node* p = dpSeq[n];
-        if(p != t->getRoot())
-            taskMap.at(p->getIndex()).precede(taskMap.at(p->getAncestor()->getIndex()));
-    }
-
-    executor.run(phyloTaskflow).wait();
-    #else
     for (int n=0; n<dpSeq.size(); n++)
         {
         Node* p = dpSeq[n];
@@ -240,8 +146,6 @@ double Chunk::lnLikelihood(void) {
                 }
             }
         }
-    #endif
-
         
     // calculate average probability at root
     std::vector<double> f = model->getBaseFrequencies(id);
