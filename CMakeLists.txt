@@ -14,3 +14,5 @@ file(GLOB_RECURSE SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 add_executable(main ${SOURCES})
 
 target_include_directories(main PRIVATE ${PROJECT_SOURCE_DIR}/src)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -O3")

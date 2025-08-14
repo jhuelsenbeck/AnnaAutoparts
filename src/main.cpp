@@ -29,10 +29,7 @@ void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms, 
 void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
 
 
-
-// analysis of simulated data
 int main(int argc, char* argv[]) {
-
     // print header
     printHeader();
 
@@ -46,10 +43,10 @@ int main(int argc, char* argv[]) {
     ); // The burn in is described in number of MCMC generations not sampling iteraitons
 
     if(settings.getSimFile() != ""){
-        int numTaxa = 10;
-        int numReplicates = 50;
-        int numPartitions = 5;
-        int numSitesPerPartition = 200;
+        int numTaxa = 50;
+        int numReplicates = 100;
+        int numPartitions = 6;
+        int numSitesPerPartition = 1000;
         Results results;
         results.n = 0;
         for (int i=0; i<numReplicates; i++)
