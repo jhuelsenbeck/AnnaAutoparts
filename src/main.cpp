@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
 
     if(settings.getSimFile() != ""){
         int numTaxa = 50;
-        int numReplicates = 100;
+        int numReplicates = settings.getNumSims();
         int numPartitions = 6;
         int numSitesPerPartition = 1000;
         Results results;

@@ -71,6 +71,7 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     treeFile                      = "";
     outputFile                    = "";
     simFile                       = "";
+    numSims                       = 50;
     numMcmcCycles                 = 400000;
     burnIn                        = 0;
     numGammaCategories            = 1;
@@ -82,6 +83,7 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     sampleFrequency               = 100;
     isConcentrationParameterFixed = true;
 	priorConcMean                 = 3.0;
+    priorMeanTables               = 0.0;
 	priorConcVariance             = 1.0;
     etAlpha                       = 1.0;
     etPi                          = 1.0;
@@ -111,6 +113,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 outputFile = settings[i];
             else if (currentArg == "-si")
                 simFile = settings[i];
+            else if (currentArg == "-nSi")
+                numSims = stoi(settings[i]);
             else if (currentArg == "-n")
                 numMcmcCycles = stoi(settings[i]);
             else if (currentArg == "-p")
@@ -133,6 +137,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 isConcentrationParameterFixed = yesNo(settings[i]);
             else if (currentArg == "-m")
                 priorConcMean = stof(settings[i]);
+            else if(currentArg == "-mT")
+                priorMeanTables = stof(settings[i]);
             else if (currentArg == "-k")
                 priorConcVariance = stof(settings[i]);
             else if (currentArg == "-ePi")
@@ -189,8 +195,9 @@ void UserSettings::print(void) {
     std::cout << "   * Exponential parameter for gamma shape                 = " << shapeLambda << std::endl;
     std::cout << "   * Number of gamma categories                            = " << numGammaCategories << std::endl;
     
-    std::cout << "   * Concentration parameter is a random variable          = " << ((isConcentrationParameterFixed == true) ? "yes" : "no") << std::endl;
+    std::cout << "   * Concentration parameter is fixed                      = " << ((isConcentrationParameterFixed == true) ? "yes" : "no") << std::endl;
     std::cout << "   * Concentration parameter mean (when r.v.)              = " << priorConcMean << std::endl;
+    std::cout << "   * Expected number of tables (when conc. is r.v.)        = " << priorMeanTables << std::endl;
     std::cout << "   * Concentration parameter variance (when r.v.)          = " << priorConcVariance << std::endl;
     std::cout << "   * Expected number of tables for tree length             = " << etLength << std::endl;
     std::cout << "   * Expected number of tables for gamma shape             = " << etAlpha << std::endl;
@@ -231,6 +238,7 @@ void UserSettings::usage(void) {
     std::cout << "   * -c       : Concentration parameter is fixed (yes) or a random variable (no)" << std::endl;
     std::cout << "   * -k       : Prior mean of the number of categories when the concentration parameter is fixed" << std::endl;
     std::cout << "   * -m       : Prior mean of the concentration parameter when it is a random variable" << std::endl;
+    std::cout << "   * -mT      : Expected number of tables when the concentration parameter is a random variable" << std::endl;
     std::cout << "   * -v       : Prior variance of the concentration parameter when it is a random variable" << std::endl;
     std::cout << "   * -eLength : Expected number of tables for tree length when the concentration parameter is fixed" << std::endl;
     std::cout << "   * -eShape  : Expected number of tables for gamma shape when the concentration parameter is fixed" << std::endl;

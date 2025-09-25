@@ -80,10 +80,25 @@ Restaurant::Restaurant(Model* mp, UserSettings* s, bool sf, double a, int np, Pa
             {
             std::cout << "   * Parameter " << parameter->getName() << " subset arrangement is a random variable following a DPP with a gamma hyperprior on alpha" << std::endl;
             double m = settingsPtr->getPriorConcMean();
+            if(settingsPtr->getPriorMeanTables() != 0){
+                double eT = settingsPtr->getPriorMeanTables();
+                m = calculateAlphaFromExpectedNumberOfTables(eT, np);
+            }
             double v = settingsPtr->getPriorConcVariance();
             gammaBeta  = m / v;
             gammaAlpha = gammaBeta * m;
-            alpha = Probability::Gamma::rv(&rng, gammaAlpha, gammaBeta);
+
+            // If the prior is for a small number of clusters, there is a chance you will initialize it to 0.0 (or something else unstable), throwing an error
+            int initialization_attempt = 0;
+            do {
+                alpha = Probability::Gamma::rv(&rng, gammaAlpha, gammaBeta);
+                initialization_attempt++;
+            }
+            while(alpha < 1e-6 && initialization_attempt <= 100);
+            if(initialization_attempt > 100){
+                Msg::error("Failed to initialize a valid alpha under the prior Gamma(" + std::to_string(gammaAlpha) + "," + std::to_string(gammaBeta) + ") for " + parameter->getName());
+            }
+
             std::cout << "   *    Initial Alpha = " << alpha << std::endl;
             }
         

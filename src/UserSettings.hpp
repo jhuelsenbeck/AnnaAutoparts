@@ -21,6 +21,7 @@ class UserSettings {
         double          getExpectedNumberThetaTables(void) { return etTheta; }
         bool            getIsConcentrationParameterFixed(void) { return isConcentrationParameterFixed; }
         double          getPriorConcMean(void) { return priorConcMean; }
+        double          getPriorMeanTables(void) { return priorMeanTables; }
         double          getPriorConcVariance(void) { return priorConcVariance; }
         std::string     getInputFile(void) { return inputFile; }
         std::string     getOutputFile(void) { return outputFile; }
@@ -28,6 +29,7 @@ class UserSettings {
         int             getNumMcmcCycles(void) { return numMcmcCycles; }
         int             getPrintFrequency(void) { return printFrequency; }
         int             getSampleFrequency(void) { return sampleFrequency; }
+        int             getNumSims(void) { return numSims; }
         std::string     getSimFile(void) { return simFile; }
         std::string     getTreeFile(void) { return treeFile; }
         double          getTuningBrlen(void) { return tuningBrlen; }
@@ -50,6 +52,7 @@ class UserSettings {
         std::string     treeFile;
         std::string     outputFile;
         std::string     simFile;
+        int             numSims;
         int             numMcmcCycles;
         int             printFrequency;
         int             sampleFrequency;
@@ -61,6 +64,7 @@ class UserSettings {
         double          shapeLambda;
         bool            isConcentrationParameterFixed;
         double          priorConcMean;
+        double          priorMeanTables;
         double          priorConcVariance;
         double          etLength;
         double          etAlpha;
