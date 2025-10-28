@@ -218,7 +218,7 @@ double Model::getGammaShape(int subsetId) {
 
 void Model::getHeader(std::string& v) {
 
-    v.empty();
+    v.clear();
     
     // tree length
     v += "RGF(Length)";
@@ -285,7 +285,7 @@ void Model::getHeader(std::string& v) {
 
 void Model::getParameterValues(std::string& v) {
 
-    v.empty();
+    v.clear();
     v.reserve(1000);
     
     // tree length
