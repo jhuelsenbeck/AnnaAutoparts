@@ -543,7 +543,6 @@ Alignment* Model::simulate(std::string fn, int ns) {
         Tree* t = getTree(s);
         double treeLength = getTreeLength(s);
         double alpha = getGammaShape(s);
-        std::cout << alpha << std::endl;
         std::vector<double>& theta = getExchangeabilityRates(s);
         std::vector<double>& bf = getBaseFrequencies(s);
         
