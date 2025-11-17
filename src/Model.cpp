@@ -20,9 +20,7 @@
 #include "Tree.hpp"
 #include "UserSettings.hpp"
 
-#define DEBUG_MODEL
-
-
+#undef DEBUG_MODEL
 
 Model::Model(UserSettings* s, int nt, int nss) {
 
@@ -463,8 +461,7 @@ void Model::initializeParameters(UserSettings* s, std::vector<std::string> tn) {
     
     // set up the tree-length restaurant
     double alphaLength = Restaurant::calculateAlphaFromExpectedNumberOfTables(s->getExpectedNumberTreeLengthTables(), numSubsets);
-    //treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getAlphaT(), s->getBetaT()) );
-    treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getBranchLengthLambda(), (int)(2*tn.size()-3)) );
+    treeLengthRestaurant = new Restaurant(this, s, true, alphaLength, numSubsets, new ParameterTreeLength(this, s, s->getAlphaT(), s->getBetaT()) );
     
     // set up the base frequencies restaurant
     double alphaPi = Restaurant::calculateAlphaFromExpectedNumberOfTables(s->getExpectedNumberPiTables(), numSubsets);
@@ -476,7 +473,7 @@ void Model::initializeParameters(UserSettings* s, std::vector<std::string> tn) {
 
     // set up the gamma shape restaurant
     double alphaAlpha = Restaurant::calculateAlphaFromExpectedNumberOfTables(s->getExpectedNumberAlphaTables(), numSubsets);
-    shapeRestaurant = new Restaurant(this, s, true, alphaAlpha, numSubsets, new ParameterGammaShape(this, s, alphaAlpha, s->getNumGammaCategories()));
+    shapeRestaurant = new Restaurant(this, s, true, alphaAlpha, numSubsets, new ParameterGammaShape(this, s, s->getGammaShapeLambda(), s->getNumGammaCategories()));
     
 #   if defined(DEBUG_MODEL)
     treeRestaurant->print();
@@ -546,6 +543,7 @@ Alignment* Model::simulate(std::string fn, int ns) {
         Tree* t = getTree(s);
         double treeLength = getTreeLength(s);
         double alpha = getGammaShape(s);
+        std::cout << alpha << std::endl;
         std::vector<double>& theta = getExchangeabilityRates(s);
         std::vector<double>& bf = getBaseFrequencies(s);
         

@@ -102,7 +102,11 @@ Restaurant::Restaurant(Model* mp, UserSettings* s, bool sf, double a, int np, Pa
             std::cout << "   *    Initial Alpha = " << alpha << std::endl;
             }
         
-        for (int i=0; i<numPatrons; i++)
+        // This can help with instantiation issues we are seeing with extreme alphas
+        Table* initTable = addTable();
+        initTable->addPatron(0);
+
+        for (int i=1; i<numPatrons; i++)
             {
             double newTableProb = alpha / (alpha + i);
             double u1 = rng.uniformRv();
@@ -459,7 +463,7 @@ double Restaurant::update(void) {
     if (isSeatingRv == true)
         {
         std::set<Table*> auxiliaryTables;
-        int numAuxliaryTables = 10; // was 3
+        int numAuxliaryTables = 10;
         for (int n=0; n<numPatrons; n++)
             {
             // get the chunk for the patron

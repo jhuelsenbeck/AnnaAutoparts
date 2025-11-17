@@ -32,7 +32,7 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     settings.push_back("-eLength");
     settings.push_back("1.2");
     settings.push_back("-eShape");
-    settings.push_back("1.2");
+    settings.push_back("5.8");
     settings.push_back("-ePi");
     settings.push_back("1.2");
     settings.push_back("-eTheta");
@@ -75,24 +75,23 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     numMcmcCycles                 = 400000;
     burnIn                        = 0;
     numGammaCategories            = 1;
-    treeLengthMean                = 1.0;
-    treeLengthSD                  = 1.0;
-    brlenLambda                   = 10.0;
+    treeLengthMean                = 6.0;
+    treeLengthSD                  = 0.5;
     shapeLambda                   = 2.0;
     printFrequency                = 1000;
     sampleFrequency               = 100;
     isConcentrationParameterFixed = true;
 	priorConcMean                 = 3.0;
-    priorMeanTables               = 0.0;
+    priorMeanTables               = 1.2;
 	priorConcVariance             = 1.0;
-    etAlpha                       = 1.0;
-    etPi                          = 1.0;
-    etTheta                       = 1.0;
-    etLength                      = 1.0;
+    etAlpha                       = 1.2;
+    etPi                          = 1.2;
+    etTheta                       = 1.2;
+    etLength                      = 1.2;
     tuningLocal                   = 200.0;
     tuningTreeLength              = log(4.0);
-    tuningBaseFrequencies         = 300.0;
-    tuningExchangabilityRates     = 300.0;
+    tuningBaseFrequencies         = 600.0;
+    tuningExchangabilityRates     = 600.0;
     tuningGammaShape              = log(4.0);
     tuningHeat                    = 0.1;
     tuningBrlen                   = 200.0;
@@ -129,8 +128,6 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 treeLengthMean = stof(settings[i]);
             else if (currentArg == "-lenSD")
                 treeLengthSD = stof(settings[i]);
-            else if (currentArg == "-lenLam")
-                brlenLambda = stof(settings[i]);
             else if (currentArg == "-e")
                 shapeLambda = stof(settings[i]);
              else if (currentArg == "-c")

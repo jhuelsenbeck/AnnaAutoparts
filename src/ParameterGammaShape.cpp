@@ -34,7 +34,7 @@ ParameterGammaShape::ParameterGammaShape(Model* m, UserSettings* s, double lam, 
         shape[0] = Probability::Exponential::rv(&rng, lambda);
         } while (shape[0] < MIN_SHAPE || shape[0] > MAX_SHAPE);
     shape[1] = shape[0];
-    
+
     numGammaCategories = nc;
     gammaRates[0].resize(numGammaCategories);
     Probability::Gamma::discretization(gammaRates[0], shape[0], shape[0], numGammaCategories, false);
