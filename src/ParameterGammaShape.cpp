@@ -6,7 +6,7 @@
 #include "UpdateInfo.hpp"
 #include "UserSettings.hpp"
 
-#define MIN_SHAPE 0.01
+#define MIN_SHAPE 1e-6
 #define MAX_SHAPE 10.0
 
 
@@ -69,7 +69,7 @@ std::string ParameterGammaShape::getValuesAsString(int precision) {
 double ParameterGammaShape::lnProbability(void) {
 
     double c = Probability::Exponential::cdf(lambda, MAX_SHAPE) - Probability::Exponential::cdf(lambda, MIN_SHAPE);
-    return log(shape[0]) - lambda * shape[0] - log(c);
+    return log(lambda) - lambda * shape[0] - log(c);
 }
 
 Parameter* ParameterGammaShape::newRandomInstance(void) {
@@ -95,10 +95,8 @@ std::string ParameterGammaShape::type(void) {
 
 double ParameterGammaShape::update(void) {
 
-    UpdateInfo::updateInfo().attempt("Gamma Shape");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double tuning = userSettings->getTuningGammaShape();
+    double tuning = UpdateInfo::updateInfo().attempt(UpdateType::SHAPE_SCALE);
     
     double newVal = 0.0, randomFactor = 1.0;
     do

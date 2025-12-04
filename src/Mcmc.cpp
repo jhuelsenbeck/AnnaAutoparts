@@ -19,6 +19,8 @@ Mcmc::Mcmc(Model* m, UserSettings* s) {
     settings = s;
     
     numCycles = settings->getNumMcmcCycles();
+    burnInCycles = settings->getBurnIn();
+    tuningFrequency = settings->getTuningFrequency();
     printFrequency = settings->getPrintFrequency();
     sampleFrequency = settings->getSampleFrequency();
 }
@@ -110,7 +112,7 @@ void Mcmc::printToScreen(int n, double lnL, Timer& t2, Timer& t1) {
 
 void Mcmc::run(void) {
 
-    std::cout << "   Markov chain Monte Carlo analysis:" << std::endl;
+    std::cout << "   Markov Chain Monte Carlo Sampling:" << std::endl;
     // open files
     openOutputFiles();
 
@@ -135,6 +137,30 @@ void Mcmc::run(void) {
     
     // close file
     closeOutputFiles();
+}
+
+void Mcmc::burnin(void) {
+    std::cout << "   Markov Chain Monte Carlo Burn-In:" << std::endl;
+
+    auto start = std::chrono::high_resolution_clock::now();
+    for (int n=1; n<=burnInCycles; n++)
+        {
+        // propose a new state for the chain
+        double lnL = model->update();
+        
+        if(n % printFrequency == 0 || n == 1){
+            std::cout << "   *    " << n << " -- " << lnL << std::endl;
+        }
+
+        if (n % tuningFrequency == 0)
+            {
+                std::cout << "\n   Tuning Parameters..." << std::endl;
+                UpdateInfo::updateInfo().summary();
+                UpdateInfo::updateInfo().tune();
+            }
+        }
+    std::cout << std::endl;
+    UpdateInfo::updateInfo().resetStats();
 }
 
 void Mcmc::sample(int n, double lnL) {

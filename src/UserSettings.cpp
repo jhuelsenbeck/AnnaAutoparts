@@ -25,6 +25,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     settings.push_back("50000");
     settings.push_back("-p");
     settings.push_back("100");
+    settings.push_back("-s");
+    settings.push_back("500");
     settings.push_back("-b");
     settings.push_back("10000");
     settings.push_back("-g");
@@ -32,17 +34,19 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     settings.push_back("-eLength");
     settings.push_back("1.2");
     settings.push_back("-eShape");
-    settings.push_back("5.8");
+    settings.push_back("1.2");
     settings.push_back("-ePi");
     settings.push_back("1.2");
     settings.push_back("-eTheta");
     settings.push_back("1.2");
     settings.push_back("-lenMean");
-    settings.push_back("2.0");
+    settings.push_back("6.0");
     settings.push_back("-lenSD");
     settings.push_back("0.25");
     settings.push_back("-si");
     settings.push_back("/workspaces/AnnaAutoparts/sim.in");
+    tuningFrequency = 1000;
+    numSims = 1;
     argc = (int)settings.size() + 1;
 #   else
     for (int i=1; i<argc; i++)
@@ -67,34 +71,37 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
         }
 
     // initialize settings variables
-    inputFile                     = "";
-    treeFile                      = "";
-    outputFile                    = "";
-    simFile                       = "";
-    numSims                       = 50;
-    numMcmcCycles                 = 400000;
-    burnIn                        = 0;
-    numGammaCategories            = 1;
-    treeLengthMean                = 6.0;
-    treeLengthSD                  = 0.5;
-    shapeLambda                   = 2.0;
-    printFrequency                = 1000;
-    sampleFrequency               = 100;
-    isConcentrationParameterFixed = true;
-	priorConcMean                 = 3.0;
-    priorMeanTables               = 1.2;
-	priorConcVariance             = 1.0;
-    etAlpha                       = 1.2;
-    etPi                          = 1.2;
-    etTheta                       = 1.2;
-    etLength                      = 1.2;
-    tuningLocal                   = 200.0;
-    tuningTreeLength              = log(4.0);
-    tuningBaseFrequencies         = 600.0;
-    tuningExchangabilityRates     = 600.0;
-    tuningGammaShape              = log(4.0);
-    tuningHeat                    = 0.1;
-    tuningBrlen                   = 200.0;
+    inputFile                       = "";
+    treeFile                        = "";
+    outputFile                      = "";
+    simFile                         = "";
+    numSims                         = 50;
+    numMcmcCycles                   = 400000;
+    burnIn                          = 0;
+    tuningFrequency                 = 1000;
+    numGammaCategories              = 1;
+    treeLengthMean                  = 6.0;
+    treeLengthSD                    = 0.5;
+    shapeLambda                     = 1.0;
+    printFrequency                  = 1000;
+    sampleFrequency                 = 100;
+    isConcentrationParameterFixed   = true;
+	priorConcMean                   = 3.0;
+    priorMeanTables                 = 1.2;
+	priorConcVariance               = 1.0;
+    etAlpha                         = 1.2;
+    etPi                            = 1.2;
+    etTheta                         = 1.2;
+    etLength                        = 1.2;
+    tuningLocal                     = 200.0;
+    tuningTreeLength                = log(4.0);
+    tuningBaseFrequencies           = 600.0;
+    tuningBaseFrequenciesSingle     = 600.0;
+    tuningExchangabilityRates       = 600.0;
+    tuningExchangabilityRatesSingle = 600.0;
+    tuningGammaShape                = log(4.0);
+    tuningHeat                      = 0.1;
+    tuningBrlen                     = 200.0;
     
     // interpret the arguments
     std::string currentArg = "";
@@ -114,6 +121,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 simFile = settings[i];
             else if (currentArg == "-nSi")
                 numSims = stoi(settings[i]);
+            else if (currentArg == "-tu")
+                tuningFrequency = stoi(settings[i]);
             else if (currentArg == "-n")
                 numMcmcCycles = stoi(settings[i]);
             else if (currentArg == "-p")
@@ -154,8 +163,12 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 tuningGammaShape = stof(settings[i]);
             else if (currentArg == "-tFreqs")
                 tuningBaseFrequencies = stof(settings[i]);
+            else if (currentArg == "-tFreqsSingle")
+                tuningBaseFrequenciesSingle = stof(settings[i]);
             else if (currentArg == "-tRates")
                 tuningExchangabilityRates = stof(settings[i]);
+            else if (currentArg == "-tRatesSingle")
+                tuningExchangabilityRatesSingle = stof(settings[i]);
             else if (currentArg == "-tTBR")
                 tuningHeat = stof(settings[i]);
             else if (currentArg == "-tBrlen")
@@ -205,10 +218,13 @@ void UserSettings::print(void) {
     std::cout << "   * Sample Frequency                                      = " << sampleFrequency << std::endl;
     std::cout << "   * Print Frequency                                       = " << printFrequency << std::endl;
     std::cout << "   * Burn in                                               = " << burnIn << std::endl;
+    std::cout << "   * Tuning Frequency                                      = " << tuningFrequency << std::endl;
     std::cout << "   * MCMC tuning parameter for the tree topology parameter = " << tuningLocal << std::endl;
     std::cout << "   * MCMC tuning parameter for the gamma shape parameter   = " << tuningGammaShape << std::endl;
-    std::cout << "   * MCMC tuning parameter for the base frequencies        = " << tuningBaseFrequencies << std::endl;
-    std::cout << "   * MCMC tuning parameter for the substitution rates      = " << tuningExchangabilityRates << std::endl;
+    std::cout << "   * MCMC tuning parameter for the base frequencies (D)    = " << tuningBaseFrequencies << std::endl;
+    std::cout << "   * MCMC tuning parameter for the substitution rates (D)  = " << tuningExchangabilityRates << std::endl;
+    std::cout << "   * MCMC tuning parameter for the base frequencies (B)    = " << tuningBaseFrequenciesSingle << std::endl;
+    std::cout << "   * MCMC tuning parameter for the substitution rates (B)  = " << tuningExchangabilityRatesSingle << std::endl;
     std::cout << "   * MCMC tuning parameter for the tree length parameter   = " << tuningTreeLength << std::endl;
     std::cout << "   * MCMC tuning parameter for the TBR heat parameter      = " << tuningHeat << std::endl;
     std::cout << "   * MCMC tuning parameter for the branch proportions      = " << tuningBrlen << std::endl;
@@ -218,42 +234,45 @@ void UserSettings::print(void) {
 void UserSettings::usage(void) {
 
     std::cout << "   Program options for data input/output:" << std::endl;
-    std::cout << "   * -i       : Input file name" << std::endl;
-    std::cout << "   * -t       : Tree file name (for constraining the analysis to a fixed tree)" << std::endl;
-    std::cout << "   * -o       : Output file name" << std::endl;
+    std::cout << "   * -i               : Input file name" << std::endl;
+    std::cout << "   * -t               : Tree file name (for constraining the analysis to a fixed tree)" << std::endl;
+    std::cout << "   * -o               : Output file name" << std::endl;
     std::cout << std::endl;
     
     std::cout << "   Program options for model parameters:" << std::endl;
-    std::cout << "   * -lenMean : Tree length mean" << std::endl;
-    std::cout << "   * -lenSD   : Tree length standard deviation" << std::endl;
-    std::cout << "   * -lenLam  : Tree length exponential parameter" << std::endl;
-    std::cout << "   * -e       : Exponential parameter for shape parameter describing ASRV" << std::endl;
-    std::cout << "   * -g       : Number of gamma categories" << std::endl;
+    std::cout << "   * -lenMean         : Tree length mean" << std::endl;
+    std::cout << "   * -lenSD           : Tree length standard deviation" << std::endl;
+    std::cout << "   * -lenLam          : Tree length exponential parameter" << std::endl;
+    std::cout << "   * -e               : Exponential parameter for shape parameter describing ASRV" << std::endl;
+    std::cout << "   * -g               : Number of gamma categories" << std::endl;
     std::cout << std::endl;
     
     std::cout << "   Program options for DPP:" << std::endl;
-    std::cout << "   * -c       : Concentration parameter is fixed (yes) or a random variable (no)" << std::endl;
-    std::cout << "   * -k       : Prior mean of the number of categories when the concentration parameter is fixed" << std::endl;
-    std::cout << "   * -m       : Prior mean of the concentration parameter when it is a random variable" << std::endl;
-    std::cout << "   * -mT      : Expected number of tables when the concentration parameter is a random variable" << std::endl;
-    std::cout << "   * -v       : Prior variance of the concentration parameter when it is a random variable" << std::endl;
-    std::cout << "   * -eLength : Expected number of tables for tree length when the concentration parameter is fixed" << std::endl;
-    std::cout << "   * -eShape  : Expected number of tables for gamma shape when the concentration parameter is fixed" << std::endl;
-    std::cout << "   * -ePi     : Expected number of tables for base frequencies when the concentration parameter is fixed" << std::endl;
-    std::cout << "   * -eTheta  : Expected number of tables for exchangability rates when the concentration parameter is fixed" << std::endl;
+    std::cout << "   * -c               : Concentration parameter is fixed (yes) or a random variable (no)" << std::endl;
+    std::cout << "   * -k               : Prior mean of the number of categories when the concentration parameter is fixed" << std::endl;
+    std::cout << "   * -m               : Prior mean of the concentration parameter when it is a random variable" << std::endl;
+    std::cout << "   * -mT              : Expected number of tables when the concentration parameter is a random variable" << std::endl;
+    std::cout << "   * -v               : Prior variance of the concentration parameter when it is a random variable" << std::endl;
+    std::cout << "   * -eLength         : Expected number of tables for tree length when the concentration parameter is fixed" << std::endl;
+    std::cout << "   * -eShape          : Expected number of tables for gamma shape when the concentration parameter is fixed" << std::endl;
+    std::cout << "   * -ePi             : Expected number of tables for base frequencies when the concentration parameter is fixed" << std::endl;
+    std::cout << "   * -eTheta          : Expected number of tables for exchangability rates when the concentration parameter is fixed" << std::endl;
     std::cout << std::endl;
     std::cout << "   Program options for MCMC:" << std::endl;
-    std::cout << "   * -n       : Number of MCMC cycles" << std::endl;
-    std::cout << "   * -p       : Print-to-screen frequency" << std::endl;
-    std::cout << "   * -s       : Sample-to-file frequency" << std::endl;
-    std::cout << "   * -b       : Fraction of samples to discard (burn-in)" << std::endl;
-    std::cout << "   * -tLocal  : MCMC tuning parameter for the tree topology parameter" << std::endl;
-    std::cout << "   * -tTBR    : MCMC tuning parameter for heat parameter for biased TBR proposals" << std::endl;
-    std::cout << "   * -tBrlen  : MCMC tuning parameter for the branch proportions update" << std::endl;
-    std::cout << "   * -tShape  : MCMC tuning parameter for the gamma shape parameter" << std::endl;
-    std::cout << "   * -tFreqs  : MCMC tuning parameter for the base frequencies" << std::endl;
-    std::cout << "   * -tRates  : MCMC tuning parameter for the substitution rates" << std::endl;
-    std::cout << "   * -tLength : MCMC tuning parameter for the tree length parameter" << std::endl;
+    std::cout << "   * -n               : Number of MCMC cycles" << std::endl;
+    std::cout << "   * -p               : Print-to-screen frequency" << std::endl;
+    std::cout << "   * -s               : Sample-to-file frequency" << std::endl;
+    std::cout << "   * -b               : The number of burn-in iterations" << std::endl;
+    std::cout << "   * -tu              : How frequently to tune the tunable parameters during the burn-in" << std::endl;
+    std::cout << "   * -tLocal          : MCMC tuning parameter for the tree topology parameter" << std::endl;
+    std::cout << "   * -tTBR            : MCMC tuning parameter for heat parameter for biased TBR proposals" << std::endl;
+    std::cout << "   * -tBrlen          : MCMC tuning parameter for the branch proportions update" << std::endl;
+    std::cout << "   * -tShape          : MCMC tuning parameter for the gamma shape parameter" << std::endl;
+    std::cout << "   * -tFreqs          : MCMC tuning parameter for the base frequencies (Dirichlet Simplex)" << std::endl;
+    std::cout << "   * -tRates          : MCMC tuning parameter for the substitution rates (Dirichlet Simplex)" << std::endl;
+    std::cout << "   * -tFreqsSingle    : MCMC tuning parameter for the base frequencies (Beta Simplex)" << std::endl;
+    std::cout << "   * -tRatesSingle    : MCMC tuning parameter for the substitution rates (Beta Simplex)" << std::endl;
+    std::cout << "   * -tLength         : MCMC tuning parameter for the tree length parameter" << std::endl;
 }
 
 bool UserSettings::yesNo(std::string str) {

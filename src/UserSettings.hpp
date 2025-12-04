@@ -28,6 +28,7 @@ class UserSettings {
         int             getNumMcmcCycles(void) { return numMcmcCycles; }
         int             getPrintFrequency(void) { return printFrequency; }
         int             getSampleFrequency(void) { return sampleFrequency; }
+        int             getTuningFrequency(void) { return tuningFrequency; }
         int             getNumSims(void) { return numSims; }
         std::string     getSimFile(void) { return simFile; }
         std::string     getTreeFile(void) { return treeFile; }
@@ -35,7 +36,9 @@ class UserSettings {
         double          getTuningLocal(void) { return tuningLocal; }
         double          getTuningTreeLength(void) { return tuningTreeLength; }
         double          getTuningBaseFrequencies(void) { return tuningBaseFrequencies; }
+        double          getTuningBaseFrequenciesSingle(void) { return tuningBaseFrequenciesSingle; }
         double          getTuningExchangabilityRates(void) { return tuningExchangabilityRates; }
+        double          getTuningExchangabilityRatesSingle(void) { return tuningExchangabilityRatesSingle; }
         double          getTuningGammaShape(void) { return tuningGammaShape; }
         double          getTuningHeat(void) { return tuningHeat; }
         void            print(void);
@@ -56,6 +59,7 @@ class UserSettings {
         int             printFrequency;
         int             sampleFrequency;
         int             burnIn;
+        int             tuningFrequency;
         int             numGammaCategories;
         double          treeLengthMean;
         double          treeLengthSD;
@@ -73,7 +77,9 @@ class UserSettings {
         double          tuningBrlen;
         double          tuningTreeLength;
         double          tuningBaseFrequencies;
+        double          tuningBaseFrequenciesSingle;
         double          tuningExchangabilityRates;
+        double          tuningExchangabilityRatesSingle;
         double          tuningGammaShape;
 };
 

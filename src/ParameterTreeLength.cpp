@@ -6,7 +6,7 @@
 #include "UpdateInfo.hpp"
 #include "UserSettings.hpp"
 
-#define MIN_LENGTH 0.001
+#define MIN_LENGTH 1e-6
 #define MAX_LENGTH 50.0
 
 
@@ -84,10 +84,8 @@ std::string ParameterTreeLength::type(void) {
 
 double ParameterTreeLength::update(void) {
 
-    UpdateInfo::updateInfo().attempt("Tree Length");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double tuning = userSettings->getTuningTreeLength();
+        double tuning = UpdateInfo::updateInfo().attempt(UpdateType::TREE_LENGTH);
     double newVal = 0.0, randomFactor = 1.0;
     do
         {

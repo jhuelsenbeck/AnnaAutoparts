@@ -89,10 +89,8 @@ double ParameterTree::update(void) {
 
 double ParameterTree::updateBrlen(void) {
 
-    UpdateInfo::updateInfo().attempt("Tree (BRLEN)");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double alpha0 = userSettings->getTuningBrlen();
+    double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::BRANCH_PROPORTIONS);
     Tree* t = trees[0];
 
     // choose a branch at random
@@ -147,10 +145,8 @@ double ParameterTree::updateBrlen(void) {
 
 double ParameterTree::updateLocal(void) {
 
-    UpdateInfo::updateInfo().attempt("Tree (LOCAL)");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double alpha0 = userSettings->getTuningLocal();
+    double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::LOCAL);
     Tree* t = trees[0];
 
     // choose the backbone and modify the branch lengths randomly
@@ -302,11 +298,10 @@ double ParameterTree::updateLocal(void) {
 
 double ParameterTree::updateTbr(void) {
 
-    UpdateInfo::updateInfo().attempt("Tree (TBR)");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
     Tree* t = trees[0];
     double lnProposalProbability = 0.0;
+    double heat = UpdateInfo::updateInfo().attempt(UpdateType::TBR);
     
     // cut the tree
     CutInfo info;
@@ -314,7 +309,7 @@ double ParameterTree::updateTbr(void) {
 
     // calculate the scores of all potential reconnection points
     std::map<NodePair,double,CompNodePair> vals;
-    t->calculateReconnectionProbabilities(info, vals, userSettings->getTuningHeat());
+    t->calculateReconnectionProbabilities(info, vals, heat);
     
     // choose a reconnection point
     NodePair newReconnectionPair = t->choosePair(vals);

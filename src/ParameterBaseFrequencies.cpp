@@ -6,7 +6,7 @@
 #include "UpdateInfo.hpp"
 #include "UserSettings.hpp"
 
-#define MIN_FREQ 0.001
+#define MIN_FREQ 1e-6
 
 
 
@@ -91,33 +91,81 @@ std::string ParameterBaseFrequencies::type(void) {
 
 double ParameterBaseFrequencies::update(void) {
 
-    UpdateInfo::updateInfo().attempt("Base Frequencies");
 
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double alpha0 = userSettings->getTuningBaseFrequencies();
     
-    std::vector<double> oldFreqs(4);
-    std::vector<double> alphaForward(4);
-    for (int i=0; i<4; i++)
+    if(rng.uniformRv() < 0.5)
         {
-        oldFreqs[i] = freqs[0][i];
-        alphaForward[i] = freqs[0][i] * alpha0;
-        }
+        double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::BASE_FREQUENCY_DIRICHLET);
+        std::vector<double> oldFreqs(4);
+        std::vector<double> alphaForward(4);
+        for (int i=0; i<4; i++)
+            {
+            oldFreqs[i] = freqs[0][i];
+            alphaForward[i] = freqs[0][i] * alpha0;
+            }
+            
+        std::vector<double> newFreqs(4);
+        bool err = false;
+        do
+            {
+            err = Probability::Dirichlet::rv(&rng, alphaForward, newFreqs);
+            } while (anyLessThanMin(newFreqs, MIN_FREQ) == true || err == true);
         
-    std::vector<double> newFreqs(4);
-    bool err = false;
-    do
+        std::vector<double> alphaReverse(4);
+        for (int i=0; i<4; i++)
+            {
+            alphaReverse[i] = newFreqs[i] * alpha0;
+            freqs[0][i] = newFreqs[i];
+            }
+            
+        double lnHastingsRatio = Probability::Dirichlet::lnPdf(alphaReverse, oldFreqs) - Probability::Dirichlet::lnPdf(alphaForward, newFreqs);
+        return lnHastingsRatio;
+    }
+    else 
         {
-        err = Probability::Dirichlet::rv(&rng, alphaForward, newFreqs);
-        } while (anyLessThanMin(newFreqs, MIN_FREQ) == true || err == true);
-    
-    std::vector<double> alphaReverse(4);
-    for (int i=0; i<4; i++)
-        {
-        alphaReverse[i] = newFreqs[i] * alpha0;
-        freqs[0][i] = newFreqs[i];
+        double lnHastingsRatio = 0.0;
+
+        int randomIndex = (int)(rng.uniformRv() * 4);
+        double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::BASE_FREQUENCY_BETA);
+
+        double currentValue = freqs[0][randomIndex];
+        std::vector<double> newFreqs(4);
+
+        double a = alpha0 + 1.0;
+        double b = alpha0 / currentValue - a + 2.0;
+        do 
+            {
+            newFreqs = freqs[0];
+            double newValue = Probability::Beta::rv(&rng, a, b);
+            newFreqs[randomIndex] = newValue;
+
+            double scaling = (1.0 - newValue) / (1.0 - currentValue);
+
+            double sum = 0.0;
+            for(int i = 0; i < 4; i++)
+                {
+                if(i != randomIndex)
+                    {
+                    newFreqs[i] *= scaling;
+                    }
+
+                sum += newFreqs[i];
+                }
+
+            for(int i = 0; i < 4; i++)
+                {
+                newFreqs[i] /= sum;
+                }
+            
+            double newB = alpha0 / newFreqs[randomIndex] - a + 2.0;
+            lnHastingsRatio = Probability::Beta::lnPdf(a, newB, currentValue) - Probability::Beta::lnPdf(a, b, newValue);
+            lnHastingsRatio += 2 * std::log(scaling) - 3 * std::log(sum);
+            }
+        while(anyLessThanMin(newFreqs, MIN_FREQ) == true);
+
+        freqs[0] = newFreqs;
+
+        return lnHastingsRatio;
         }
-        
-    double lnHastingsRatio = Probability::Dirichlet::lnPdf(alphaReverse, oldFreqs) - Probability::Dirichlet::lnPdf(alphaForward, newFreqs);
-    return lnHastingsRatio;
 }

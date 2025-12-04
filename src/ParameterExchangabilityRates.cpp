@@ -6,7 +6,7 @@
 #include "UpdateInfo.hpp"
 #include "UserSettings.hpp"
 
-#define MIN_RATES 0.001
+#define MIN_RATES 1e-6
 
 
 
@@ -91,33 +91,81 @@ std::string ParameterExchangabilityRates::type(void) {
 
 double ParameterExchangabilityRates::update(void) {
 
-    UpdateInfo::updateInfo().attempt("Exchangability Rates");
-
     RandomVariable& rng = RandomVariable::randomVariableInstance();
-    double alpha0 = userSettings->getTuningExchangabilityRates();
-    
-    std::vector<double> oldRates(6);
-    std::vector<double> alphaForward(6);
-    for (int i=0; i<6; i++)
+
+    if(rng.uniformRv() < 0.5)
         {
-        oldRates[i] = rates[0][i];
-        alphaForward[i] = rates[0][i] * alpha0;
-        }
+        double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::RATE_DIRICHLET);
         
-    std::vector<double> newRates(6);
-    bool err = false;
-    do
-        {
-        err = Probability::Dirichlet::rv(&rng, alphaForward, newRates);
-        } while (anyLessThanMin(newRates, MIN_RATES) == true || err == true);
-    
-    std::vector<double> alphaReverse(6);
-    for (int i=0; i<6; i++)
-        {
-        alphaReverse[i] = newRates[i] * alpha0;
-        rates[0][i] = newRates[i];
-        }
+        std::vector<double> oldRates(6);
+        std::vector<double> alphaForward(6);
+        for (int i=0; i<6; i++)
+            {
+            oldRates[i] = rates[0][i];
+            alphaForward[i] = rates[0][i] * alpha0;
+            }
+            
+        std::vector<double> newRates(6);
+        bool err = false;
+        do
+            {
+            err = Probability::Dirichlet::rv(&rng, alphaForward, newRates);
+            } while (anyLessThanMin(newRates, MIN_RATES) == true || err == true);
         
-    double lnHastingsRatio = Probability::Dirichlet::lnPdf(alphaReverse, oldRates) - Probability::Dirichlet::lnPdf(alphaForward, newRates);
-    return lnHastingsRatio;
+        std::vector<double> alphaReverse(6);
+        for (int i=0; i<6; i++)
+            {
+            alphaReverse[i] = newRates[i] * alpha0;
+            rates[0][i] = newRates[i];
+            }
+            
+        double lnHastingsRatio = Probability::Dirichlet::lnPdf(alphaReverse, oldRates) - Probability::Dirichlet::lnPdf(alphaForward, newRates);
+        return lnHastingsRatio;
+        }
+    else 
+        {
+        double lnHastingsRatio = 0.0;
+
+        int randomIndex = (int)(rng.uniformRv() * 6);
+        double alpha0 = UpdateInfo::updateInfo().attempt(UpdateType::RATE_BETA);
+
+        double currentValue = rates[0][randomIndex];
+        std::vector<double> newRates(6);
+
+        double a = alpha0 + 1.0;
+        double b = alpha0 / currentValue - a + 2.0;
+        do 
+            {
+            newRates = rates[0];
+            double newValue = Probability::Beta::rv(&rng, a, b);
+            newRates[randomIndex] = newValue;
+
+            double scaling = (1.0 - newValue) / (1.0 - currentValue);
+
+            double sum = 0.0;
+            for(int i = 0; i < 6; i++)
+                {
+                if(i != randomIndex)
+                    {
+                    newRates[i] *= scaling;
+                    }
+
+                sum += newRates[i];
+                }
+
+            for(int i = 0; i < 6; i++)
+                {
+                newRates[i] /= sum;
+                }
+            
+            double newB = alpha0 / newRates[randomIndex] - a + 2.0;
+            lnHastingsRatio = Probability::Beta::lnPdf(a, newB, currentValue) - Probability::Beta::lnPdf(a, b, newValue);
+            lnHastingsRatio += 4 * std::log(scaling) - 5 * std::log(sum);
+            }
+        while(anyLessThanMin(newRates, MIN_RATES) == true);
+
+        rates[0] = newRates;
+
+        return lnHastingsRatio;
+        }
 }

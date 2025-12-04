@@ -10,6 +10,7 @@
 #include "ParameterSummary.hpp"
 #include "ParameterSummaryPartition.hpp"
 #include "ParameterSummaryReal.hpp"
+#include "UpdateInfo.hpp"
 #include "UserSettings.hpp"
 
 
@@ -23,9 +24,9 @@ struct Results {
 };
 
 void printHeader(void);
-void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms);
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
+void readTsvFile(std::string fn, std::vector<ParameterSummary*>& parms);
+void summarize(std::string fn, std::vector<ParameterSummary*>& parms);
+void summarize(std::string fn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
 void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res);
 
 
@@ -37,16 +38,22 @@ int main(int argc, char* argv[]) {
     UserSettings settings(argc, argv);
     settings.print();
 
-    int burnInIter = (int)(
-        (settings.getNumMcmcCycles()/(double)(settings.getSampleFrequency())) *
-        (settings.getBurnIn()/(double)(settings.getNumMcmcCycles()))
-    ); // The burn in is described in number of MCMC generations not sampling iteraitons
+    auto& updateInfo = UpdateInfo::updateInfo();
+    updateInfo.setTunableParam(SHAPE_SCALE, settings.getTuningGammaShape());
+    updateInfo.setTunableParam(BASE_FREQUENCY_BETA, settings.getTuningBaseFrequenciesSingle());
+    updateInfo.setTunableParam(BASE_FREQUENCY_DIRICHLET, settings.getTuningBaseFrequencies());
+    updateInfo.setTunableParam(RATE_BETA, settings.getTuningExchangabilityRatesSingle());
+    updateInfo.setTunableParam(RATE_DIRICHLET, settings.getTuningExchangabilityRates());
+    updateInfo.setTunableParam(TBR, settings.getTuningHeat());
+    updateInfo.setTunableParam(LOCAL, settings.getTuningLocal());
+    updateInfo.setTunableParam(BRANCH_PROPORTIONS, settings.getTuningBrlen());
+    updateInfo.setTunableParam(TREE_LENGTH, settings.getTuningTreeLength());
 
     if(settings.getSimFile() != ""){
         int numTaxa = 50;
         int numReplicates = settings.getNumSims();
         int numPartitions = 6;
-        int numSitesPerPartition = 1000;
+        int numSitesPerPartition = 500; 
         Results results;
         results.n = 0;
         for (int i=0; i<numReplicates; i++)
@@ -63,11 +70,12 @@ int main(int argc, char* argv[]) {
             
             // perform the MCMC analysis
             Mcmc mcmc(&model, &settings);
+            mcmc.burnin();
             mcmc.run();
             
             // compare to the true results
             std::vector<ParameterSummary*> parms;
-            summarize(settings.getOutputFile()+".tsv", burnInIter, parms, &simModel, results);
+            summarize(settings.getOutputFile()+".tsv", parms, &simModel, results);
             
             delete data;
             }
@@ -85,28 +93,29 @@ int main(int argc, char* argv[]) {
         
         // perform the MCMC analysis
         Mcmc mcmc(&model, &settings);
+        mcmc.burnin();
         mcmc.run();
 
         // summarize the results
         std::vector<ParameterSummary*> parms;
-        summarize(settings.getOutputFile()+".tsv", burnInIter, parms);
+        summarize(settings.getOutputFile()+".tsv", parms);
     }
     
     return 0;
 }
 
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms) {
+void summarize(std::string fn, std::vector<ParameterSummary*>& parms) {
 
-    readTsvFile(fn, burn, parms);
+    readTsvFile(fn, parms);
     
     std::cout << "   Results Summary:" << std::endl;
     for (int i=0; i<parms.size(); i++)
         parms[i]->print();
 }
 
-void summarize(std::string fn, int burn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res) {
+void summarize(std::string fn, std::vector<ParameterSummary*>& parms, Model* trueModel, Results& res) {
 
-    readTsvFile(fn, burn, parms);
+    readTsvFile(fn, parms);
     tabulateResults(parms, trueModel, res);
 
     std::cout << "   Results Summary:" << std::endl;
@@ -141,12 +150,13 @@ void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Re
 void printHeader(void) {
 
     std::cout << "   AutoParts v1.0" << std::endl;
-    std::cout << "   * John P. Huelsenbeck(1), Brian Moore(2), and Anna Chriss(1)" << std::endl;
+    std::cout << "   * John P. Huelsenbeck(1), Brian Moore(2), Anna Chriss(1) and Wesley DeMontigny (3)" << std::endl;
     std::cout << "   * (1) University of California, Berkeley" << std::endl;
-    std::cout << "   * (2) University of California, Davis" << std::endl << std::endl;
+    std::cout << "   * (2) University of California, Davis" << std::endl;
+    std::cout << "   * (3) University of Maryland, College Park\n" << std::endl;
 }
 
-void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms) {
+void readTsvFile(std::string fn, std::vector<ParameterSummary*>& parms) {
 
     // open the file
     std::ifstream strm(fn.c_str());
@@ -196,7 +206,7 @@ void readTsvFile(std::string fn, int burn, std::vector<ParameterSummary*>& parms
             else
                 {
                 
-                if (line > burn && word != "")
+                if (word != "")
                     {
                     if (isPartition[wordNum-1] == false)
                         {

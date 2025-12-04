@@ -385,7 +385,7 @@ double Restaurant::sampleAlpha(int k, int n, double oldAlpha, double a, double b
 
 double Restaurant::update(void) {
 
-    // The update of a restaurant does two thigns. First, we visit all of the
+    // The update of a restaurant does two things. First, we visit all of the
     // current tables in the restaurant, and update the parameter on each. We
     // then reseat patrons at tables according to Algorithm 8 of Neal (2000).
         

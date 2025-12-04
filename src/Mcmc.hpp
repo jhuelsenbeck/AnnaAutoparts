@@ -16,6 +16,7 @@ class Mcmc {
     public:
                         Mcmc(Model* m, UserSettings* s);
         void            run(void);
+        void            burnin(void);
     
     private:
         void            closeOutputFiles(void);
@@ -26,8 +27,10 @@ class Mcmc {
         std::ofstream   parmStrm;
         std::ofstream   treeStrm;
         int             numCycles;
+        int             burnInCycles;
         int             printFrequency;
         int             sampleFrequency;
+        int             tuningFrequency;
         Model*          model;
         UserSettings*   settings;
 };
