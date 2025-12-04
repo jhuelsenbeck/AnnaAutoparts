@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) {
         int numTaxa = 50;
         int numReplicates = settings.getNumSims();
         int numPartitions = 6;
-        int numSitesPerPartition = 500; 
+        int numSitesPerPartition = 1000; 
         Results results;
         results.n = 0;
         for (int i=0; i<numReplicates; i++)
