@@ -545,6 +545,9 @@ Alignment* Model::simulate(std::string fn, int ns) {
         double alpha = getGammaShape(s);
         std::vector<double>& theta = getExchangeabilityRates(s);
         std::vector<double>& bf = getBaseFrequencies(s);
+
+        std::vector<double> gammaCategories;
+        Probability::Gamma::discretization(gammaCategories, alpha, alpha, settings->getNumGammaCategories(), false);
         
         // set up the rate matrix
         double q[4][4];
@@ -580,7 +583,8 @@ Alignment* Model::simulate(std::string fn, int ns) {
         
         for (int c=0; c<ns; c++)
             {
-            double r = Probability::Gamma::rv(&rng, alpha, alpha);
+            int randCat = (int)(rng.uniformRv() * gammaCategories.size());
+            double r = gammaCategories[randCat];
             for (int n=(int)dpSeq.size()-1; n>=0; n--)
                 {
                 Node* p = dpSeq[n];
