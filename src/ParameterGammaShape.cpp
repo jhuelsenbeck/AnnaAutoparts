@@ -69,7 +69,7 @@ std::string ParameterGammaShape::getValuesAsString(int precision) {
 double ParameterGammaShape::lnProbability(void) {
 
     double c = Probability::Exponential::cdf(lambda, MAX_SHAPE) - Probability::Exponential::cdf(lambda, MIN_SHAPE);
-    return log(lambda) - lambda * shape[0] - log(c);
+    return Probability::Exponential::lnPdf(lambda, shape[0]) - log(c);
 }
 
 Parameter* ParameterGammaShape::newRandomInstance(void) {
