@@ -223,9 +223,9 @@ void Model::getHeader(std::string& v) {
     v += '\t';
     v += "L(Alpha)";
     v += '\t';
-    for (int n=0; n<shapeRestaurant->getNumPatrons(); n++)
+    for (int n=0; n<treeLengthRestaurant->getNumPatrons(); n++)
         {
-        std::vector<double> s = shapeRestaurant->findTableWithPatron(n)->getParameter()->getValue();
+        std::vector<double> s = treeLengthRestaurant->findTableWithPatron(n)->getParameter()->getValue();
         for (int i=0; i<s.size(); i++)
             {
             v += "L(" + std::to_string(n+1) + "," + std::to_string(i+1) + ")";
