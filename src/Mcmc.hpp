@@ -30,6 +30,7 @@ class Mcmc {
         void            sample(int coldChainIdx, int n, double lnL);
         std::ofstream   parmStrm;
         std::ofstream   treeStrm;
+        std::vector<int> chainIndex;
         int             numCycles;
         int             burnInCycles;
         int             printFrequency;

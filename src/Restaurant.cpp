@@ -507,9 +507,9 @@ double Restaurant::update(double power) {
                 std::set<Table*>::iterator it = auxiliaryTables.find(t);
                 double lnP = 0.0;
                 if (it == auxiliaryTables.end())
-                    lnP = log( (double)(t->getNumPatrons() - 1) ); // subtract the patron that was added for calculation purposes
+                    lnP = log( (double)(t->getNumPatrons() - 1) ) * power; // subtract the patron that was added for calculation purposes
                 else
-                    lnP = log(alpha/numAuxliaryTables);
+                    lnP = log(alpha/numAuxliaryTables) * power;
                 tableLikes.insert( std::make_pair(t, lnL+lnP) );
                 t->removePatron(n);
                 }

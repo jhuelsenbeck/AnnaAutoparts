@@ -127,6 +127,7 @@ void Mcmc::printToScreen(int coldChainIdx, int n, double lnL, Timer& t2, Timer& 
     std::cout << std::endl;
 }
 
+// Single chain MCMC
 void Mcmc::run(void) {
 
     std::cout << "   Markov Chain Monte Carlo Sampling:" << std::endl;
@@ -156,6 +157,7 @@ void Mcmc::run(void) {
     closeOutputFiles();
 }
 
+// MCMCMC
 void Mcmc::run(int numChains, double temperature) {
 
     if (numChains == 1)
@@ -166,9 +168,11 @@ void Mcmc::run(int numChains, double temperature) {
     
     RandomVariable& rng = RandomVariable::randomVariableInstance();
 
-    std::vector<int> chainIndex(numChains);
-    for (int i=0; i<numChains; i++)
-        chainIndex[i] = i;
+    // This allows us to continue from burn-in, but also jump straight into sampling if we need to
+    if(chainIndex.empty()){
+        for (int i=0; i<numChains; i++)
+            chainIndex.push_back(i);
+    }
         
     std::cout << "   Markov Chain Monte Carlo Sampling:" << std::endl;
     // open files
@@ -261,10 +265,11 @@ void Mcmc::burnin(int numChains, double temperature) {
 
     RandomVariable& rng = RandomVariable::randomVariableInstance();
 
-    std::vector<int> chainIndex(numChains);
-    for (int i=0; i<numChains; i++)
-        chainIndex[i] = i;
-
+    if(chainIndex.empty()){
+        for (int i=0; i<numChains; i++)
+            chainIndex.push_back(i);
+    }
+    
     std::cout << "   Markov Chain Monte Carlo Burn-In:" << std::endl;
 
     std::vector<double> lnL(numChains);

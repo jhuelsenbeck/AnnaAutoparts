@@ -522,6 +522,7 @@ double Model::lnLikelihood(int idx) {
     return chunks[idx]->lnLikelihood();
 }
 
+// Return the prior probability
 double Model::lnProbability(void) {
 
     double lnP = 0.0;
@@ -691,6 +692,7 @@ Alignment* Model::simulate(std::string fn, int ns) {
     return aln;
 }
 
+// Picks a restaurant to update and returns the likelihood
 double Model::update(double power) {
 
     // pick a parameter to update
