@@ -53,8 +53,9 @@ class Model {
         void                            getParameterValues(std::string& v);
         double                          lnLikelihood(void);
         double                          lnLikelihood(int idx);
+        double                          lnProbability(void);
         Alignment*                      simulate(std::string fn, int ns);
-        double                          update(void);
+        double                          update(double power);
     
     private:
         char                            charCode(int x);

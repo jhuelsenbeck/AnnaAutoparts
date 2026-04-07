@@ -29,8 +29,10 @@ class UserSettings {
         int             getPrintFrequency(void) { return printFrequency; }
         int             getSampleFrequency(void) { return sampleFrequency; }
         int             getTuningFrequency(void) { return tuningFrequency; }
+        int             getNumChains(void) { return numChains; }
         int             getNumSims(void) { return numSims; }
         std::string     getSimFile(void) { return simFile; }
+        double          getTemperature(void) { return temperature; }
         std::string     getTreeFile(void) { return treeFile; }
         double          getTuningBrlen(void) { return tuningBrlen; }
         double          getTuningLocal(void) { return tuningLocal; }
@@ -55,12 +57,14 @@ class UserSettings {
         std::string     outputFile;
         std::string     simFile;
         int             numSims;
+        int             numChains;
         int             numMcmcCycles;
         int             printFrequency;
         int             sampleFrequency;
         int             burnIn;
         int             tuningFrequency;
         int             numGammaCategories;
+        double          temperature;
         double          treeLengthMean;
         double          treeLengthSD;
         double          shapeLambda;

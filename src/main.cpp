@@ -31,6 +31,7 @@ void tabulateResults(std::vector<ParameterSummary*>& parms, Model* trueModel, Re
 
 
 int main(int argc, char* argv[]) {
+
     // print header
     printHeader();
 
@@ -49,7 +50,8 @@ int main(int argc, char* argv[]) {
     updateInfo.setTunableParam(BRANCH_PROPORTIONS, settings.getTuningBrlen());
     updateInfo.setTunableParam(TREE_LENGTH, settings.getTuningTreeLength());
 
-    if(settings.getSimFile() != ""){
+    if (settings.getSimFile() != "")
+        {
         int numTaxa = 50;
         int numReplicates = settings.getNumSims();
         int numPartitions = 6;
@@ -65,13 +67,15 @@ int main(int argc, char* argv[]) {
             Alignment* data = simModel.simulate(settings.getSimFile(), numSitesPerPartition);
                     
             // set up the phylogenetic model
-            Model model(data, &settings);
-            //Model model(data, &settings, &simModel);
+            int numChains = settings.getNumChains();
+            Model** model = new Model*[numChains];
+            for (int j=0; j<numChains; j++)
+                model[j] = new Model(data, &settings);
             
             // perform the MCMC analysis
-            Mcmc mcmc(&model, &settings);
-            mcmc.burnin();
-            mcmc.run();
+            Mcmc mcmc(model, &settings);
+            mcmc.burnin(numChains, settings.getTemperature());
+            mcmc.run(numChains, settings.getTemperature());
             
             // compare to the true results
             std::vector<ParameterSummary*> parms;
@@ -83,23 +87,31 @@ int main(int argc, char* argv[]) {
         // summarize results over simulations
         for (int i=0; i<results.name.size(); i++)
             std::cout << results.name[i] << " -- " << results.mse[i]/numReplicates << " " << results.ci[i]/numReplicates << std::endl;
-    }
-    else {
+        }
+    else 
+        {
         Alignment data(settings.getInputFile());
         //data.print();
             
         // set up the phylogenetic model
-        Model model(&data, &settings);
+        int numChains = settings.getNumChains();
+        Model** model = new Model*[numChains];
+        for (int i=0; i<numChains; i++)
+            model[i] = new Model(&data, &settings);
         
         // perform the MCMC analysis
-        Mcmc mcmc(&model, &settings);
-        mcmc.burnin();
-        mcmc.run();
+        Mcmc mcmc(model, &settings);
+        mcmc.burnin(numChains, settings.getTemperature());
+        mcmc.run(numChains, settings.getTemperature());
 
         // summarize the results
         std::vector<ParameterSummary*> parms;
         summarize(settings.getOutputFile()+".tsv", parms);
-    }
+        
+        for (int i=0; i<numChains; i++)
+            delete model[i];
+        delete [] model;
+        }
     
     return 0;
 }

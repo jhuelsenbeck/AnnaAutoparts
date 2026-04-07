@@ -76,6 +76,8 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
     outputFile                      = "";
     simFile                         = "";
     numSims                         = 50;
+    numChains                       = 1;
+    temperature                     = 0.2;
     numMcmcCycles                   = 400000;
     burnIn                          = 0;
     tuningFrequency                 = 1000;
@@ -123,6 +125,10 @@ UserSettings::UserSettings(int argc,  char* argv[]) {
                 numSims = stoi(settings[i]);
             else if (currentArg == "-tu")
                 tuningFrequency = stoi(settings[i]);
+            else if (currentArg == "-nc")
+                numChains = stoi(settings[i]);
+            else if (currentArg == "-temp")
+                temperature = stof(settings[i]);
             else if (currentArg == "-n")
                 numMcmcCycles = stoi(settings[i]);
             else if (currentArg == "-p")
@@ -214,6 +220,8 @@ void UserSettings::print(void) {
     std::cout << "   * Expected number of tables for base frequencies        = " << etPi << std::endl;
     std::cout << "   * Expected number of tables for exchangability rates    = " << etTheta << std::endl;
     
+    std::cout << "   * Number of MCMC chains                                 = " << numChains << std::endl;
+    std::cout << "   * MC^3 temperature                                      = " << temperature << std::endl;
     std::cout << "   * Number of MCMC cycles                                 = " << numMcmcCycles << std::endl;
     std::cout << "   * Sample Frequency                                      = " << sampleFrequency << std::endl;
     std::cout << "   * Print Frequency                                       = " << printFrequency << std::endl;

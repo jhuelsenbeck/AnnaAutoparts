@@ -255,6 +255,17 @@ Table* Restaurant::findTableWithPatron(int idx) {
     return NULL;
 }
 
+double Restaurant::lnProbability(void) {
+
+    double lnP = 0.0;
+    for (Table* t : tables)
+        {
+        Parameter* parm = t->getParameter();
+        lnP += parm->lnProbability();
+        }
+    return lnP;
+}
+
 void Restaurant::normalize(std::map<Table*,double>& lnProbs) {
 
     // find maximum value
@@ -383,7 +394,7 @@ double Restaurant::sampleAlpha(int k, int n, double oldAlpha, double a, double b
 	return newAlpha;
 }
 
-double Restaurant::update(void) {
+double Restaurant::update(double power) {
 
     // The update of a restaurant does two things. First, we visit all of the
     // current tables in the restaurant, and update the parameter on each. We
@@ -430,7 +441,7 @@ double Restaurant::update(void) {
             }
             
         // accept/reject
-        double lnR = lnLikelihoodRatio + lnPriorRatio + lnProposalRatio;
+        double lnR = (lnLikelihoodRatio * power) + (lnPriorRatio * power) + lnProposalRatio;
         bool accept = false;
         if (log(rng.uniformRv()) < lnR)
             accept = true;
@@ -492,7 +503,7 @@ double Restaurant::update(void) {
                 if (t->getParameter()->getUpdateModifiesEigens() == true)
                     chunk->updateRateMatrix();
                 chunk->updateTransitionProbabilities();
-                double lnL = chunk->lnLikelihood();
+                double lnL = chunk->lnLikelihood() * power;
                 std::set<Table*>::iterator it = auxiliaryTables.find(t);
                 double lnP = 0.0;
                 if (it == auxiliaryTables.end())

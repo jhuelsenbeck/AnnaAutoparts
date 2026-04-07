@@ -27,11 +27,12 @@ class Restaurant {
         int                 getNumPatrons(void) { return numPatrons; }
         int                 getNumTables(void) { return (int)tables.size(); }
         Parameter*          getParameter(void) { return parameter; }
+        double              lnProbability(void);
         void                print(void);
         void                removeTable(Table* tab);
         std::string         rgf(void);
         void                setModel(Model* m) {modelPtr = m; parameter->setModel(m); for(Table* t : tables) {t->setModel(m);}}
-        double              update(void);
+        double              update(double power);
         
     private:
         Table*              addAuxiliaryTable(void);

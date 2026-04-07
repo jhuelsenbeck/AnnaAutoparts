@@ -522,6 +522,17 @@ double Model::lnLikelihood(int idx) {
     return chunks[idx]->lnLikelihood();
 }
 
+double Model::lnProbability(void) {
+
+    double lnP = 0.0;
+    lnP += treeRestaurant->lnProbability();
+    lnP += treeLengthRestaurant->lnProbability();
+    lnP += freqsRestaurant->lnProbability();
+    lnP += ratesRestaurant->lnProbability();
+    lnP += shapeRestaurant->lnProbability();
+    return lnP;
+}
+
 Alignment* Model::simulate(std::string fn, int ns) {
 
     // dynamically allocate the matrix
@@ -680,7 +691,7 @@ Alignment* Model::simulate(std::string fn, int ns) {
     return aln;
 }
 
-double Model::update(void) {
+double Model::update(double power) {
 
     // pick a parameter to update
     Restaurant* restaurantToUpdate = NULL;
@@ -700,5 +711,5 @@ double Model::update(void) {
         Msg::error("Could not find a restaurant to update (" + std::to_string(u) + ")");
         
     // call the update function in the restaurant
-    return restaurantToUpdate->update();
+    return restaurantToUpdate->update(power);
 }
