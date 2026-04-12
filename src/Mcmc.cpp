@@ -28,6 +28,8 @@ Mcmc::Mcmc(Model** m, UserSettings* s) {
 void Mcmc::closeOutputFiles(void) {
 
     parmStrm.close();
+
+    treeStrm << "end;" << std::endl; // Close the NEXUS block started at the start of sampling.
     treeStrm.close();
 }
 
@@ -79,6 +81,21 @@ void Mcmc::openOutputFiles(void) {
     treeStrm.open( treeFileName.c_str(), std::ios::out );
     if (!treeStrm)
         Msg::error("Cannot open file \"" + treeFileName + "\"");
+
+
+    Tree* t = model[0]->getTree(0); // The tree shouldn't really matter for this
+    treeStrm << "begin trees;" << std::endl; // Write the start of the NEXUS block that is closed when we close the stream.
+    treeStrm << "   translate" << std::endl;
+    std::vector<std::string> taxonNames = t->getTaxonNames();
+    for (int i=0; i<taxonNames.size(); i++)
+        {
+        treeStrm << "   " << i+1 << " " << taxonNames[i];
+        if (i == taxonNames.size()-1)
+            treeStrm << ";" << std::endl;
+        else
+            treeStrm << "," << std::endl;
+        }
+
 }
 
 double Mcmc::power(int idx, double temperature) {
@@ -323,20 +340,6 @@ void Mcmc::sample(int coldChainIdx, int n, double lnL) {
 
     // sample the tree
     Tree* t = model[coldChainIdx]->getTree(0);
-    if (n == 1)
-        {
-        treeStrm << "begin trees;" << std::endl;
-        treeStrm << "   translate" << std::endl;
-        std::vector<std::string> taxonNames = t->getTaxonNames();
-        for (int i=0; i<taxonNames.size(); i++)
-            {
-            treeStrm << "   " << i+1 << " " << taxonNames[i];
-            if (i == taxonNames.size()-1)
-                treeStrm << ";" << std::endl;
-            else
-                treeStrm << "," << std::endl;
-            }
-        }
     treeStrm << "   tree t_" << n << " = " << t->getNewick() << std::endl;
 
     // sample the other parameters
