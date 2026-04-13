@@ -15,11 +15,16 @@ void mySort(vector<int> &item, vector<int> &assoc, int count);
 void sort2(vector<int> &item, vector<int> &assoc, int left, int right);
 
 
-int main (int argc, char * const argv[]) {
+int main (int argc, char* const argv[]) {
 
-//	string fileName = "/Users/brianmoore/Desktop/ap_sim1_part/ap_sim_X1_2.treelength.part";
-	string fileName = "/Users/brianmoore/grunts/Grunts_k6_2.subrates.part";
-	int burnIn = 2000;
+	if(argc != 2){
+		std::cout << "Required a file input!" << std::endl;
+		return -1;
+	}
+
+	string fileName = argv[1];
+	std::cout << "Evaluating paritions for " << fileName << std::endl;
+	int burnIn = 0; // Hard coding to this value because in our current analyses we only log post burn in
 	
 	vector<Partition *> partitions;
 	readFile(fileName, burnIn, partitions);
