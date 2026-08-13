@@ -1,0 +1,17 @@
+./build/main -si ./simulations/hyper_1.2_1.in -o ./simulations/hyper_1.2_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 1.2 -nSi 25 -c no -tFreqs 800 -tRates 800 > ./simulations/hyper_1.2_1.log
+sleep 1.0; ./build/main -si ./simulations/hyper_1.2_2.in -o ./simulations/hyper_1.2_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 1.2 -nSi 25 -c no -tFreqs 800 -tRates 800 > ./simulations/hyper_1.2_2.log
+
+./build/main -si ./simulations/hyper_3.0_1.in -o ./simulations/hyper_3.0_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 3.0 -nSi 25 -c no -tFreqs 500 -tRates 500 > ./simulations/hyper_3.0_1.log
+sleep 1.0; ./build/main -si ./simulations/hyper_3.0_2.in -o ./simulations/hyper_3.0_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 3.0 -nSi 25 -c no -tFreqs 500 -tRates 500 > ./simulations/hyper_3.0_2.log
+
+./build/main -si ./simulations/hyper_5.8_1.in -o ./simulations/hyper_5.8_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 5.8 -nSi 25 -c no > ./simulations/hyper_5.8_1.log
+sleep 1.0; ./build/main -si ./simulations/hyper_5.8_2.in -o ./simulations/hyper_5.8_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -mT 5.8 -nSi 25 -c no > ./simulations/hyper_5.8_2.log
+
+./build/main -si ./simulations/fixed_1.2_1.in -o ./simulations/fixed_1.2_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 1.2 -eTheta 1.2 -eShape 1.2 -eLength 1.2 -c yes -tFreqs 800 -tRates 800 > ./simulations/fixed_1.2_1.log
+sleep 1.0; ./build/main -si ./simulations/fixed_1.2_2.in -o ./simulations/fixed_1.2_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 1.2 -eTheta 1.2 -eShape 1.2 -eLength 1.2 -c yes -tFreqs 800 -tRates 800 > ./simulations/fixed_1.2_2.log
+
+./build/main -si ./simulations/fixed_3.0_1.in -o ./simulations/fixed_3.0_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 3.0 -eTheta 3.0 -eShape 3.0 -eLength 3.0 -c yes -tFreqs 500 -tRates 500 > ./simulations/fixed_3.0_1.log
+sleep 1.0; ./build/main -si ./simulations/fixed_3.0_2.in -o ./simulations/fixed_3.0_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 3.0 -eTheta 3.0 -eShape 3.0 -eLength 3.0 -c yes -tFreqs 500 -tRates 500 > ./simulations/fixed_3.0_2.log
+
+./build/main -si ./simulations/fixed_5.8_1.in -o ./simulations/fixed_5.8_1.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 5.8 -eTheta 5.8 -eShape 5.8 -eLength 5.8 -c yes > ./simulations/fixed_5.8_1.log
+sleep 1.0; ./build/main -si ./simulations/fixed_5.8_2.in -o ./simulations/fixed_5.8_2.out -s 1000 -n 1000000 -p 1000 -b 40000 -g 4 -nSi 25 -ePi 5.8 -eTheta 5.8 -eShape 5.8 -eLength 5.8 -c yes > ./simulations/fixed_5.8_2.log
