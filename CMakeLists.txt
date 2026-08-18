@@ -1,18 +1,38 @@
 cmake_minimum_required(VERSION 3.10)
+
+project(Autoparts)
+
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(AnnaAutoparts)
+include(FetchContent)
 
-find_package(Eigen3 REQUIRED)
-include_directories(${EIGEN3_INCLUDE_DIR})
+find_package(Eigen3 QUIET)
 
-include_directories(${PROJECT_SOURCE_DIR}/src)
+if(NOT Eigen3_FOUND)
+    FetchContent_Declare(
+        eigen
+        GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+        GIT_TAG 3.4.0
+    )
+    FetchContent_MakeAvailable(eigen)
+endif()
 
-file(GLOB_RECURSE SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
+file(GLOB_RECURSE SOURCES
+    "${PROJECT_SOURCE_DIR}/src/*.cpp"
+)
 
-add_executable(main ${SOURCES})
+add_executable(autoparts ${SOURCES})
 
-target_include_directories(main PRIVATE ${PROJECT_SOURCE_DIR}/src)
+target_include_directories(autoparts PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -O3")
+target_link_libraries(autoparts PRIVATE
+    Eigen3::Eigen
+)
+
+target_compile_options(autoparts PRIVATE
+    -march=native
+    -O3
+)
